@@ -2,7 +2,7 @@ program Project1;
 
 uses
   Vcl.Forms,
-  PrimeiroProjeto in '..\PrimeiroProjeto.pas' {Form1};
+  PrimeiroProjeto in 'PrimeiroProjeto.pas' {Form1};
 
 {$R *.res}
 
