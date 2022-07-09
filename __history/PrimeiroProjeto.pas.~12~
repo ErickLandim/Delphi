@@ -1,0 +1,57 @@
+unit PrimeiroProjeto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Public declarations }
+    i : integer;
+    c : currency;
+    s : string;
+    b : boolean;
+
+    procedure ExibeVariavel(Valor : String);
+    function fncExibeTexto : string;
+  public
+  end;
+
+var
+  Form1: TForm1;
+  Global: String;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+
+  //s := Edit1.Text;
+  //s := fncExibeTexto;
+  Global := fncExibeTexto;
+  ExibeVariavel(Global);
+end;
+
+procedure TForm1.ExibeVariavel(Valor : String);
+begin
+  ShowMessage (Valor);
+  ShowMessage ('____*##########*'+#13'__*##############'+#13'__################'+#13'_##################_________*####*'+#13'__##################_____*##########'+#13'__##################___*#############'+#13'___#################*_###############*'+#13'____#################################*'+#13'______###############################'+#13'_______#############################'+#13'________=##########################'+#13'__________########################'+#13'___________*#####################'+#13'____________*##################'+#13'___________*###############'+#13'_______________#############'+#13'________________##########'+#13'________________=#######*'+#13'_________________######'+#13'__________________####'+#13'__________________###'+#13'___________________#'+#13);
+end;
+
+function Tform1.fncExibeTexto;
+var
+  strFunction: string;
+begin
+  strFunction := 'Bom trabalho, te amo!';
+  Result := strFunction;
+end;
+
+end.

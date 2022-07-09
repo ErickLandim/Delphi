@@ -17,14 +17,16 @@ type
     c : currency;
     s : string;
     b : boolean;
+    Date : TDateTime;
 
-    procedure ExibeVariavel(Valor : String);
-    function fncExibeTexto : string;
+    procedure ExibeVariavel(Valor : integer);
+    function fncExibeTexto : String;
   public
   end;
 
 var
   Form1: TForm1;
+  Global: String;
 
 implementation
 
@@ -34,13 +36,14 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
 
   //s := Edit1.Text;
-  s := fncExibeTexto;
-  ExibeVariavel(s);
+  //s := fncExibeTexto;
+  Global := fncExibeTexto;
+  ExibeVariavel(StrToInt (Global));
 end;
 
-procedure TForm1.ExibeVariavel(Valor : String);
+procedure TForm1.ExibeVariavel(Valor : integer);
 begin
-  ShowMessage (Valor);
+  ShowMessage(IntToStr(Valor));
 end;
 
 function Tform1.fncExibeTexto;
