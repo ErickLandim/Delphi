@@ -12,30 +12,30 @@ object Form1: TForm1
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 224
-    Top = 40
-    Width = 9
-    Height = 25
+    Left = 176
+    Top = 37
+    Width = 8
+    Height = 15
     Caption = '='
   end
   object EdtValue1: TEdit
     Left = 8
     Top = 34
-    Width = 89
+    Width = 73
     Height = 31
     TabOrder = 0
   end
   object EdtValue2: TEdit
-    Left = 113
+    Left = 87
     Top = 34
-    Width = 88
+    Width = 72
     Height = 31
     TabOrder = 1
   end
   object EdtResult: TEdit
-    Left = 256
+    Left = 200
     Top = 34
-    Width = 89
+    Width = 73
     Height = 31
     TabOrder = 2
   end
@@ -47,5 +47,14 @@ object Form1: TForm1
     Caption = '+'
     TabOrder = 3
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 71
+    Top = 96
+    Width = 58
+    Height = 33
+    Caption = '-'
+    TabOrder = 4
+    OnClick = Button2Click
   end
 end
