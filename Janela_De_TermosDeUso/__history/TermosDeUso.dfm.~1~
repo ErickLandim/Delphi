@@ -15,9 +15,9 @@ object Form1: TForm1
   TextHeight = 15
   object Button1: TButton
     Left = 540
-    Top = 416
+    Top = 411
     Width = 84
-    Height = 22
+    Height = 27
     Caption = 'Continue'
     TabOrder = 0
     OnClick = Button1Click
@@ -35,28 +35,28 @@ object Form1: TForm1
     Top = 416
     Width = 97
     Height = 17
-    Caption = 'N'#227'o Concordo'
+    Caption = 'Concordo2'
     TabOrder = 2
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 624
-    Height = 417
+    Height = 405
     Align = alTop
     Caption = 'QuadroDasDiretrizes'
     TabOrder = 3
+    ExplicitLeft = -8
     DesignSize = (
       624
-      417)
+      405)
     object Label1: TLabel
-      Left = 24
-      Top = 402
-      Width = 57
-      Height = 15
+      Left = 507
+      Top = 380
+      Width = 111
+      Height = 25
       Anchors = [akBottom]
-      Caption = 'Clique em:'
-      ExplicitTop = 390
+      Caption = 'Clique em continuar:'
     end
     object Diretrizesblablabla: TMemo
       Left = 32

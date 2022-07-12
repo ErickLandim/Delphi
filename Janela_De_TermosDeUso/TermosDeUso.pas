@@ -31,13 +31,35 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);
-
+var
+  Retorno: integer;
 begin
   if CheckBox1.Checked and CheckBox2.Checked then
-    ShowMessage('Carregando...')
+          MessageDlg('ERRORR TRAGIC', TMsgDlgType.mtError, [mbOk], 0)
+  Else if CheckBox1.Checked then
+    Showmessage('Carregando próxima etapa...')
+  else if CheckBox2.Checked then       
+    Retorno := MessageDlg('Você marcou que não concorda com os termos de uso. Deseja encerrar o sistema?',TMsgDlgType.mtConfirmation, [mbYes, mbNo], 0)
+  Else
+  MessageDlg('ERRORR', TMsgDlgType.mtError, [mbOk], 0);
+   
+      if Retorno = 6 then
+        Close
+      Else if Retorno = 7 then
+        MessageDlg('Parece que aconteceu algum erro, reinicie o sistema e tente novamente',TMsgDlgType.mtError, [mbOk], 0);
+        Close;
+   {Marcou as duas checkbox e apertou continue = ERRORR TRAGIC 
+    Marcou só a "concordo" = Carregando próxima etapa... e encerra sozinho
+    Marcou só a "Não concordo" = Você marcou que não concorda com os termos de uso. Deseja encerrar o sistema?
+    (Se a resposta for sim = o sistema fecha; Se apertar não, o sistema mostra uma mensagem de erro(Parece que aconteceu algum erro, reinicie o sistema e tente novamente) e fecha)
+    Se você anotar algo na parte de cima das diretrizes e apertar continue = ERRORR}       
+        
+
+{ if CheckBox1.Checked and CheckBox2.Checked then
+  ShowMessage('Carregando...')
   Else
   MessageDlg('Marque todas as checkBoxs para continuar!', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbOK], 0);
-  //SetDesignVisible(False);
+  SetDesignVisible(False); }
 end;
 
 end.
