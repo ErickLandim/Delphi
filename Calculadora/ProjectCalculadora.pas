@@ -3,7 +3,8 @@ unit ProjectCalculadora;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
@@ -23,14 +24,13 @@ type
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
 
-
   private
     { Private declarations }
-    function soma(Value1, Value2 : currency) : currency;
-    function subtrair(Value1, Value2 : currency) : currency;
-    function multiplicar(Value1, Value2 : currency) : currency;
-    function dividir(Value1, Value2 : currency) : currency;
-    function resto(Value1, Value2 : integer) : integer;
+    function soma(Value1, Value2: currency): currency;
+    function subtrair(Value1, Value2: currency): currency;
+    function multiplicar(Value1, Value2: currency): currency;
+    function dividir(Value1, Value2: currency): currency;
+    function resto(Value1, Value2: integer): integer;
   public
     { Public declarations }
   end;
@@ -44,45 +44,46 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 var
-  Resultado : currency;
+  Resultado: currency;
 begin
-   Resultado := soma(StrTocurr(EdtValue1.Text), StrTocurr(EdtValue2.Text));
-   EdtResult.Text := currToStr(Resultado);
+  Resultado := soma(StrTocurr(EdtValue1.Text), StrTocurr(EdtValue2.Text));
+  EdtResult.Text := currToStr(Resultado);
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 var
-  Resultado : currency;
+  Resultado: currency;
 begin
-   Resultado := subtrair(StrTocurr(EdtValue1.Text), StrTocurr(EdtValue2.Text));
-   EdtResult.Text := currToStr(Resultado);
+  Resultado := subtrair(StrTocurr(EdtValue1.Text), StrTocurr(EdtValue2.Text));
+  EdtResult.Text := currToStr(Resultado);
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 var
-  Resultado : currency;
+  Resultado: currency;
 begin
-   Resultado := multiplicar(StrTocurr(EdtValue1.Text), StrTocurr(EdtValue2.Text));
-   EdtResult.Text := currToStr(Resultado);
+  Resultado := multiplicar(StrTocurr(EdtValue1.Text),
+    StrTocurr(EdtValue2.Text));
+  EdtResult.Text := currToStr(Resultado);
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 var
-  Resultado : currency;
+  Resultado: currency;
 begin
-   Resultado := dividir(StrTocurr(EdtValue1.Text), StrTocurr(EdtValue2.Text));
-   EdtResult.Text := currToStr(Resultado);
+  Resultado := dividir(StrTocurr(EdtValue1.Text), StrTocurr(EdtValue2.Text));
+  EdtResult.Text := currToStr(Resultado);
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);
 var
-  Resultado : currency;
+  Resultado: integer;
 begin
-   Resultado := resto(StrTocurr(EdtValue1.Text), StrToCurr(EdtValue2.Text));
-   EdtResult.Text := CurrToStr(Resultado);
+  Resultado := resto(StrToInt(EdtValue1.Text), StrToInt(EdtValue2.Text));
+  EdtResult.Text := IntToStr(Resultado);
 end;
 
-//Div é para numeros inteiros, e a / é para ponto flutuante
+// Div é para numeros inteiros, e a / é para ponto flutuante
 function TForm1.dividir(Value1, Value2: currency): currency;
 begin
   Result := Value1 / Value2;
@@ -98,7 +99,7 @@ begin
   Result := Value1 mod Value2;
 end;
 
-function TForm1.soma(Value1: currency; Value2: currency) : currency;
+function TForm1.soma(Value1: currency; Value2: currency): currency;
 begin
   Result := Value1 + Value2;
 end;
