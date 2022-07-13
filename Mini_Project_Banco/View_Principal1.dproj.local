@@ -8,7 +8,15 @@
     <Transaction>2022/07/13 17:01:39.501,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\View_Principal.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/07/13 17:01:55.808,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\View_Principal1.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2022/07/13 17:02:04.901,=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit2.pas</Transaction>
-    <Transaction>2022/07/13 17:02:18.239,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Pessoa.dfm=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit2.dfm</Transaction>
     <Transaction>2022/07/13 17:02:18.239,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Pessoa.pas=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit2.pas</Transaction>
+    <Transaction>2022/07/13 17:02:18.239,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Pessoa.dfm=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit2.dfm</Transaction>
+    <Transaction>2022/07/13 17:44:58.657,=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit3.pas</Transaction>
+    <Transaction>2022/07/13 17:45:07.073,=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit4.pas</Transaction>
+    <Transaction>2022/07/13 17:45:28.512,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\contabancaria.dfm=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit4.dfm</Transaction>
+    <Transaction>2022/07/13 17:45:28.512,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\contabancaria.pas=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit4.pas</Transaction>
+    <Transaction>2022/07/13 17:45:51.299,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\contabancaria1.dfm=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit3.dfm</Transaction>
+    <Transaction>2022/07/13 17:45:51.299,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\contabancaria1.pas=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\Unit3.pas</Transaction>
+    <Transaction>2022/07/13 17:46:08.937,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\unit2.pas=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\contabancaria1.pas</Transaction>
+    <Transaction>2022/07/13 17:46:08.937,C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\unit2.dfm=C:\Users\Administrator\Documents\Delphi\Mini_Project_Banco\contabancaria1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
