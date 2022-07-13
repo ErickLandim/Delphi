@@ -3,9 +3,9 @@
 	<Transactions>
     <Transaction>2022/07/02 09:59:48.000.250,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/07/09 13:45:18.000.278,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/07/12 14:55:59.615,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/07/12 15:37:43.910,C:\Users\Administrator\Documents\Delphi\Janela_De_TermosDeUso\TermosDeUso.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/07/12 15:37:43.910,C:\Users\Administrator\Documents\Delphi\Janela_De_TermosDeUso\TermosDeUso.dfm=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/07/12 15:37:55.522,C:\Users\Administrator\Documents\Delphi\Janela_De_TermosDeUso\TermosDeUso1.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/07/12 14:55:59.000.615,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/12 15:37:43.000.910,C:\Users\Administrator\Documents\Delphi\Janela_De_TermosDeUso\TermosDeUso.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/12 15:37:43.000.910,C:\Users\Administrator\Documents\Delphi\Janela_De_TermosDeUso\TermosDeUso.dfm=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/07/12 15:37:55.000.522,C:\Users\Administrator\Documents\Delphi\Janela_De_TermosDeUso\TermosDeUso1.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
