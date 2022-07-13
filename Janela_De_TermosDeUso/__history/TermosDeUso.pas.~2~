@@ -43,28 +43,23 @@ begin
   Else
   MessageDlg('ERRORR', TMsgDlgType.mtError, [mbOk], 0);
    
-   case Retorno  of
-      6: Close;
-
-      7: 
-        begin
-          MessageDlg('Certo, voltando a tela anterior. Marque corretamente dessa vez',TMsgDlgType.mtInformation, [mbOk], 0);
-          Exit;
-        end;
-   end;
-     { if Retorno = 6 then
+      if Retorno = 6 then
         Close
       Else if Retorno = 7 then
-        MessageDlg('Certo, voltando a tela anterior. Marque corretamente dessa vez',TMsgDlgType.mtInformation, [mbOk], 0);
-        Exit;
-      //Exit = Faz a tela voltar a parte principal
-      }
+        MessageDlg('Parece que aconteceu algum erro, reinicie o sistema e tente novamente',TMsgDlgType.mtError, [mbOk], 0);
+        Close;
    {Marcou as duas checkbox e apertou continue = ERRORR TRAGIC 
     Marcou só a "concordo" = Carregando próxima etapa... e encerra sozinho
     Marcou só a "Não concordo" = Você marcou que não concorda com os termos de uso. Deseja encerrar o sistema?
-    (Se a resposta for sim = o sistema fecha; Se apertar não, o sistema volta para a tela)
+    (Se a resposta for sim = o sistema fecha; Se apertar não, o sistema mostra uma mensagem de erro(Parece que aconteceu algum erro, reinicie o sistema e tente novamente) e fecha)
     Se você anotar algo na parte de cima das diretrizes e apertar continue = ERRORR}       
         
+
+{ if CheckBox1.Checked and CheckBox2.Checked then
+  ShowMessage('Carregando...')
+  Else
+  MessageDlg('Marque todas as checkBoxs para continuar!', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbOK], 0);
+  SetDesignVisible(False); }
 end;
 
 end.

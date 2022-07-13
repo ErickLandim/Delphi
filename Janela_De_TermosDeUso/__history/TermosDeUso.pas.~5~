@@ -62,9 +62,15 @@ begin
    {Marcou as duas checkbox e apertou continue = ERRORR TRAGIC 
     Marcou só a "concordo" = Carregando próxima etapa... e encerra sozinho
     Marcou só a "Não concordo" = Você marcou que não concorda com os termos de uso. Deseja encerrar o sistema?
-    (Se a resposta for sim = o sistema fecha; Se apertar não, o sistema volta para a tela)
+    (Se a resposta for sim = o sistema fecha; Se apertar não, o sistema mostra uma mensagem de erro(Parece que aconteceu algum erro, reinicie o sistema e tente novamente) e fecha)
     Se você anotar algo na parte de cima das diretrizes e apertar continue = ERRORR}       
         
+
+{ if CheckBox1.Checked and CheckBox2.Checked then
+  ShowMessage('Carregando...')
+  Else
+  MessageDlg('Marque todas as checkBoxs para continuar!', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbOK], 0);
+  SetDesignVisible(False); }
 end;
 
 end.
