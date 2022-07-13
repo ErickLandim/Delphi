@@ -1,0 +1,14 @@
+program MenuTeste1;
+
+uses
+  Vcl.Forms,
+  MenuTeste in 'MenuTeste.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

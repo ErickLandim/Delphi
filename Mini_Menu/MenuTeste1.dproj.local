@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/07/02 09:59:48.000.250,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/09 13:45:18.000.278,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/13 02:49:27.927,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/13 02:52:06.335,C:\Users\Administrator\Documents\Delphi\Mini_Menu\MenuTeste.dfm=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/07/13 02:52:06.335,C:\Users\Administrator\Documents\Delphi\Mini_Menu\MenuTeste.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/13 02:52:17.556,C:\Users\Administrator\Documents\Delphi\Mini_Menu\MenuTeste1.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/07/13 02:54:32.156,=C:\Users\Administrator\Documents\Delphi\Mini_Menu\Unit2.pas</Transaction>
+    <Transaction>2022/07/13 02:55:29.469,C:\Users\Administrator\Documents\Delphi\Mini_Menu\TermosDeUso\TermosDeUso.pas=C:\Users\Administrator\Documents\Delphi\Mini_Menu\Unit2.pas</Transaction>
+    <Transaction>2022/07/13 02:55:29.469,C:\Users\Administrator\Documents\Delphi\Mini_Menu\TermosDeUso\TermosDeUso.dfm=C:\Users\Administrator\Documents\Delphi\Mini_Menu\Unit2.dfm</Transaction>
+    <Transaction>2022/07/13 02:58:40.678,=C:\Users\Administrator\Documents\Delphi\Mini_Menu\Unit3.pas</Transaction>
+    <Transaction>2022/07/13 02:59:38.685,C:\Users\Administrator\Documents\Delphi\Mini_Menu\TermosDeUsoo.pas=C:\Users\Administrator\Documents\Delphi\Mini_Menu\Unit3.pas</Transaction>
+    <Transaction>2022/07/13 02:59:38.685,C:\Users\Administrator\Documents\Delphi\Mini_Menu\TermosDeUsoo.dfm=C:\Users\Administrator\Documents\Delphi\Mini_Menu\Unit3.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
