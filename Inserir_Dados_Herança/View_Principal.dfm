@@ -25,9 +25,10 @@ object Form1: TForm1
     Left = 162
     Top = 143
     Width = 303
-    Height = 162
+    Height = 226
     Lines.Strings = (
-      'Memo1')
+      'Ol'#225' Usuario! Essas s'#227'o as informa'#231#245'es que voc'#234' '
+      'adcionou, deseja confirmar?')
     TabOrder = 1
   end
 end

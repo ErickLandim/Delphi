@@ -43,20 +43,22 @@ begin
     Pessoa2.Email := 'Andrecoelho@gmail.com';
     Pessoa2.ValorDeCredito := 1000;
 
+
     Memo1.Lines.Add('Pessoa: ');
     Memo1.Lines.Add('Nome: ' + Pessoa.Nome);
     Memo1.Lines.Add('Data de nascimento: ' + Pessoa.DataDeNascimento);
     Memo1.Lines.Add('Idade: ' + Pessoa.Idade.ToString);
     Memo1.Lines.Add('Email: ' + Pessoa.Email);
 
+    Memo1.Lines.Add('===============================');
     Memo1.Lines.Add('Cliente:');
     Memo1.Lines.Add('Nome:' + Pessoa2.Nome);
     Memo1.Lines.Add('Data de nascimento:' + Pessoa2.DataDeNascimento);
     Memo1.Lines.Add('Idade:' + Pessoa2.Idade.ToString);
     Memo1.Lines.Add('Valor de Credito: ' + Pessoa2.ValorDeCredito.ToString);
   finally
-    Pessoa.DisposeOf;
-    Pessoa2.DisposeOf;
+    Pessoa.Free;
+    Pessoa2.Free;
   end;
 end;
 
