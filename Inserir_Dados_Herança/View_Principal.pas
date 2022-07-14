@@ -11,14 +11,21 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Memo1: TMemo;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
     procedure Button1Click(Sender: TObject);
+
+
   private
     { Private declarations }
   public
     { Public declarations }
   end;
 
-  // Trunc( (now - StrToDate(Value )) / 365.25);
 var
   Form1: TForm1;
 
@@ -34,9 +41,9 @@ begin
   Pessoa := TPessoa.Create;
   Pessoa2 := TCliente.Create;
   try
-    Pessoa.Nome := 'Erick';
-    Pessoa.DataDeNascimento := '26/10/2003';
-    Pessoa.Email := 'ErickLandim@gmail.com';
+    Pessoa.Nome := Edit1.Text;
+    Pessoa.DataDeNascimento := Edit2.Text;//'26/10/2003';
+    Pessoa.Email := Edit3.Text;//'ErickLandim@gmail.com';
 
     Pessoa2.Nome := 'Andre';
     Pessoa2.DataDeNascimento := '24/04/2003';
@@ -44,7 +51,7 @@ begin
     Pessoa2.ValorDeCredito := 1000;
 
 
-    Memo1.Lines.Add('Pessoa: ');
+    Memo1.Lines.Add(#13'Pessoa: ');
     Memo1.Lines.Add('Nome: ' + Pessoa.Nome);
     Memo1.Lines.Add('Data de nascimento: ' + Pessoa.DataDeNascimento);
     Memo1.Lines.Add('Idade: ' + Pessoa.Idade.ToString);
