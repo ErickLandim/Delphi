@@ -37,9 +37,11 @@ procedure TForm1.Button1Click(Sender: TObject);
 var
   Pessoa: TPessoa;
   Pessoa2: TCliente;
+
 begin
   Pessoa := TPessoa.Create;
   Pessoa2 := TCliente.Create;
+
   try
     Pessoa.Nome := Edit1.Text;
     Pessoa.DataDeNascimento := Edit2.Text;//'26/10/2003';
@@ -48,7 +50,6 @@ begin
     Pessoa2.Nome := 'Andre';
     Pessoa2.DataDeNascimento := '24/04/2003';
     Pessoa2.Email := 'Andrecoelho@gmail.com';
-    Pessoa2.ValorDeCredito := 1000;
 
 
     Memo1.Lines.Add(#13'Pessoa: ');
@@ -62,7 +63,9 @@ begin
     Memo1.Lines.Add('Nome:' + Pessoa2.Nome);
     Memo1.Lines.Add('Data de nascimento:' + Pessoa2.DataDeNascimento);
     Memo1.Lines.Add('Idade:' + Pessoa2.Idade.ToString);
-    Memo1.Lines.Add('Valor de Credito: ' + Pessoa2.ValorDeCredito.ToString);
+    Memo1.Lines.Add('Valor de Credito: ' + CurrToStr(Pessoa2.ValorDeCredito));
+    Memo1.Lines.Add('Receber curr: ' + Pessoa2.Receber(10.5));
+    Memo1.Lines.Add('Receber int: ' + Pessoa2.Receber(1));
   finally
     Pessoa.Free;
     Pessoa2.Free;

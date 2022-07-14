@@ -1,0 +1,26 @@
+unit Pessoa;
+
+interface
+
+uses
+   System.SysUtils;
+
+  type
+    TPessoa = class
+  private
+  public
+    Nome : string;
+    Email : string;
+    DataDeNascimento : string;
+    function idade: integer;
+  end;
+implementation
+
+{ TPessoa }
+
+function TPessoa.idade: integer;
+begin
+    Result := Trunc((now - StrToDate(DataDeNascimento)) / 365.25);
+end;
+
+end.

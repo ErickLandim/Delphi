@@ -8,11 +8,14 @@ uses
   type
     TPessoa = class
   private
+  FNome: string;
+  FEmail: string;
+  FDataDeNascimento: string;
   public
-    Nome : string;
-    Email : string;
-    DataDeNascimento : string;
-    function idade: integer;
+    function idade : integer;
+    property Nome : string read FNome write FNome;
+    Property Email : string read FEmail write FEmail;
+    Property DataDeNascimento : string read FDataDeNascimento write FDataDeNascimento;
   end;
 implementation
 
