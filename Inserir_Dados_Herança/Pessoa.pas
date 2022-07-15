@@ -11,11 +11,13 @@ uses
   FNome: string;
   FEmail: string;
   FDataDeNascimento: string;
+  FDados : String;
   public
 
     property Nome : string read FNome write FNome;
     Property Email : string read FEmail write FEmail;
     Property DataDeNascimento : string read FDataDeNascimento write FDataDeNascimento;
+    property Dados: String read FDados write FDados;
     function ReceberDados : String; Virtual;
     function idade : integer;
   end;
@@ -32,10 +34,10 @@ end;
 
 function TPessoa.ReceberDados: String;
 begin
-    Result := 'Nome: ' + Nome +
-    '- Data de nascimento: ' + DataDeNascimento +
-    '- Idade: ' + idade.ToString +
-    '- Email: ' + Email;
+    Dados := 'Nome: ' + Nome +
+    ' - Data de nascimento: ' + DataDeNascimento +
+    ' - Idade: ' + idade.ToString +
+    ' - Email: ' + Email;
 end;
 
 end.
