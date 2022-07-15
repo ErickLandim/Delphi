@@ -17,6 +17,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    Memo2: TMemo;
     procedure Button1Click(Sender: TObject);
 
 
@@ -43,9 +44,9 @@ begin
   Pessoa2 := TCliente.Create;
 
   try
-    Pessoa.Nome := Edit1.Text;
-    Pessoa.DataDeNascimento := Edit2.Text;//'26/10/2003';
-    Pessoa.Email := Edit3.Text;//'ErickLandim@gmail.com';
+    Pessoa.Nome := 'Erick';
+    Pessoa.DataDeNascimento := '26/10/2003';
+    Pessoa.Email := 'ErickLandim@gmail.com';
 
     Pessoa2.Nome := 'Andre';
     Pessoa2.DataDeNascimento := '24/04/2003';
@@ -66,6 +67,15 @@ begin
     Memo1.Lines.Add('Valor de Credito: ' + CurrToStr(Pessoa2.ValorDeCredito));
     Memo1.Lines.Add('Receber curr: ' + Pessoa2.Receber(10.5));
     Memo1.Lines.Add('Receber int: ' + Pessoa2.Receber(1));
+    /////////////////////////////////////////////////////////////////
+    Memo2.Lines.Add(#13'Pessoa: ');
+    Memo2.Lines.Add(Pessoa2.ReceberDados);
+    Memo2.Lines.Add('===============================');
+    Memo2.Lines.Add('Cliente:');
+    Memo2.Lines.Add(Pessoa2.ReceberDados);
+    Memo2.Lines.Add('===============================');
+
+
   finally
     Pessoa.Free;
     Pessoa2.Free;

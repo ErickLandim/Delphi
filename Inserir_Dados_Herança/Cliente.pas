@@ -9,10 +9,13 @@ uses
      TCliente = class(TPessoa)
    private
    FValorDeCredito : Currency;
+   FCpf : String;
    public
    property ValorDeCredito: Currency read FValorDeCredito;
+   property Cpf : string read FCpf write FCpf;
    function Receber(Value: integer) : string overload;
    function Receber(Value: currency): string overload;
+   function ReceberDados: string; override;
    end;
 implementation
 
@@ -27,6 +30,21 @@ function TCliente.Receber(Value: currency): string;
 begin
   FValorDeCredito := Value * (Value * 0.10);
   Result := CurrToStr(Value);
+end;
+
+
+
+
+function TCliente.ReceberDados: string;
+begin
+     Result := 'Nome: '+#13+ Nome +
+    'Data de nascimento: '+#13+ DataDeNascimento +
+    'Idade: '+#13+ idade.ToString +
+    'Email: '+#13+ Email +
+    'CPF: '+#13+ Cpf +
+    'Valor de Credito:'+#13+ CurrToStr(ValorDeCredito) +
+    'Receber int: '+#13+ Receber(1)+
+    'Receber Curr: '+#13+ Receber(2);
 end;
 
 end.

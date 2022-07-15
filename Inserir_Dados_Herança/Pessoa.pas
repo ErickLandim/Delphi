@@ -12,10 +12,12 @@ uses
   FEmail: string;
   FDataDeNascimento: string;
   public
-    function idade : integer;
+
     property Nome : string read FNome write FNome;
     Property Email : string read FEmail write FEmail;
     Property DataDeNascimento : string read FDataDeNascimento write FDataDeNascimento;
+    function ReceberDados : String; Virtual;
+    function idade : integer;
   end;
 implementation
 
@@ -24,6 +26,16 @@ implementation
 function TPessoa.idade: integer;
 begin
     Result := Trunc((now - StrToDate(DataDeNascimento)) / 365.25);
+end;
+
+
+
+function TPessoa.ReceberDados: String;
+begin
+    Result := 'Nome: '+#13+ Nome +
+    ',Data de nascimento: '+#13+ DataDeNascimento +
+    ',Idade: '+#13+ idade.ToString +
+    ',Email: '+#13+ Email;
 end;
 
 end.
