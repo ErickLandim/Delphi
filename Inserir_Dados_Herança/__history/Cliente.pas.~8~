@@ -37,14 +37,14 @@ end;
 
 function TCliente.ReceberDados: string;
 begin
-     Result := '- Nome: ' + Nome +
-    '- Data de nascimento: ' + DataDeNascimento +
-    '- Idade: ' + idade.ToString +
-    '- Email: ' + Email +
-    '- CPF: ' + Cpf +
-    '- Valor de Credito:' + CurrToStr(ValorDeCredito) +
-    '- Receber int: '+ Receber(1)+
-    '- Receber Curr: '+ Receber(2);
+     Result := 'Nome: '+#13+ Nome +
+    'Data de nascimento: '+#13+ DataDeNascimento +
+    'Idade: '+#13+ idade.ToString +
+    'Email: '+#13+ Email +
+    'CPF: '+#13+ Cpf +
+    'Valor de Credito:'+#13+ CurrToStr(ValorDeCredito) +
+    'Receber int: '+#13+ Receber(1)+
+    'Receber Curr: '+#13+ Receber(2);
 end;
 
 end.

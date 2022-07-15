@@ -5,14 +5,19 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Pessoa, Cliente, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Pessoa, Cliente;
 
 type
   TForm1 = class(TForm)
     Button1: TButton;
     Memo1: TMemo;
-    MainMenu1: TMainMenu;
     Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Memo2: TMemo;
     procedure Button1Click(Sender: TObject);
 
 
@@ -22,7 +27,6 @@ type
     { Public declarations }
   end;
 
-  // Trunc( (now - StrToDate(Value )) / 365.25);
 var
   Form1: TForm1;
 
@@ -34,22 +38,22 @@ procedure TForm1.Button1Click(Sender: TObject);
 var
   Pessoa: TPessoa;
   Pessoa2: TCliente;
+
 begin
   Pessoa := TPessoa.Create;
   Pessoa2 := TCliente.Create;
+
   try
-    ShowMessage('Digite seu nome:');
-    Pessoa.Nome := Edit1.Text;
+    Pessoa.Nome := 'Erick';
     Pessoa.DataDeNascimento := '26/10/2003';
     Pessoa.Email := 'ErickLandim@gmail.com';
 
     Pessoa2.Nome := 'Andre';
     Pessoa2.DataDeNascimento := '24/04/2003';
     Pessoa2.Email := 'Andrecoelho@gmail.com';
-    Pessoa2.ValorDeCredito := 1000;
 
 
-    Memo1.Lines.Add('Pessoa: ');
+    Memo1.Lines.Add(#13'Pessoa: ');
     Memo1.Lines.Add('Nome: ' + Pessoa.Nome);
     Memo1.Lines.Add('Data de nascimento: ' + Pessoa.DataDeNascimento);
     Memo1.Lines.Add('Idade: ' + Pessoa.Idade.ToString);
@@ -60,7 +64,18 @@ begin
     Memo1.Lines.Add('Nome:' + Pessoa2.Nome);
     Memo1.Lines.Add('Data de nascimento:' + Pessoa2.DataDeNascimento);
     Memo1.Lines.Add('Idade:' + Pessoa2.Idade.ToString);
-    Memo1.Lines.Add('Valor de Credito: ' + Pessoa2.ValorDeCredito.ToString);
+    Memo1.Lines.Add('Valor de Credito: ' + CurrToStr(Pessoa2.ValorDeCredito));
+    Memo1.Lines.Add('Receber curr: ' + Pessoa2.Receber(10.5));
+    Memo1.Lines.Add('Receber int: ' + Pessoa2.Receber(1));
+    /////////////////////////////////////////////////////////////////
+    Memo2.Lines.Add(#13'Pessoa: ');
+    Memo2.Lines.Add(Pessoa2.ReceberDados);
+    Memo2.Lines.Add('===============================');
+    Memo2.Lines.Add('Cliente:');
+    Memo2.Lines.Add(Pessoa2.ReceberDados);
+    Memo2.Lines.Add('===============================');
+
+
   finally
     Pessoa.Free;
     Pessoa2.Free;

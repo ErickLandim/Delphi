@@ -32,10 +32,10 @@ end;
 
 function TPessoa.ReceberDados: String;
 begin
-    Result := 'Nome: ' + Nome +
-    '- Data de nascimento: ' + DataDeNascimento +
-    '- Idade: ' + idade.ToString +
-    '- Email: ' + Email;
+    Result := 'Nome: '+#13+ Nome +
+    ',Data de nascimento: '+#13+ DataDeNascimento +
+    ',Idade: '+#13+ idade.ToString +
+    ',Email: '+#13+ Email;
 end;
 
 end.
