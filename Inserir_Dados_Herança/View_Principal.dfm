@@ -94,4 +94,13 @@ object Form1: TForm1
     TabOrder = 6
     OnClick = NextClick
   end
+  object Button1: TButton
+    Left = 168
+    Top = 256
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 7
+    OnClick = Button1Click
+  end
 end

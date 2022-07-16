@@ -19,7 +19,9 @@ type
     Memo2: TMemo;
     Campo3: TMemo;
     Next: TButton;
+    Button1: TButton;
     procedure NextClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -35,7 +37,7 @@ implementation
 {$R *.dfm}
 
 
-{procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.Button1Click(Sender: TObject);
 var
   Pessoa: TPessoa;
   Pessoa2: TCliente;
@@ -82,15 +84,13 @@ begin
     Pessoa2.Free;
   end;
 end;
- }
-
 procedure TForm1.NextClick(Sender: TObject);
 var
   lPessoa1 : Tpessoa;
   lCliente1, lCliente2, lCliente3 : TCliente;
 begin
 
-  lPessoa1 := lPessoa1.Create;
+  lPessoa1 := TPessoa.Create;
   lPessoa1.Nome := 'Duda';
   lPessoa1.DataDeNascimento := '11/10/2005';
 
