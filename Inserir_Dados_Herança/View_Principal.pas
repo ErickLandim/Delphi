@@ -84,6 +84,9 @@ begin
     Pessoa2.Free;
   end;
 end;
+
+
+
 procedure TForm1.NextClick(Sender: TObject);
 var
   lPessoa1 : Tpessoa;
@@ -99,9 +102,9 @@ begin
   lCliente3 := TCliente.Create(lPessoa1);
    try
      Campo3.Lines.Add('Cliente1:' + lCliente1.Nome);
-     Campo3.Lines.Add('Cliente endereço: ' + lCliente1.Endereco.Logradouro + ' - ' +  lCliente1.Endereco.Numero);
+     Campo3.Lines.Add('Cliente1 endereço: ' + lCliente1.Endereco.Logradouro + ' - ' +  lCliente1.Endereco.Numero);
      Campo3.Lines.Add('Cliente2:' + lCliente2.Nome);
-     Campo3.Lines.Add('Cliente3:' + lCliente3.Nome +' - ' + lCliente3.DataDeNascimento);
+     Campo3.Lines.Add('Cliente3:' + lCliente3.Nome + ' - ' + lCliente3.DataDeNascimento);
 
    finally
       lPessoa1.Free;
