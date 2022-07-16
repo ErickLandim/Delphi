@@ -10,19 +10,12 @@ uses
    private
    FValorDeCredito : Currency;
    FCpf : String;
-   FEndereco: String;
    public
    property ValorDeCredito: Currency read FValorDeCredito;
    property Cpf : string read FCpf write FCpf;
-   property Endereco: String read FEndereco write FEndereco;
    function Receber(Value: integer) : string overload;
    function Receber(Value: currency): string overload;
    function ReceberDados: string; override;
-
-   Constructor Create; Overload;
-   Constructor Create(Value: String) ; Overload;
-   Constructor Create(Value: TPessoa) ; Overload;
-   Destructor Destroy; Override;
    end;
 implementation
 
@@ -31,26 +24,6 @@ implementation
 function TCliente.Receber(Value: integer): string;
 begin
   Result := Value.ToString;
-end;
-
-constructor TCliente.Create;
-begin
-
-end;
-
-constructor TCliente.Create(Value: String);
-begin
-
-end;
-
-constructor TCliente.Create(Value: TPessoa);
-begin
-
-end;
-
-destructor TCliente.Destroy;
-begin
-
 end;
 
 function TCliente.Receber(Value: currency): string;

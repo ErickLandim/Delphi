@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 470
-  Top = 166
+  Left = 633
+  Top = 270
   Caption = 'Form1'
-  ClientHeight = 678
+  ClientHeight = 391
   ClientWidth = 1028
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -34,8 +34,8 @@ object Form1: TForm1
     Caption = 'Email:'
   end
   object Button1: TButton
-    Left = 185
-    Top = 256
+    Left = 28
+    Top = 297
     Width = 75
     Height = 25
     Caption = 'Next'
@@ -46,7 +46,7 @@ object Form1: TForm1
     Left = 290
     Top = 8
     Width = 303
-    Height = 273
+    Height = 369
     Lines.Strings = (
       'Ol'#225' Usuario! Essas s'#227'o as informa'#231#245'es que voc'#234' '
       'adicionou, deseja confirmar?'
@@ -78,33 +78,11 @@ object Form1: TForm1
     Left = 712
     Top = 8
     Width = 308
-    Height = 273
+    Height = 369
     Lines.Strings = (
       'Ol'#225' Usuario! Essas s'#227'o as informa'#231#245'es que voc'#234' '
       'adicionou, deseja confirmar?'
       '')
     TabOrder = 5
-  end
-  object Memo3: TMemo
-    Left = 290
-    Top = 360
-    Width = 303
-    Height = 289
-    Lines.Strings = (
-      'Ol'#225' Usuario! Essas s'#227'o as informa'#231#245'es que voc'#234' '
-      'adicionou, deseja confirmar?'
-      ''
-      'Memo de ClienteT Contructor'
-      '')
-    TabOrder = 6
-  end
-  object Button2: TButton
-    Left = 185
-    Top = 624
-    Width = 75
-    Height = 25
-    Caption = 'Next2'
-    TabOrder = 7
-    OnClick = Button1Click
   end
 end

@@ -18,8 +18,10 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Memo2: TMemo;
+    Memo3: TMemo;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
-
+    procedure Button2Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -80,6 +82,32 @@ begin
     Pessoa.Free;
     Pessoa2.Free;
   end;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  lPessoa1 : Tpessoa;
+  lCliente1, lCliente2, lCliente3 : TCliente;
+begin
+  lPessoa1.Create;
+  lPessoa1.Nome := 'Duda';
+  lPessoa1.DataDeNascimento := '11/10/2005';
+
+  lCliente1.Create;
+  lCliente2.Create('Carlos antonio');
+  lCliente3.Create(lPessoa1);
+   try
+     Memo2.Lines.Add('Cliente1:' + lCliente1.Nome);
+     memo2.Lines.Add('Cliente endereço: ' + lCliente1.Endereco.Logradouro + ' - ' +  lCliente1.Endereco.Numero);
+          Memo2.Lines.Add('Cliente2:' + lCliente2.Nome);
+               Memo2.Lines.Add('Cliente3:' + lCliente3.Nome +' - ' + lCliente3.DataDeNascimento);
+
+   finally
+      lPessoa1.Free;
+      lCliente1.Free;
+      lCliente2.Free;
+      lCliente3.Free;
+   end;
 end;
 
 end.
