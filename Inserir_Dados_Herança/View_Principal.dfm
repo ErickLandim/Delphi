@@ -33,15 +33,6 @@ object Form1: TForm1
     Height = 15
     Caption = 'Email:'
   end
-  object Button1: TButton
-    Left = 185
-    Top = 256
-    Width = 75
-    Height = 25
-    Caption = 'Next'
-    TabOrder = 0
-    OnClick = Button1Click
-  end
   object Memo1: TMemo
     Left = 290
     Top = 8
@@ -51,28 +42,28 @@ object Form1: TForm1
       'Ol'#225' Usuario! Essas s'#227'o as informa'#231#245'es que voc'#234' '
       'adicionou, deseja confirmar?'
       '')
-    TabOrder = 1
+    TabOrder = 0
   end
   object Edit1: TEdit
     Left = 70
     Top = 37
     Width = 121
     Height = 23
-    TabOrder = 2
+    TabOrder = 1
   end
   object Edit2: TEdit
     Left = 139
     Top = 63
     Width = 121
     Height = 23
-    TabOrder = 3
+    TabOrder = 2
   end
   object Edit3: TEdit
     Left = 70
     Top = 92
     Width = 121
     Height = 23
-    TabOrder = 4
+    TabOrder = 3
   end
   object Memo2: TMemo
     Left = 712
@@ -83,28 +74,24 @@ object Form1: TForm1
       'Ol'#225' Usuario! Essas s'#227'o as informa'#231#245'es que voc'#234' '
       'adicionou, deseja confirmar?'
       '')
+    TabOrder = 4
+  end
+  object Campo3: TMemo
+    Left = 290
+    Top = 400
+    Width = 303
+    Height = 249
+    Lines.Strings = (
+      'Campo3')
     TabOrder = 5
   end
-  object Memo3: TMemo
-    Left = 290
-    Top = 360
-    Width = 303
-    Height = 289
-    Lines.Strings = (
-      'Ol'#225' Usuario! Essas s'#227'o as informa'#231#245'es que voc'#234' '
-      'adicionou, deseja confirmar?'
-      ''
-      'Memo de ClienteT Contructor'
-      '')
-    TabOrder = 6
-  end
-  object Button2: TButton
-    Left = 185
-    Top = 624
+  object Next: TButton
+    Left = 608
+    Top = 440
     Width = 75
     Height = 25
-    Caption = 'Next2'
-    TabOrder = 7
-    OnClick = Button1Click
+    Caption = 'Next'
+    TabOrder = 6
+    OnClick = NextClick
   end
 end

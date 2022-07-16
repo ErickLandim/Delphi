@@ -9,7 +9,6 @@ uses
 
 type
   TForm1 = class(TForm)
-    Button1: TButton;
     Memo1: TMemo;
     Edit1: TEdit;
     Edit2: TEdit;
@@ -18,10 +17,9 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Memo2: TMemo;
-    Memo3: TMemo;
-    Button2: TButton;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    Campo3: TMemo;
+    Next: TButton;
+    procedure NextClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -36,7 +34,8 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm1.Button1Click(Sender: TObject);
+
+{procedure TForm1.Button1Click(Sender: TObject);
 var
   Pessoa: TPessoa;
   Pessoa2: TCliente;
@@ -83,25 +82,26 @@ begin
     Pessoa2.Free;
   end;
 end;
+ }
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.NextClick(Sender: TObject);
 var
   lPessoa1 : Tpessoa;
   lCliente1, lCliente2, lCliente3 : TCliente;
 begin
 
-  lPessoa1.Create;
+  lPessoa1 := lPessoa1.Create;
   lPessoa1.Nome := 'Duda';
   lPessoa1.DataDeNascimento := '11/10/2005';
 
-  lCliente1.Create;
-  lCliente2.Create('Carlos antonio');
-  lCliente3.Create(lPessoa1);
+  lCliente1 := TCliente.Create;
+  lCliente2 := TCliente.Create('Carlos antonio');
+  lCliente3 := TCliente.Create(lPessoa1);
    try
-     Memo3.Lines.Add('Cliente1:' + lCliente1.Nome);
-     memo3.Lines.Add('Cliente endereço: ' + lCliente1.Endereco.Logradouro + ' - ' +  lCliente1.Endereco.Numero);
-     Memo3.Lines.Add('Cliente2:' + lCliente2.Nome);
-     Memo3.Lines.Add('Cliente3:' + lCliente3.Nome +' - ' + lCliente3.DataDeNascimento);
+     Campo3.Lines.Add('Cliente1:' + lCliente1.Nome);
+     Campo3.Lines.Add('Cliente endereço: ' + lCliente1.Endereco.Logradouro + ' - ' +  lCliente1.Endereco.Numero);
+     Campo3.Lines.Add('Cliente2:' + lCliente2.Nome);
+     Campo3.Lines.Add('Cliente3:' + lCliente3.Nome +' - ' + lCliente3.DataDeNascimento);
 
    finally
       lPessoa1.Free;

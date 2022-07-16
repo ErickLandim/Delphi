@@ -1,7 +1,4 @@
-﻿[Button1]
-Coordinates=127,78,59,58
-
-[Edit3]
+﻿[Edit3]
 Coordinates=264,10,44,58
 
 [Memo1]
@@ -14,5 +11,5 @@ Coordinates=73,78,44,58
 Coordinates=84,10,44,58
 
 []
-Coordinates=318,10,53,58
+Coordinates=127,78,59,58
 
