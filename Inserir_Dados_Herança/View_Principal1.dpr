@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   View_Principal in 'View_Principal.pas' {Form1},
   Cliente in 'Cliente.pas',
-  Pessoa in 'Pessoa.pas';
+  Pessoa in 'Pessoa.pas',
+  Endereco in 'Endereco.pas';
 
 {$R *.res}
 

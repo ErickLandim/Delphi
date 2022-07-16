@@ -4,12 +4,14 @@
     <Transaction>2022/07/02 09:59:48.000.250,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/07/09 13:45:18.000.278,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/07/14 15:27:41.000.682,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/07/14 15:35:02.000.024,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\View_Principal.pas</Transaction>
-    <Transaction>2022/07/14 15:35:02.000.024,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\View_Principal.dfm</Transaction>
-    <Transaction>2022/07/14 15:35:16.000.516,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\View_Principal1.dproj</Transaction>
+    <Transaction>2022/07/14 15:35:02.000.024,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\View_Principal.dfm=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/07/14 15:35:02.000.024,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\View_Principal.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/14 15:35:16.000.516,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\View_Principal1.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2022/07/14 15:35:28.000.519,=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit1.pas</Transaction>
     <Transaction>2022/07/14 15:35:35.000.518,=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit2.pas</Transaction>
-    <Transaction>2022/07/14 15:35:44.000.789,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit1.pas=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Cliente.pas</Transaction>
-    <Transaction>2022/07/14 15:35:56.000.859,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit2.pas=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Pessoa.pas</Transaction>
+    <Transaction>2022/07/14 15:35:44.000.789,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Cliente.pas=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit1.pas</Transaction>
+    <Transaction>2022/07/14 15:35:56.000.859,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Pessoa.pas=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit2.pas</Transaction>
+    <Transaction>2022/07/16 14:51:19.606,=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit1.pas</Transaction>
+    <Transaction>2022/07/16 15:00:12.096,C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Endereco.pas=C:\Users\Administrator\Documents\Delphi\Inserir_Dados_Herança\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

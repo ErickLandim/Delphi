@@ -89,6 +89,7 @@ var
   lPessoa1 : Tpessoa;
   lCliente1, lCliente2, lCliente3 : TCliente;
 begin
+
   lPessoa1.Create;
   lPessoa1.Nome := 'Duda';
   lPessoa1.DataDeNascimento := '11/10/2005';
@@ -97,10 +98,10 @@ begin
   lCliente2.Create('Carlos antonio');
   lCliente3.Create(lPessoa1);
    try
-     Memo2.Lines.Add('Cliente1:' + lCliente1.Nome);
-     memo2.Lines.Add('Cliente endereço: ' + lCliente1.Endereco.Logradouro + ' - ' +  lCliente1.Endereco.Numero);
-          Memo2.Lines.Add('Cliente2:' + lCliente2.Nome);
-               Memo2.Lines.Add('Cliente3:' + lCliente3.Nome +' - ' + lCliente3.DataDeNascimento);
+     Memo3.Lines.Add('Cliente1:' + lCliente1.Nome);
+     memo3.Lines.Add('Cliente endereço: ' + lCliente1.Endereco.Logradouro + ' - ' +  lCliente1.Endereco.Numero);
+     Memo3.Lines.Add('Cliente2:' + lCliente2.Nome);
+     Memo3.Lines.Add('Cliente3:' + lCliente3.Nome +' - ' + lCliente3.DataDeNascimento);
 
    finally
       lPessoa1.Free;
