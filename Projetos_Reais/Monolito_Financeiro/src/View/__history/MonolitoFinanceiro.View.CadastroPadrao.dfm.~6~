@@ -59,7 +59,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 0
-          OnClick = BtnCancelarClick
         end
         object BtnSalvar: TButton
           Left = 433
@@ -146,7 +145,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 0
-          OnClick = BtnFecharClick
           ExplicitLeft = 528
           ExplicitTop = 0
           ExplicitHeight = 73
@@ -163,7 +161,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 1
-          OnClick = BtnIncluirClick
           ExplicitTop = 5
         end
         object BtnExcluir: TButton
@@ -208,7 +205,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 4
-          OnClick = BtnAlterarClick
           ExplicitLeft = 83
           ExplicitTop = 5
         end
