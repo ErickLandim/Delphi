@@ -19,6 +19,10 @@ object FrmPrincipal: TFrmPrincipal
     Top = 184
     object mnuCadastro: TMenuItem
       Caption = 'Cadastros'
+      object MnuCadastroPadrao: TMenuItem
+        Caption = 'Cadastro Padr'#227'o'
+        OnClick = MnuCadastroPadraoClick
+      end
     end
     object mnuRelatorios: TMenuItem
       Caption = 'Relat'#243'rios'

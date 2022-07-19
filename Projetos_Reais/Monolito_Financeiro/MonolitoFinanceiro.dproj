@@ -109,6 +109,10 @@
             <Form>FrmPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\View\MonolitoFinanceiro.View.CadastroPadrao.pas">
+            <Form>FrmCadastroPadrao</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -135,7 +139,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="Win32\Debug\MonolitoFinanceiro.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="bin\MonolitoFinanceiro.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>MonolitoFinanceiro.exe</RemoteName>
                         <Overwrite>true</Overwrite>

@@ -12,6 +12,8 @@ type
     mnuCadastro: TMenuItem;
     mnuRelatorios: TMenuItem;
     mnuAjuda: TMenuItem;
+    MnuCadastroPadrao: TMenuItem;
+    procedure MnuCadastroPadraoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,6 +25,14 @@ var
 
 implementation
 
+uses
+  MonolitoFinanceiro.View.CadastroPadrao;
+
 {$R *.dfm}
+
+procedure TFrmPrincipal.MnuCadastroPadraoClick(Sender: TObject);
+begin
+   FrmCadastroPadrao.show;
+end;
 
 end.
