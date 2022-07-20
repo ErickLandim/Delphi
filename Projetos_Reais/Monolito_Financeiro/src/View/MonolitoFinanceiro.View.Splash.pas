@@ -16,6 +16,10 @@ type
     LblNomeAplicacao: TLabel;
     Timer1: TTimer;
     Panel1: TPanel;
+    ImgBancoDeDados: TImage;
+    ImgDll: TImage;
+    ImgConfiguracoes: TImage;
+    ImgIniciando: TImage;
     procedure Timer1Timer(Sender: TObject);
 
   private
