@@ -1,6 +1,6 @@
 object FrmPrincipal: TFrmPrincipal
-  Left = 0
-  Top = 0
+  Left = 735
+  Top = 312
   Caption = 'Monolito Financeiro'
   ClientHeight = 441
   ClientWidth = 624
@@ -11,8 +11,9 @@ object FrmPrincipal: TFrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = MainMenu1
-  Position = poScreenCenter
+  Position = poDesigned
   WindowState = wsMaximized
+  OnCreate = FormCreate
   TextHeight = 15
   object MainMenu1: TMainMenu
     Left = 232

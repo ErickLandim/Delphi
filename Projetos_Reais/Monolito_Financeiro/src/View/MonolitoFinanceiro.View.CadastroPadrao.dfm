@@ -1,6 +1,6 @@
 object FrmCadastroPadrao: TFrmCadastroPadrao
-  Left = 0
-  Top = 0
+  Left = 735
+  Top = 332
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cadastro Padr'#227'o'
@@ -12,7 +12,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poScreenCenter
+  Position = poDesigned
   TextHeight = 15
   object PnlPrincipal: TCardPanel
     Left = 0
@@ -23,10 +23,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
     ActiveCard = CardPesquisa
     Caption = 'Card1'
     TabOrder = 0
-    ExplicitLeft = 280
-    ExplicitTop = 168
-    ExplicitWidth = 300
-    ExplicitHeight = 200
     object CardCadastro: TCard
       Left = 1
       Top = 1
@@ -85,10 +81,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
       Caption = 'CardPesquisa'
       CardIndex = 1
       TabOrder = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object PnlPesquisa: TPanel
         Left = 0
         Top = 0
@@ -123,7 +115,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 1
-          ExplicitHeight = 73
         end
       end
       object PnlPesquisaBotoes: TPanel
@@ -133,7 +124,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Height = 71
         Align = alBottom
         TabOrder = 1
-        ExplicitTop = 373
         object BtnFechar: TButton
           Left = 527
           Top = 1
@@ -147,9 +137,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           Images = ImageList1
           TabOrder = 0
           OnClick = BtnFecharClick
-          ExplicitLeft = 528
-          ExplicitTop = 0
-          ExplicitHeight = 73
         end
         object BtnIncluir: TButton
           Left = 1
@@ -164,7 +151,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           Images = ImageList1
           TabOrder = 1
           OnClick = BtnIncluirClick
-          ExplicitTop = 5
         end
         object BtnExcluir: TButton
           Left = 189
@@ -178,8 +164,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 2
-          ExplicitLeft = 9
-          ExplicitTop = 2
         end
         object BtnImprimir: TButton
           Left = 283
@@ -193,8 +177,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 3
-          ExplicitLeft = 333
-          ExplicitTop = 5
         end
         object BtnAlterar: TButton
           Left = 95
@@ -209,8 +191,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           Images = ImageList1
           TabOrder = 4
           OnClick = BtnAlterarClick
-          ExplicitLeft = 83
-          ExplicitTop = 5
         end
       end
       object PnlGrid: TPanel
@@ -220,10 +200,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Height = 301
         Align = alClient
         TabOrder = 2
-        ExplicitLeft = 320
-        ExplicitTop = 200
-        ExplicitWidth = 185
-        ExplicitHeight = 41
         object DBGrid1: TDBGrid
           Left = 1
           Top = 1
