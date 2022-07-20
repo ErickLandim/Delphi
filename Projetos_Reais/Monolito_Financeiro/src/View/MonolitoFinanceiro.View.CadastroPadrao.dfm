@@ -12,7 +12,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesigned
+  Position = poScreenCenter
   TextHeight = 15
   object PnlPrincipal: TCardPanel
     Left = 0
@@ -31,10 +31,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object Panel1: TPanel
         Left = 0
         Top = 368
@@ -42,7 +38,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Height = 71
         Align = alBottom
         TabOrder = 0
-        ExplicitTop = 373
         object BtnCancelar: TButton
           Left = 527
           Top = 1
@@ -69,7 +64,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 1
-          ExplicitLeft = 283
         end
       end
     end

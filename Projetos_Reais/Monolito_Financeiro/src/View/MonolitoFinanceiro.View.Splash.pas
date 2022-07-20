@@ -24,6 +24,7 @@ type
 
   private
     { Private declarations }
+    Procedure AtualizarStatus(Mensagem : string; Imagem : TImage);
   public
     { Public declarations }
   end;
@@ -37,17 +38,26 @@ implementation
 
 
 
-procedure TFrmSplash.Timer1Timer(Sender: TObject);
+Procedure TFrmSplash.AtualizarStatus(Mensagem : string; Imagem : TImage);
 begin
-  PrgsBarStatusCarregamento.StepIt;
-  case PrgsBarStatusCarregamento.Position of
-  10 : LblStatus.Caption := 'Carregando dependências...';
-  25 : LblStatus.Caption := 'Conectando ao banco de dados...';
-  45 : LblStatus.Caption := 'Carregando as configurações...';
-  75 : LblStatus.Caption := 'Iniciando sistema...';
+  LblStatus.Caption := Mensagem;
+  Imagem.Visible := True;
+end;
+
+procedure TFrmSplash.Timer1Timer(Sender: TObject);
+Begin
+  if PrgsBarStatusCarregamento.Position <= 100 then
+  begin
+    PrgsBarStatusCarregamento.StepIt;
+      case PrgsBarStatusCarregamento.Position of
+        10 : AtualizarStatus('Carregando dependências...', ImgDll);
+        25 : AtualizarStatus('Conectando ao banco de dados...', ImgBancoDeDados);
+        45 : AtualizarStatus('Carregando as configurações...', ImgConfiguracoes);
+        75 : AtualizarStatus('Iniciando sistema...', ImgIniciando);
+      end;
   end;
-  if PrgsBarStatusCarregamento.Position = 100 then
-    Close;
+    if PrgsBarStatusCarregamento.Position = 100 then
+      Close;
 end;
 
 end.

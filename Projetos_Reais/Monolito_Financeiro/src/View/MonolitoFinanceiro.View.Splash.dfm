@@ -1,22 +1,23 @@
 object FrmSplash: TFrmSplash
   Left = 756
   Top = 332
+  BorderStyle = bsNone
   Caption = 'FrmSplash'
-  ClientHeight = 401
-  ClientWidth = 624
+  ClientHeight = 440
+  ClientWidth = 640
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesigned
+  Position = poScreenCenter
   TextHeight = 15
   object PnlPrincipal: TPanel
     Left = 0
     Top = 0
-    Width = 624
-    Height = 401
+    Width = 640
+    Height = 440
     Align = alClient
     BevelOuter = bvNone
     Color = clHotLight
@@ -24,11 +25,12 @@ object FrmSplash: TFrmSplash
     ParentBackground = False
     TabOrder = 0
     ExplicitLeft = -8
+    ExplicitWidth = 624
     ExplicitHeight = 441
     object ImgLogo: TImage
       Left = 0
       Top = 10
-      Width = 624
+      Width = 640
       Height = 175
       Align = alTop
       Center = True
@@ -1213,11 +1215,12 @@ object FrmSplash: TFrmSplash
         4C5CD4250AE471300000000049454E44AE426082}
       Proportional = True
       Stretch = True
+      ExplicitWidth = 624
     end
     object LblNomeAplicacao: TLabel
       Left = 0
       Top = 185
-      Width = 624
+      Width = 640
       Height = 45
       Align = alTop
       Alignment = taCenter
@@ -1929,6 +1932,7 @@ object FrmSplash: TFrmSplash
         F91003001111910FFDFF1A17802CB3B2A0A20000000049454E44AE426082}
       Proportional = True
       Stretch = True
+      Visible = False
     end
     object ImgDll: TImage
       Left = 176
@@ -2351,6 +2355,7 @@ object FrmSplash: TFrmSplash
         00000049454E44AE426082}
       Proportional = True
       Stretch = True
+      Visible = False
     end
     object ImgConfiguracoes: TImage
       Left = 319
@@ -3147,6 +3152,7 @@ object FrmSplash: TFrmSplash
         6082}
       Proportional = True
       Stretch = True
+      Visible = False
     end
     object ImgIniciando: TImage
       Left = 392
@@ -4360,11 +4366,12 @@ object FrmSplash: TFrmSplash
         B00000000049454E44AE426082}
       Proportional = True
       Stretch = True
+      Visible = False
     end
     object PrgsBarStatusCarregamento: TProgressBar
       Left = 0
-      Top = 384
-      Width = 624
+      Top = 423
+      Width = 640
       Height = 17
       Align = alBottom
       Step = 1
@@ -4375,18 +4382,19 @@ object FrmSplash: TFrmSplash
     end
     object Panel1: TPanel
       Left = 0
-      Top = 360
-      Width = 624
+      Top = 399
+      Width = 640
       Height = 24
       Align = alBottom
       BevelOuter = bvNone
       Padding.Bottom = 5
       TabOrder = 1
       ExplicitTop = 400
+      ExplicitWidth = 624
       object LblStatus: TLabel
         Left = 0
         Top = 1
-        Width = 624
+        Width = 640
         Height = 18
         Align = alBottom
         Alignment = taCenter
