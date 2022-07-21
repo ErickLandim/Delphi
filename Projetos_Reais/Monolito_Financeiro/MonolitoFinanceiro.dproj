@@ -118,7 +118,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="src\Model\MonolitoFinanceiro.Model.Conexao.pas">
-            <Form>DataModule1</Form>
+            <Form>DmConexao</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

@@ -1,5 +1,4 @@
-object DmConexao: TDmConexao
-  OnCreate = DataModuleCreate
+object DataModule1: TDataModule1
   Height = 480
   Width = 632
   object SQLConexao: TFDConnection

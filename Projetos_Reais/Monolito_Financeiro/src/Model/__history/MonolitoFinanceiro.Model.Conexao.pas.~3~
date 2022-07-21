@@ -12,10 +12,9 @@ uses
   FireDAC.DApt, FireDAC.Comp.DataSet;
 
 type
-  TDmConexao = class(TDataModule)
+  TDataModule1 = class(TDataModule)
     SQLConexao: TFDConnection;
     FDQuery1: TFDQuery;
-    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -27,7 +26,7 @@ type
   end;
 
 var
-  DmConexao: TDmConexao;
+  DataModule1: TDataModule1;
 
 implementation
 
@@ -37,7 +36,7 @@ implementation
 
 { TDataModule1 }
 
-procedure TDmConexao.CarregarConfiguracoes;
+procedure TDataModule1.CarregarConfiguracoes;
 var
   ParametroNome : String;
   ParametroValor : String;
@@ -64,18 +63,12 @@ begin
         end;
 end;
 
-procedure TDmConexao.Conectar;
+procedure TDataModule1.Conectar;
 begin
    SQLConexao.Connected;
 end;
 
-procedure TDmConexao.DataModuleCreate(Sender: TObject);
-begin
-  CarregarConfiguracoes;
-  Conectar;
-end;
-
-procedure TDmConexao.Desconectar;
+procedure TDataModule1.Desconectar;
 begin
    SQLConexao.Connected := False;
 end;
