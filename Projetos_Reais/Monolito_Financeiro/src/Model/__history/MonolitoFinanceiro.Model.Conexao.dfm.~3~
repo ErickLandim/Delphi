@@ -1,0 +1,23 @@
+object DataModule1: TDataModule1
+  Height = 480
+  Width = 632
+  object SQLConexao: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\' +
+        'Monolito_Financeiro\db\SistemaFinanceiro.db'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 80
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = SQLConexao
+    SQL.Strings = (
+      'select * from usuarios')
+    Left = 56
+    Top = 192
+  end
+end

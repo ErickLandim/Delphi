@@ -28,7 +28,6 @@ type
     Panel1: TPanel;
     BtnCancelar: TButton;
     BtnSalvar: TButton;
-    DataSource1: TDataSource;
     procedure BtnIncluirClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnFecharClick(Sender: TObject);

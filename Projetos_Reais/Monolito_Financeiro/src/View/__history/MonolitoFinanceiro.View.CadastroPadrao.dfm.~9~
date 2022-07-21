@@ -1809,9 +1809,4 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000}
   end
-  object DataSource1: TDataSource
-    AutoEdit = False
-    Left = 553
-    Top = 324
-  end
 end
