@@ -12,8 +12,8 @@ type
     mnuCadastro: TMenuItem;
     mnuRelatorios: TMenuItem;
     mnuAjuda: TMenuItem;
-    MnuCadastroPadrao: TMenuItem;
-    procedure MnuCadastroPadraoClick(Sender: TObject);
+    MnuUsuarios: TMenuItem;
+    procedure MnuUsuariosClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -27,7 +27,7 @@ var
 implementation
 
 uses
-  MonolitoFinanceiro.View.CadastroPadrao, MonolitoFinanceiro.View.Splash;
+  MonolitoFinanceiro.View.Usuarios, MonolitoFinanceiro.View.Splash;
 
 {$R *.dfm}
 
@@ -42,9 +42,9 @@ begin
    end;
 end;
 
-procedure TFrmPrincipal.MnuCadastroPadraoClick(Sender: TObject);
+procedure TFrmPrincipal.MnuUsuariosClick(Sender: TObject);
 begin
-   FrmCadastroPadrao.show;
+   FrmUsuarios.show;
 end;
 
 end.

@@ -13,8 +13,8 @@ uses
 
 type
   TDmConexao = class(TDataModule)
+    FDQuerySelect: TFDQuery;
     SQLConexao: TFDConnection;
-    FDQuery1: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

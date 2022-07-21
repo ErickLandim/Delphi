@@ -13,9 +13,9 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDmConexao, DmConexao);
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TFrmCadastroPadrao, FrmCadastroPadrao);
-  Application.CreateForm(TDmConexao, DmConexao);
   Application.CreateForm(TFrmUsuarios, FrmUsuarios);
   Application.Run;
 end.

@@ -10,6 +10,7 @@ uses
 
 type
   TFrmUsuarios = class(TFrmCadastroPadrao)
+    procedure BtnPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -22,5 +23,15 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmUsuarios.BtnPesquisarClick(Sender: TObject);
+begin
+  inherited;
+  DmConexao.FDQuerySelect.Close;
+  DmConexao.FDQuerySelect.SQL.Clear;
+  DmConexao.FDQuerySelect.SQL.Add('SELECT * FROM Usuarios');
+  DmConexao.FDQuerySelect.Open;
+
+end;
 
 end.
