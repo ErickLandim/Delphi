@@ -6,6 +6,7 @@ object DataModule1: TDataModule1
       
         'Database=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\' +
         'Monolito_Financeiro\db\SistemaFinanceiro.db'
+      'LockingMode=Normal'
       'DriverID=SQLite')
     LoginPrompt = False
     Left = 56

@@ -19,6 +19,10 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure CarregarConfiguracoes;
+    procedure Conectar;
+    procedure Desconectar;
+    const ARQUIVOCONFIGURACAO = 'MonolitoFinanceiro.cfg';
   end;
 
 var
@@ -29,5 +33,44 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+{ TDataModule1 }
+
+procedure TDataModule1.CarregarConfiguracoes;
+var
+  ParametroNome : String;
+  ParametroValor : String;
+  Contador : Integer;
+  ListaParamentros : TstringList;
+begin
+  SQLConexao.Params.Clear;
+    if not FileExists(ARQUIVOCONFIGURACAO) then
+    raise Exception.Create('Arquivo de configuração não encontrado!');
+      ListaParamentros := TStringList.Create;
+        try
+         ListaParamentros.LoadFromFile(ARQUIVOCONFIGURACAO);
+           for Contador := 0 to Pred(ListaParamentros.Count) do
+           begin
+              if ListaParamentros[Contador].IndexOf('=') > 0 then
+              begin
+                ParametroNome := ListaParamentros[Contador].split(['='])[0].trim;
+                ParametroValor := ListaParamentros[Contador].Split(['='])[1].Trim;
+                SQLConexao.Params.Add(ParametroNome + '=' + ParametroValor);
+              end;
+           end;
+        finally
+          ListaParamentros.Free;
+        end;
+end;
+
+procedure TDataModule1.Conectar;
+begin
+   SQLConexao.Connected;
+end;
+
+procedure TDataModule1.Desconectar;
+begin
+   SQLConexao.Connected := False;
+end;
 
 end.

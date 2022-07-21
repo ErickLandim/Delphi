@@ -19,9 +19,6 @@ type
     { Private declarations }
   public
     { Public declarations }
-    procedure CarregarConfiguracoes;
-    procedure Conectar;
-    procedure Desconectar;
   end;
 
 var
@@ -32,27 +29,5 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
-
-{ TDataModule1 }
-
-procedure TDataModule1.CarregarConfiguracoes;
-var
-  ParametroNome : String;
-  ParametroValor : String;
-  Contador : Integer;
-  ListaParamentros : TstringList;
-begin
-
-end;
-
-procedure TDataModule1.Conectar;
-begin
-
-end;
-
-procedure TDataModule1.Desconectar;
-begin
-
-end;
 
 end.
