@@ -20,6 +20,10 @@ type
     LblStatus: TLabel;
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure BtnIncluirClick(Sender: TObject);
+    Procedure LimparCampos;
+    procedure BtnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,6 +40,8 @@ implementation
 procedure TFrmUsuarios.BtnAlterarClick(Sender: TObject);
 begin
   inherited;
+  DmUsuarios.CdsUsuarios.Edit;
+
   EdtNome.Text := DmUsuarios.CdsUsuariosNome.AsString;
   EdtLogin.Text := DmUsuarios.CdsUsuariosLogin.AsString;
   EdtSenha.Text := DmUsuarios.CdsUsuariosSenha.AsString;
@@ -45,6 +51,19 @@ begin
     ToggleStatus.State := tssOff;
 end;
 
+procedure TFrmUsuarios.BtnCancelarClick(Sender: TObject);
+begin
+  inherited;
+  DmUsuarios.CdsUsuarios.Cancel;
+end;
+
+procedure TFrmUsuarios.BtnIncluirClick(Sender: TObject);
+begin
+  inherited;
+  LimparCampos;
+  DmUsuarios.CdsUsuarios.Insert;
+end;
+
 procedure TFrmUsuarios.BtnPesquisarClick(Sender: TObject);
 begin
   inherited;
@@ -52,10 +71,61 @@ begin
   DmUsuarios.CdsUsuarios.CommandText := 'SELECT * FROM Usuarios';
   DmUsuarios.Cdsusuarios.open;
 
-  { DmConexao.FDQuerySelect.Close;
-  DmConexao.FDQuerySelect.SQL.Clear;
-  DmConexao.FDQuerySelect.SQL.Add('SELECT * FROM Usuarios');
-  DmConexao.FDQuerySelect.Open;}
+end;
+
+procedure TFrmUsuarios.BtnSalvarClick(Sender: TObject);
+Var
+  LStatus : String;
+begin
+  if Trim(EdtNome.Text) = '' then
+  Begin
+    EdtNome.SetFocus;
+    application.MessageBox('O campo nome não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
+    Abort;
+  End;
+          if Trim(EdtLogin.Text) = '' then
+          Begin
+            EdtNome.SetFocus;
+            application.MessageBox('O campo Login não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
+            Abort;
+          End;
+                  if Trim(EdtSenha.Text) = '' then
+                  Begin
+                    EdtNome.SetFocus;
+                    application.MessageBox('O campo Senha não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
+                    Abort;
+                  End;
+
+  LStatus := 'A';
+
+  if ToggleStatus.State = tssoff then
+  LStatus := 'B';
+
+  DmUsuarios.CdsUsuariosNome.AsString := Trim(EdtNome.Text);
+  DmUsuarios.CdsUsuariosLogin.AsString := Trim(EdtLogin.Text);
+  DmUsuarios.CdsUsuariosSenha.AsString := Trim(EdtSenha.Text);
+  DmUsuarios.CdsUsuariosStatus.AsString := LStatus;
+
+  DmUsuarios.CdsUsuarios.Post;
+  DmUsuarios.CdsUsuarios.ApplyUpdates (0);
+  application.MessageBox('Registro alterado com sucesso.', 'Atenção', Mb_OK + MB_ICONINFORMATION);
+
+  PnlPrincipal.ActiveCard := CardPesquisa;
+  inherited;
+
+end;
+
+procedure TFrmUsuarios.LimparCampos;
+Var
+  Contador : integer;
+begin
+  for Contador := 0 to Pred(ComponentCount) do
+  begin
+    if Components[Contador] is TCustomEdit then
+      TCustomEdit(Components[Contador]).Clear
+    Else if Components[Contador] is TToggleSwitch then
+      TToggleSwitch(Components[Contador]).State := TssOn;
+  end;
 
 end;
 

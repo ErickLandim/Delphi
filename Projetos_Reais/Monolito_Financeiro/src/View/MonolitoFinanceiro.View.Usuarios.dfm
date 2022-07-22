@@ -32,6 +32,11 @@ inherited FrmUsuarios: TFrmUsuarios
         Height = 15
         Caption = 'Status'
       end
+      inherited Panel1: TPanel
+        inherited BtnSalvar: TButton
+          OnClick = BtnSalvarClick
+        end
+      end
       object ToggleStatus: TToggleSwitch
         Left = 72
         Top = 152
