@@ -13,6 +13,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnShow = FormShow
   TextHeight = 15
   object PnlPrincipal: TCardPanel
     Left = 0
@@ -20,7 +21,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
     Width = 624
     Height = 441
     Align = alClient
-    ActiveCard = CardPesquisa
+    ActiveCard = CardCadastro
     Caption = 'Card1'
     TabOrder = 0
     object CardCadastro: TCard
