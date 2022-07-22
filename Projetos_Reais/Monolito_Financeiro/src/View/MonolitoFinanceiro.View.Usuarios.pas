@@ -24,6 +24,7 @@ type
     procedure BtnIncluirClick(Sender: TObject);
     Procedure LimparCampos;
     procedure BtnCancelarClick(Sender: TObject);
+    procedure BtnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +35,9 @@ var
   FrmUsuarios: TFrmUsuarios;
 
 implementation
+
+uses
+  MonolitoFinanceiro.Utilitarios;
 
 {$R *.dfm}
 
@@ -57,6 +61,25 @@ begin
   DmUsuarios.CdsUsuarios.Cancel;
 end;
 
+procedure TFrmUsuarios.BtnExcluirClick(Sender: TObject);
+begin
+  inherited;
+  
+  if Application.MessageBox('Deseja mesmo excluir o registro?', 'Pergunta', MB_YESNO + MB_ICONQUESTION) <> mrYes then
+  Exit;
+
+  Try
+    DmUsuarios.CdsUsuarios.Delete;
+    DmUsuarios.CdsUsuarios.ApplyUpdates(0);
+    Application.MessageBox('Registro Excluido com sucesso!', 'Atenção', MB_OK + MB_ICONINFORMATION)
+  
+  Except on E : Exception do
+  Application.MessageBox(PWideChar(E.Message), 'Erro ao excluir!', MB_OK + MB_ICONERROR); 
+
+  End;
+  
+end;
+
 procedure TFrmUsuarios.BtnIncluirClick(Sender: TObject);
 begin
   inherited;
@@ -76,6 +99,7 @@ end;
 procedure TFrmUsuarios.BtnSalvarClick(Sender: TObject);
 Var
   LStatus : String;
+  Mensagem : String;
 begin
   if Trim(EdtNome.Text) = '' then
   Begin
@@ -85,22 +109,39 @@ begin
   End;
           if Trim(EdtLogin.Text) = '' then
           Begin
-            EdtNome.SetFocus;
+            EdtLogin.SetFocus;
             application.MessageBox('O campo Login não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
             Abort;
           End;
                   if Trim(EdtSenha.Text) = '' then
                   Begin
-                    EdtNome.SetFocus;
+                    EdtSenha.SetFocus;
                     application.MessageBox('O campo Senha não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
                     Abort;
                   End;
 
+  if DmUsuarios.TemLoginCadastrado(Trim(EdtLogin.Text), DmUsuarios.CdsUsuarios.FieldByName('ID').AsString) then
+  Begin
+    EdtLogin.SetFocus;
+    application.MessageBox(PwideChar(format('O Login já existe', [EdtLogin.text])), 'Atenção', Mb_OK + MB_ICONWARNING);
+    Abort;
+  End;
+                  
   LStatus := 'A';
 
   if ToggleStatus.State = tssoff then
   LStatus := 'B';
 
+  Mensagem := 'Registro alterado com sucesso';
+  
+  if DmUsuarios.CdsUsuarios.State in [dsInsert] then
+  Begin
+    Mensagem := 'Registro alterado com sucesso';
+    
+    DmUsuarios.CdsUsuariosId.AsString := TUtilitario.GetID;
+    DmUsuarios.CdsUsuariosData_Cadastro.AsDateTime := Now;
+  end;
+  
   DmUsuarios.CdsUsuariosNome.AsString := Trim(EdtNome.Text);
   DmUsuarios.CdsUsuariosLogin.AsString := Trim(EdtLogin.Text);
   DmUsuarios.CdsUsuariosSenha.AsString := Trim(EdtSenha.Text);
@@ -108,7 +149,7 @@ begin
 
   DmUsuarios.CdsUsuarios.Post;
   DmUsuarios.CdsUsuarios.ApplyUpdates (0);
-  application.MessageBox('Registro alterado com sucesso.', 'Atenção', Mb_OK + MB_ICONINFORMATION);
+  application.MessageBox(PWideChar(Mensagem),  'Atenção', Mb_OK + MB_ICONINFORMATION);
 
   PnlPrincipal.ActiveCard := CardPesquisa;
   inherited;

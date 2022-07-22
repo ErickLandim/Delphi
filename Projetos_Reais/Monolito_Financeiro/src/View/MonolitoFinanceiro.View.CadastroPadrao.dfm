@@ -32,7 +32,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      object Panel1: TPanel
+      object PnlCadastroBotoes: TPanel
         Left = 0
         Top = 368
         Width = 622

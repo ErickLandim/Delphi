@@ -2,6 +2,7 @@ inherited FrmUsuarios: TFrmUsuarios
   Caption = 'Cadastro de Usuarios'
   TextHeight = 15
   inherited PnlPrincipal: TCardPanel
+    ActiveCard = CardPesquisa
     inherited CardCadastro: TCard
       ExplicitLeft = 0
       object LblNome: TLabel [0]
@@ -32,7 +33,7 @@ inherited FrmUsuarios: TFrmUsuarios
         Height = 15
         Caption = 'Status'
       end
-      inherited Panel1: TPanel
+      inherited PnlCadastroBotoes: TPanel
         inherited BtnSalvar: TButton
           OnClick = BtnSalvarClick
         end
@@ -79,6 +80,9 @@ inherited FrmUsuarios: TFrmUsuarios
         end
       end
       inherited PnlPesquisaBotoes: TPanel
+        inherited BtnExcluir: TButton
+          OnClick = BtnExcluirClick
+        end
         inherited BtnAlterar: TButton
           Cursor = crHandPoint
         end

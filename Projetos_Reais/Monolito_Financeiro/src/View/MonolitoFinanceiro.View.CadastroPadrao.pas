@@ -25,7 +25,7 @@ type
     BtnExcluir: TButton;
     BtnImprimir: TButton;
     BtnAlterar: TButton;
-    Panel1: TPanel;
+    PnlCadastroBotoes: TPanel;
     BtnCancelar: TButton;
     BtnSalvar: TButton;
     DataSource1: TDataSource;
