@@ -24,7 +24,7 @@ type
     procedure BtnIncluirClick(Sender: TObject);
     Procedure LimparCampos;
     procedure BtnCancelarClick(Sender: TObject);
-    procedure BtnExcluirClick(Sender: TObject);
+    procedure BtnExcluirClick(Sender: TObject);                                 
   private
     { Private declarations }
   public

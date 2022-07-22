@@ -24,7 +24,7 @@ type
     procedure BtnIncluirClick(Sender: TObject);
     Procedure LimparCampos;
     procedure BtnCancelarClick(Sender: TObject);
-    procedure BtnExcluirClick(Sender: TObject);                                 
+    procedure BtnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,7 +71,7 @@ begin
   Try
     DmUsuarios.CdsUsuarios.Delete;
     DmUsuarios.CdsUsuarios.ApplyUpdates(0);
-    Application.MessageBox('Registro Excluido com sucesso!', 'Aten√ß√£o', MB_OK + MB_ICONINFORMATION)
+    Application.MessageBox('Registro Excluido com sucesso!', 'AtenÁ„o', MB_OK + MB_ICONINFORMATION)
   
   Except on E : Exception do
   Application.MessageBox(PWideChar(E.Message), 'Erro ao excluir!', MB_OK + MB_ICONERROR); 
@@ -104,26 +104,26 @@ begin
   if Trim(EdtNome.Text) = '' then
   Begin
     EdtNome.SetFocus;
-    application.MessageBox('O campo nome n√£o pode estar vazio.', 'Aten√ß√£o', Mb_OK + MB_ICONWARNING);
+    application.MessageBox('O campo nome n„o pode estar vazio.', 'AtenÁ„o', Mb_OK + MB_ICONWARNING);
     Abort;
   End;
           if Trim(EdtLogin.Text) = '' then
           Begin
             EdtLogin.SetFocus;
-            application.MessageBox('O campo Login n√£o pode estar vazio.', 'Aten√ß√£o', Mb_OK + MB_ICONWARNING);
+            application.MessageBox('O campo Login n„o pode estar vazio.', 'AtenÁ„o', Mb_OK + MB_ICONWARNING);
             Abort;
           End;
                   if Trim(EdtSenha.Text) = '' then
                   Begin
                     EdtSenha.SetFocus;
-                    application.MessageBox('O campo Senha n√£o pode estar vazio.', 'Aten√ß√£o', Mb_OK + MB_ICONWARNING);
+                    application.MessageBox('O campo Senha n„o pode estar vazio.', 'AtenÁ„o', Mb_OK + MB_ICONWARNING);
                     Abort;
                   End;
 
   if DmUsuarios.TemLoginCadastrado(Trim(EdtLogin.Text), DmUsuarios.CdsUsuarios.FieldByName('ID').AsString) then
   Begin
     EdtLogin.SetFocus;
-    application.MessageBox(PwideChar(format('O Login j√° existe', [EdtLogin.text])), 'Aten√ß√£o', Mb_OK + MB_ICONWARNING);
+    application.MessageBox(PwideChar(format('O Login j· existe', [EdtLogin.text])), 'AtenÁ„o', Mb_OK + MB_ICONWARNING);
     Abort;
   End;
                   
@@ -149,7 +149,7 @@ begin
 
   DmUsuarios.CdsUsuarios.Post;
   DmUsuarios.CdsUsuarios.ApplyUpdates (0);
-  application.MessageBox(PWideChar(Mensagem),  'Aten√ß√£o', Mb_OK + MB_ICONINFORMATION);
+  application.MessageBox(PWideChar(Mensagem),  'AtenÁ„o', Mb_OK + MB_ICONINFORMATION);
 
   PnlPrincipal.ActiveCard := CardPesquisa;
   inherited;
