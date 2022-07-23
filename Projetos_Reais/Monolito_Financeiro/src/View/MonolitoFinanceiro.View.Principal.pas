@@ -27,7 +27,8 @@ var
 implementation
 
 uses
-  MonolitoFinanceiro.View.Usuarios, MonolitoFinanceiro.View.Splash;
+  MonolitoFinanceiro.View.Usuarios, MonolitoFinanceiro.View.Splash,
+  MonolitoFinanceiro.View.Login;
 
 {$R *.dfm}
 
@@ -40,6 +41,14 @@ begin
    finally
    FreeAndNil(FrmSplash);
    end;
+     FrmLogin := TFrmLogin.Create(nil);
+    Try
+      FrmLogin.ShowModal;
+      if FrmLogin.ModalResult <> MrOK then
+       Application.Terminate;
+     Finally
+       FreeAndNil(FrmLogin);
+     End;
 end;
 
 procedure TFrmPrincipal.MnuUsuariosClick(Sender: TObject);

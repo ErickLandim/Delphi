@@ -24,9 +24,6 @@ object FrmSplash: TFrmSplash
     Padding.Top = 10
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -8
-    ExplicitWidth = 624
-    ExplicitHeight = 441
     object ImgLogo: TImage
       Left = 0
       Top = 10
@@ -1216,22 +1213,6 @@ object FrmSplash: TFrmSplash
       Proportional = True
       Stretch = True
       ExplicitWidth = 624
-    end
-    object LblNomeAplicacao: TLabel
-      Left = 0
-      Top = 185
-      Width = 640
-      Height = 45
-      Align = alTop
-      Alignment = taCenter
-      Caption = 'Sistema Financeiro'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clAqua
-      Font.Height = -33
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      ExplicitWidth = 271
     end
     object ImgBancoDeDados: TImage
       Left = 248
@@ -4368,6 +4349,22 @@ object FrmSplash: TFrmSplash
       Stretch = True
       Visible = False
     end
+    object LblNomeAplicacao: TLabel
+      Left = 0
+      Top = 185
+      Width = 640
+      Height = 45
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'Sistema Financeiro'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clAqua
+      Font.Height = -33
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      ExplicitWidth = 271
+    end
     object PrgsBarStatusCarregamento: TProgressBar
       Left = 0
       Top = 423
@@ -4376,9 +4373,6 @@ object FrmSplash: TFrmSplash
       Align = alBottom
       Step = 1
       TabOrder = 0
-      ExplicitLeft = 16
-      ExplicitTop = 414
-      ExplicitWidth = 608
     end
     object Panel1: TPanel
       Left = 0
@@ -4389,13 +4383,11 @@ object FrmSplash: TFrmSplash
       BevelOuter = bvNone
       Padding.Bottom = 5
       TabOrder = 1
-      ExplicitTop = 400
-      ExplicitWidth = 624
       object LblStatus: TLabel
         Left = 0
-        Top = 1
+        Top = -9
         Width = 640
-        Height = 18
+        Height = 28
         Align = alBottom
         Alignment = taCenter
         Font.Charset = DEFAULT_CHARSET
@@ -4404,9 +4396,8 @@ object FrmSplash: TFrmSplash
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 1
-        ExplicitTop = 7
-        ExplicitWidth = 622
+        ExplicitTop = 1
+        ExplicitWidth = 5
       end
     end
   end

@@ -25,6 +25,7 @@ type
   public
     { Public declarations }
     Function TemLoginCadastrado(Login : string; Id : String) : Boolean;
+    Procedure EfetuarLogin(Login :  string;  Senha : String);
   end;
 
 var
@@ -37,6 +38,31 @@ implementation
 {$R *.dfm}
 
 { TDmUsuarios }
+
+procedure TDmUsuarios.EfetuarLogin(Login, Senha: String);
+Var
+  SQLConsulta : TFDQuery;
+begin
+  SQLConsulta := TFDQuery.Create(nil);
+    try
+      SQLConsulta.Connection := DmConexao.SQLConexao;
+      SQLConsulta.SQL.Clear;
+      SQLConsulta.SQL.Add('SELECT * FROM USUARIOS WHERE LOGIN = :LOGIN AND :SENHA ');
+      SQLConsulta.ParamByName('LOGIN').AsString := Login;
+      SQLConsulta.ParamByName('SENHA').AsString := Senha;
+      SQLConsulta.Open;
+
+        if SQLConsulta.IsEmpty then
+          raise Exception.Create('Usuário e/ou Senha inválidos');
+            if SQLConsulta.FieldbyName('STATUS').AsString <> 'A' then
+              raise Exception.Create('Usuário Bloqueado, entre em contato com o adminstrador');
+
+
+    finally
+      SQLConsulta.Close;
+      SQLConsulta.Free;
+    end;
+end;
 
 function TDmUsuarios.TemLoginCadastrado(Login, Id: String): Boolean;
 Var

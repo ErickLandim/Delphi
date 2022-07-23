@@ -13,13 +13,13 @@ type
     ImgLogo: TImage;
     LblStatus: TLabel;
     PrgsBarStatusCarregamento: TProgressBar;
-    LblNomeAplicacao: TLabel;
     Timer1: TTimer;
     Panel1: TPanel;
     ImgBancoDeDados: TImage;
     ImgDll: TImage;
     ImgConfiguracoes: TImage;
     ImgIniciando: TImage;
+    LblNomeAplicacao: TLabel;
     procedure Timer1Timer(Sender: TObject);
 
   private

@@ -4,7 +4,6 @@ inherited FrmUsuarios: TFrmUsuarios
   inherited PnlPrincipal: TCardPanel
     ActiveCard = CardPesquisa
     inherited CardCadastro: TCard
-      ExplicitLeft = 0
       object LblNome: TLabel [0]
         Left = 24
         Top = 40
@@ -80,8 +79,18 @@ inherited FrmUsuarios: TFrmUsuarios
         end
       end
       inherited PnlPesquisaBotoes: TPanel
+        inherited BtnFechar: TButton
+          Cursor = crHandPoint
+        end
+        inherited BtnIncluir: TButton
+          Cursor = crHandPoint
+        end
         inherited BtnExcluir: TButton
+          Cursor = crHandPoint
           OnClick = BtnExcluirClick
+        end
+        inherited BtnImprimir: TButton
+          Cursor = crHandPoint
         end
         inherited BtnAlterar: TButton
           Cursor = crHandPoint
@@ -99,11 +108,13 @@ inherited FrmUsuarios: TFrmUsuarios
             item
               Expanded = False
               FieldName = 'Login'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Status'
+              Width = 64
               Visible = True
             end>
         end

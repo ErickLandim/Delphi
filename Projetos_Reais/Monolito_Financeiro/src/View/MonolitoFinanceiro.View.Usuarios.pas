@@ -136,7 +136,7 @@ begin
   
   if DmUsuarios.CdsUsuarios.State in [dsInsert] then
   Begin
-    Mensagem := 'Registro alterado com sucesso';
+    Mensagem := 'Registro Incluido com sucesso';
     
     DmUsuarios.CdsUsuariosId.AsString := TUtilitario.GetID;
     DmUsuarios.CdsUsuariosData_Cadastro.AsDateTime := Now;
