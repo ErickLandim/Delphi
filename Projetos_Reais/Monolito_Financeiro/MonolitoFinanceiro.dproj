@@ -136,6 +136,12 @@
             <Form>FrmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\Model\Entidades\MonolitoFinanceiro.Model.Entidades.Usuario.pas"/>
+        <DCCReference Include="src\Model\MonolitoFinanceiro.Model.Sistema.pas">
+            <Form>DmSistema</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

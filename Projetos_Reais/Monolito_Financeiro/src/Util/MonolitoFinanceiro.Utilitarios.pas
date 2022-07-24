@@ -8,19 +8,7 @@ interface
         {Essa classe foi usada no View.Usuarios}
       End;
 
-    Type
-      TModelUsuarioEntidade = Class(TUtilitario)
-        private
-          FLoginUsuarioLogado: string;
-          FNomeUsuarioLogado: string;
-          FIDUsuarioLogado: String;
-        public
-          property NomeUsuarioLogado: string read FNomeUsuarioLogado write FNomeUsuarioLogado;
-          property LoginUsuarioLogado: string read FLoginUsuarioLogado write FLoginUsuarioLogado;
-          property IDUsuarioLogado: String read FIDUsuarioLogado write FIDUsuarioLogado;
-          {Essa Classe foi usada no Model.Usuarios}
 
-      End;
 
 
 implementation

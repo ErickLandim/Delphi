@@ -1,0 +1,70 @@
+unit MonolitoFinanceiro.Model.Sistema;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Vcl.Forms;
+
+type
+  TDmSistema = class(TDataModule)
+  private
+    { Private declarations }
+
+    const ARQUIVOCONFIGURACAO = 'MonolitoFinanceiro.cfg';
+    Function GetConfiguracao(Secao, Parametro, ValorPadrao : String) : String;
+    Procedure SetConfiguracao(Secao, Parametro, Valor : String);
+  public
+    { Public declarations }
+    function DataUltimoAcesso : String; Overload;
+    Procedure DataUltimoAcesso(aValue : TDateTime); overload;
+    function UsuarioUltimoAcesso : string; Overload;
+    Procedure UsuarioUltimoAcesso(aValue : String); Overload;
+  end;
+
+var
+  DmSistema: TDmSistema;
+
+implementation
+
+uses
+  System.IniFiles;
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+{ TDataModule1 }
+
+function TDmSistema.DataUltimoAcesso: String;
+begin
+
+end;
+
+procedure TDmSistema.DataUltimoAcesso(aValue: TDateTime);
+begin
+
+end;
+
+function TDmSistema.GetConfiguracao(Secao, Parametro,
+  ValorPadrao: String): String;
+var
+  LArquivoConfig : TIniFile;
+  begin
+  LAquivoConfig := TIniFile.Create(ExtractFilePath(Application.ExeName) + ARQUIVOCONFIGURACAO);
+end;
+
+procedure TDmSistema.SetConfiguracao(Secao, Parametro, Valor: String);
+begin
+
+end;
+
+function TDmSistema.UsuarioUltimoAcesso: string;
+begin
+
+end;
+
+procedure TDmSistema.UsuarioUltimoAcesso(aValue: String);
+begin
+
+end;
+
+end.

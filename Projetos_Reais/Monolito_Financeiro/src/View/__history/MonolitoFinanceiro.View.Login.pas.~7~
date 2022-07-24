@@ -1,0 +1,67 @@
+unit MonolitoFinanceiro.View.Login;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
+  Vcl.StdCtrls, MonolitoFinanceiro.Model.Usuarios;
+
+type
+  TFrmLogin = class(TForm)
+    PnlLoginEsquerda: TPanel;
+    ImgLogo: TImage;
+    PnlPrincipal: TPanel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    LblNomeAplicacao: TLabel;
+    PnlLoginInformacoes: TPanel;
+    LblLogin: TLabel;
+    LblSenha: TLabel;
+    EdtLogin: TEdit;
+    EdtSenha: TEdit;
+    BtnEntrar: TButton;
+    LblLoginSemSenha: TLabel;
+    LblLoginSemLogin: TLabel;
+    procedure BtnEntrarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmLogin: TFrmLogin;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmLogin.BtnEntrarClick(Sender: TObject);
+begin
+  if Trim(EdtLogin.Text) = '' then
+  Begin
+    EdtLogin.SetFocus;
+    Application.MessageBox('Informe seu nome de usuario', 'Atenção', Mb_Ok + Mb_ICONWARNING);
+    Abort;
+  End;
+     if Trim(EdtSenha.Text) = '' then
+     begin
+        EdtSenha.SetFocus;
+        Application.MessageBox('Informe sua senha de usuario', 'Atenção', Mb_Ok + Mb_ICONWARNING);
+        Abort;
+     end;
+       try
+         DmUsuarios.EfetuarLogin(Trim(EdtLogin.Text), Trim(EdtSenha.Text));
+         ModalResult := MrOk;
+       Except on Erro : Exception do
+        begin
+          Application.MessageBox(PWideChar(Erro.Message), 'Atenção', MB_Ok + MB_ICONWARNING);
+          EdtLogin.SetFocus;
+        end;
+
+       end;
+
+end;
+
+end.

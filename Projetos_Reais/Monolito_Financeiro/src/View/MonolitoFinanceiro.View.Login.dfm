@@ -12,6 +12,8 @@ object FrmLogin: TFrmLogin
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
+  OnShow = FormShow
   TextHeight = 15
   object PnlLoginEsquerda: TPanel
     Left = 0
@@ -24,7 +26,6 @@ object FrmLogin: TFrmLogin
     Padding.Top = 100
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 441
     object ImgLogo: TImage
       Left = 0
       Top = 100
@@ -590,9 +591,6 @@ object FrmLogin: TFrmLogin
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 279
-    ExplicitWidth = 489
-    ExplicitHeight = 441
     object Panel1: TPanel
       Left = 0
       Top = 0
@@ -634,10 +632,6 @@ object FrmLogin: TFrmLogin
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 128
-      ExplicitTop = 288
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object LblLoginSemSenha: TLabel
         Left = 30
         Top = 280
@@ -674,8 +668,6 @@ object FrmLogin: TFrmLogin
         Padding.Left = 30
         Padding.Top = 25
         TabOrder = 0
-        ExplicitLeft = 6
-        ExplicitTop = 6
         object LblLogin: TLabel
           Left = 22
           Top = 64

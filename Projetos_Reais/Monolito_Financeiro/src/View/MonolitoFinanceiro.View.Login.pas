@@ -24,6 +24,7 @@ type
     LblLoginSemSenha: TLabel;
     LblLoginSemLogin: TLabel;
     procedure BtnEntrarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +35,9 @@ var
   FrmLogin: TFrmLogin;
 
 implementation
+
+uses
+  MonolitoFinanceiro.Model.Sistema;
 
 {$R *.dfm}
 
@@ -53,15 +57,21 @@ begin
      end;
        try
          DmUsuarios.EfetuarLogin(Trim(EdtLogin.Text), Trim(EdtSenha.Text));
+         DmSistema.DataUltimoAcesso(Now);
+         DmSistema.UsuarioUltimoAcesso(DmUsuarios.GetUsuarioLogado.Login);
          ModalResult := MrOk;
        Except on Erro : Exception do
         begin
           Application.MessageBox(PWideChar(Erro.Message), 'Atenção', MB_Ok + MB_ICONWARNING);
           EdtLogin.SetFocus;
         end;
-
        end;
 
+end;
+
+procedure TFrmLogin.FormShow(Sender: TObject);
+begin
+    EdtLogin.Text := DmSistema.UsuarioUltimoAcesso;
 end;
 
 end.

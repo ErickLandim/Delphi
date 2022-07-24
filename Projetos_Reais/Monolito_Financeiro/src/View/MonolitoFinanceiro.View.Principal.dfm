@@ -27,9 +27,6 @@ object FrmPrincipal: TFrmPrincipal
       item
         Width = 300
       end>
-    ExplicitLeft = 248
-    ExplicitTop = 312
-    ExplicitWidth = 0
   end
   object MainMenu1: TMainMenu
     Left = 432
@@ -47,5 +44,10 @@ object FrmPrincipal: TFrmPrincipal
     object mnuAjuda: TMenuItem
       Caption = 'Ajuda'
     end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 560
+    Top = 328
   end
 end
