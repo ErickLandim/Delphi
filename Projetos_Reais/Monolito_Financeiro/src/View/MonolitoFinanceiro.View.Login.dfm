@@ -627,11 +627,43 @@ object FrmLogin: TFrmLogin
       Height = 305
       Align = alClient
       BevelOuter = bvNone
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
       ExplicitLeft = 128
       ExplicitTop = 288
       ExplicitWidth = 185
       ExplicitHeight = 41
+      object LblLoginSemSenha: TLabel
+        Left = 30
+        Top = 280
+        Width = 102
+        Height = 15
+        Caption = 'Login: SUPERVISOR'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object LblLoginSemLogin: TLabel
+        Left = 166
+        Top = 280
+        Width = 80
+        Height = 15
+        Caption = 'Senha: 1234567'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
       object PnlLoginInformacoes: TPanel
         Left = 0
         Top = 0

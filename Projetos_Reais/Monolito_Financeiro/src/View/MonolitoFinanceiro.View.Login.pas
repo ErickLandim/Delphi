@@ -21,6 +21,8 @@ type
     EdtLogin: TEdit;
     EdtSenha: TEdit;
     BtnEntrar: TButton;
+    LblLoginSemSenha: TLabel;
+    LblLoginSemLogin: TLabel;
     procedure BtnEntrarClick(Sender: TObject);
   private
     { Private declarations }
