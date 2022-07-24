@@ -17,9 +17,9 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDmConexao, DmConexao);
+  Application.CreateForm(TDmUsuarios, DmUsuarios);
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.CreateForm(TFrmCadastroPadrao, FrmCadastroPadrao);
   Application.CreateForm(TFrmUsuarios, FrmUsuarios);
-  Application.CreateForm(TDmUsuarios, DmUsuarios);
   Application.Run;
 end.

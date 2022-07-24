@@ -707,6 +707,7 @@ object FrmLogin: TFrmLogin
           Top = 64
           Width = 362
           Height = 25
+          Cursor = crIBeam
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -13
@@ -720,6 +721,7 @@ object FrmLogin: TFrmLogin
           Top = 112
           Width = 362
           Height = 25
+          Cursor = crIBeam
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -13
@@ -735,6 +737,7 @@ object FrmLogin: TFrmLogin
         Top = 181
         Width = 362
         Height = 34
+        Cursor = crHandPoint
         Caption = 'Entrar'
         TabOrder = 1
         OnClick = BtnEntrarClick

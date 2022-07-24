@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls;
 
 type
   TFrmPrincipal = class(TForm)
@@ -13,6 +13,7 @@ type
     mnuRelatorios: TMenuItem;
     mnuAjuda: TMenuItem;
     MnuUsuarios: TMenuItem;
+    StatusBar1: TStatusBar;
     procedure MnuUsuariosClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -28,7 +29,7 @@ implementation
 
 uses
   MonolitoFinanceiro.View.Usuarios, MonolitoFinanceiro.View.Splash,
-  MonolitoFinanceiro.View.Login;
+  MonolitoFinanceiro.View.Login, MonolitoFinanceiro.Model.Usuarios;
 
 {$R *.dfm}
 
@@ -49,6 +50,7 @@ begin
      Finally
        FreeAndNil(FrmLogin);
      End;
+    // StatusBar1.Penels.Items[1].Text := 'Usuário: ' +
 end;
 
 procedure TFrmPrincipal.MnuUsuariosClick(Sender: TObject);

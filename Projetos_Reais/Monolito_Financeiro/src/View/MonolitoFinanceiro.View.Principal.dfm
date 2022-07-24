@@ -15,9 +15,25 @@ object FrmPrincipal: TFrmPrincipal
   WindowState = wsMaximized
   OnCreate = FormCreate
   TextHeight = 15
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 422
+    Width = 624
+    Height = 19
+    Panels = <
+      item
+        Width = 150
+      end
+      item
+        Width = 300
+      end>
+    ExplicitLeft = 248
+    ExplicitTop = 312
+    ExplicitWidth = 0
+  end
   object MainMenu1: TMainMenu
-    Left = 232
-    Top = 184
+    Left = 432
+    Top = 80
     object mnuCadastro: TMenuItem
       Caption = 'Cadastros'
       object MnuUsuarios: TMenuItem

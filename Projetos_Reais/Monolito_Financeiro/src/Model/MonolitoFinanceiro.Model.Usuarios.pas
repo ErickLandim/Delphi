@@ -42,10 +42,10 @@ implementation
 procedure TDmUsuarios.EfetuarLogin(Login, Senha: String);
 Var
   SQLConsulta : TFDQuery;
-  lUsuario : TPessoaUsuario;
+  lUsuario : TModelUsuarioEntidade;
 begin
   SQLConsulta := TFDQuery.Create(nil);
-  lUsuario := TPessoaUsuario.Create;
+  lUsuario := TModelUsuarioEntidade.Create;
     try
       SQLConsulta.Connection := DmConexao.SQLConexao;
       SQLConsulta.SQL.Clear;

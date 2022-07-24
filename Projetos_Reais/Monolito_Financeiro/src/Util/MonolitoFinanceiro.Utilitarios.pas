@@ -4,10 +4,12 @@ interface
     Type
       TUtilitario = Class
         Class function GetID : String;
+
+        {Essa classe foi usada no View.Usuarios}
       End;
 
     Type
-      TPessoaUsuario = Class(TUtilitario)
+      TModelUsuarioEntidade = Class(TUtilitario)
         private
           FLoginUsuarioLogado: string;
           FNomeUsuarioLogado: string;
@@ -16,6 +18,8 @@ interface
           property NomeUsuarioLogado: string read FNomeUsuarioLogado write FNomeUsuarioLogado;
           property LoginUsuarioLogado: string read FLoginUsuarioLogado write FLoginUsuarioLogado;
           property IDUsuarioLogado: String read FIDUsuarioLogado write FIDUsuarioLogado;
+          {Essa Classe foi usada no Model.Usuarios}
+
       End;
 
 
