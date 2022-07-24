@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
-  Vcl.StdCtrls;
+  Vcl.StdCtrls, MonolitoFinanceiro.Model.Usuarios;
 
 type
   TFrmLogin = class(TForm)
@@ -16,9 +16,9 @@ type
     Panel2: TPanel;
     LblNomeAplicacao: TLabel;
     PnlLoginInformacoes: TPanel;
-    LblNome: TLabel;
+    LblLogin: TLabel;
     LblSenha: TLabel;
-    EdtNome: TEdit;
+    EdtLogin: TEdit;
     EdtSenha: TEdit;
     BtnEntrar: TButton;
     procedure BtnEntrarClick(Sender: TObject);
@@ -37,16 +37,28 @@ implementation
 
 procedure TFrmLogin.BtnEntrarClick(Sender: TObject);
 begin
-  if Trim(EdtNome.Text) = '' then
-    EdtNome.SetFocus;
+  if Trim(EdtLogin.Text) = '' then
+  Begin
+    EdtLogin.SetFocus;
     Application.MessageBox('Informe seu nome de usuario', 'Atenção', Mb_Ok + Mb_ICONWARNING);
     Abort;
-
+  End;
      if Trim(EdtSenha.Text) = '' then
+     begin
         EdtSenha.SetFocus;
         Application.MessageBox('Informe sua senha de usuario', 'Atenção', Mb_Ok + Mb_ICONWARNING);
         Abort;
+     end;
+       try
+         DmUsuarios.EfetuarLogin(Trim(EdtLogin.Text), Trim(EdtSenha.Text));
+         ModalResult := MrOk;
+       Except on Erro : Exception do
+        begin
+          Application.MessageBox(PWideChar(Erro.Message), 'Atenção', MB_Ok + MB_ICONWARNING);
+          EdtLogin.SetFocus;
+        end;
 
+       end;
 
 end;
 

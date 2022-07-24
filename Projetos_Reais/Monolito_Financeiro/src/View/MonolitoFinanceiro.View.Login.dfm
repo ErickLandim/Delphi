@@ -644,12 +644,12 @@ object FrmLogin: TFrmLogin
         TabOrder = 0
         ExplicitLeft = 6
         ExplicitTop = 6
-        object LblNome: TLabel
+        object LblLogin: TLabel
           Left = 22
           Top = 64
-          Width = 43
+          Width = 39
           Height = 21
-          Caption = 'Nome'
+          Caption = 'Login'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -670,7 +670,7 @@ object FrmLogin: TFrmLogin
           Font.Style = []
           ParentFont = False
         end
-        object EdtNome: TEdit
+        object EdtLogin: TEdit
           Left = 71
           Top = 64
           Width = 362

@@ -5,6 +5,20 @@ interface
       TUtilitario = Class
         Class function GetID : String;
       End;
+
+    Type
+      TPessoaUsuario = Class(TUtilitario)
+        private
+          FLoginUsuarioLogado: string;
+          FNomeUsuarioLogado: string;
+          FIDUsuarioLogado: String;
+        public
+          property NomeUsuarioLogado: string read FNomeUsuarioLogado write FNomeUsuarioLogado;
+          property LoginUsuarioLogado: string read FLoginUsuarioLogado write FLoginUsuarioLogado;
+          property IDUsuarioLogado: String read FIDUsuarioLogado write FIDUsuarioLogado;
+      End;
+
+
 implementation
 
     Uses
@@ -18,5 +32,6 @@ begin
   Result := StringReplace(Result, '{', '',  [rfReplaceAll]);
   Result := StringReplace(Result, '}', '',  [rfReplaceAll]);
   end;
+
 
 end.

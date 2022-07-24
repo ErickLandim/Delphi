@@ -7,7 +7,7 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Datasnap.Provider,
   Datasnap.DBClient, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  MonolitoFinanceiro.Model.Conexao;
+  MonolitoFinanceiro.Model.Conexao, MonolitoFinanceiro.Utilitarios;
 
 type
   TDmUsuarios = class(TDataModule)
@@ -42,8 +42,10 @@ implementation
 procedure TDmUsuarios.EfetuarLogin(Login, Senha: String);
 Var
   SQLConsulta : TFDQuery;
+  lUsuario : TPessoaUsuario;
 begin
   SQLConsulta := TFDQuery.Create(nil);
+  lUsuario := TPessoaUsuario.Create;
     try
       SQLConsulta.Connection := DmConexao.SQLConexao;
       SQLConsulta.SQL.Clear;
@@ -57,10 +59,13 @@ begin
             if SQLConsulta.FieldbyName('STATUS').AsString <> 'A' then
               raise Exception.Create('Usuário Bloqueado, entre em contato com o adminstrador');
 
-
+              lUsuario.IDUsuarioLogado := SQLConsulta.FieldbyName('ID').AsString;
+              lUsuario.NomeUsuarioLogado := SQLConsulta.FieldByName('NOME').AsString;
+              lUsuario.LoginUsuarioLogado := SQLConsulta.FieldByName('LOGIN').AsString;
     finally
       SQLConsulta.Close;
       SQLConsulta.Free;
+      lUsuario.Free;
     end;
 end;
 
