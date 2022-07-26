@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/07/02 09:59:48.000.250,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/09 13:45:18.000.278,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/25 14:01:16.000.480,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/25 21:13:24.000.022,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Administrator\Documents\Delphi\Mini_ProjetosTeste\Funções do pacoteRXLib\Pnl.Principal.pas</Transaction>
+    <Transaction>2022/07/25 21:13:24.000.022,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Administrator\Documents\Delphi\Mini_ProjetosTeste\Funções do pacoteRXLib\Pnl.Principal.dfm</Transaction>
+    <Transaction>2022/07/25 21:13:28.000.177,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Administrator\Documents\Delphi\Mini_ProjetosTeste\Funções do pacoteRXLib\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
