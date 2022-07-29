@@ -12,9 +12,9 @@ uses
    FCpf : String;
    FEndereco: TEndereco;
    public
-    property ValorDeCredito: Currency read FValorDeCredito;
-    property Cpf : string read FCpf write FCpf;
-    property Endereco: TEndereco read FEndereco write FEndereco;
+   property ValorDeCredito: Currency read FValorDeCredito;
+   property Cpf : string read FCpf write FCpf;
+   property Endereco: TEndereco read FEndereco write FEndereco;
    function Receber(Value: integer) : string overload;
    function Receber(Value: currency): string overload;
    function ReceberDados: string; override;
