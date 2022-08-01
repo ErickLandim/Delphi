@@ -1235,7 +1235,7 @@ object FrmLogin: TFrmLogin
       Stretch = True
       ExplicitTop = 150
     end
-    object PnlLogoNomeAplicacao: TPanel
+    object Panel1: TPanel
       Left = 0
       Top = 60
       Width = 321
@@ -1287,7 +1287,7 @@ object FrmLogin: TFrmLogin
     ExplicitLeft = 273
     ExplicitWidth = 531
     ExplicitHeight = 399
-    object PnlLateradireita: TPanel
+    object Panel2: TPanel
       Left = 0
       Top = 0
       Width = 535
@@ -1336,7 +1336,7 @@ object FrmLogin: TFrmLogin
         Font.Style = []
         ParentFont = False
       end
-      object LblTextoLoginPadrao: TLabel
+      object Label1: TLabel
         Left = 120
         Top = 40
         Width = 294
@@ -1418,13 +1418,13 @@ object FrmLogin: TFrmLogin
             ParentFont = False
             TabOrder = 0
           end
-          object PnlLinhaEdtUsuario: TPanel
+          object Panel4: TPanel
             Left = 0
             Top = 55
             Width = 459
             Height = 1
             Align = alBottom
-            Caption = 'PnlLinhaEdtUsuario'
+            Caption = 'Panel4'
             Color = clBackground
             ParentBackground = False
             TabOrder = 1
@@ -1490,7 +1490,7 @@ object FrmLogin: TFrmLogin
           ExplicitTop = 34
           ExplicitWidth = 457
         end
-        object PnlLinhaEdtSenha: TPanel
+        object Panel3: TPanel
           Left = 0
           Top = 64
           Width = 459

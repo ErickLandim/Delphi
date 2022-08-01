@@ -12,8 +12,8 @@ type
     PnlLoginEsquerda: TPanel;
     ImgLogo: TImage;
     PnlPrincipal: TPanel;
-    PnlLogoNomeAplicacao: TPanel;
-    PnlLateradireita: TPanel;
+    Panel1: TPanel;
+    Panel2: TPanel;
     LblNomeAplicacao: TLabel;
     PnlLoginInformacoes: TPanel;
     LblLogin: TLabel;
@@ -24,10 +24,10 @@ type
     LblLoginSemSenha: TLabel;
     LblLoginSemLogin: TLabel;
     PnlLoginInserindo: TPanel;
-    PnlLinhaEdtUsuario: TPanel;
+    Panel4: TPanel;
     PnlSenhaInserindo: TPanel;
-    PnlLinhaEdtSenha: TPanel;
-    LblTextoLoginPadrao: TLabel;
+    Panel3: TPanel;
+    Label1: TLabel;
     SpeedButton1: TSpeedButton;
     procedure BtnEntrarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
