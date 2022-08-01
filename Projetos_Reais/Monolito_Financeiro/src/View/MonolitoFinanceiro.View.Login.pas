@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
-  Vcl.StdCtrls, MonolitoFinanceiro.Model.Usuarios;
+  Vcl.StdCtrls, MonolitoFinanceiro.Model.Usuarios, Vcl.Buttons;
 
 type
   TFrmLogin = class(TForm)
@@ -23,8 +23,15 @@ type
     BtnEntrar: TButton;
     LblLoginSemSenha: TLabel;
     LblLoginSemLogin: TLabel;
+    PnlLoginInserindo: TPanel;
+    Panel4: TPanel;
+    PnlSenhaInserindo: TPanel;
+    Panel3: TPanel;
+    Label1: TLabel;
+    SpeedButton1: TSpeedButton;
     procedure BtnEntrarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -72,6 +79,11 @@ end;
 procedure TFrmLogin.FormShow(Sender: TObject);
 begin
     EdtLogin.Text := DmSistema.UsuarioUltimoAcesso;
+end;
+
+procedure TFrmLogin.SpeedButton1Click(Sender: TObject);
+begin
+    Application.Terminate;
 end;
 
 end.
