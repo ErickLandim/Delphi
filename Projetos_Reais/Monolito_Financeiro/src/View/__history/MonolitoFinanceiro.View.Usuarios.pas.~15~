@@ -159,8 +159,6 @@ begin
 
 end;
 
-///////Botão de teste///////
-
 procedure TFrmUsuarios.Image1Click(Sender: TObject);
 begin
   inherited;
@@ -174,8 +172,6 @@ begin
   DmUsuarios.Cdsusuarios.open;
 
 end;
-
-///////Botão de teste///////
 
 procedure TFrmUsuarios.LimparCampos;
 Var

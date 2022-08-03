@@ -4369,10 +4369,6 @@ inherited FrmUsuarios: TFrmUsuarios
           Transparent = True
           OnClick = Image1Click
         end
-        inherited EdtPesquisar: TEdit
-          Width = 173
-          ExplicitWidth = 173
-        end
         inherited BtnPesquisar: TButton
           Cursor = crHandPoint
           OnClick = BtnPesquisarClick
