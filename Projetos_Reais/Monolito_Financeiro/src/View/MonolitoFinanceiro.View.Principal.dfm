@@ -2,8 +2,8 @@ object FrmPrincipal: TFrmPrincipal
   Left = 735
   Top = 312
   Caption = 'Monolito Financeiro'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 513
+  ClientWidth = 977
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,14 +11,15 @@ object FrmPrincipal: TFrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = MainMenu1
-  Position = poDesigned
-  WindowState = wsMaximized
+  OldCreateOrder = True
+  Position = poScreenCenter
   OnCreate = FormCreate
+  PixelsPerInch = 96
   TextHeight = 15
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 422
-    Width = 624
+    Top = 494
+    Width = 977
     Height = 19
     Panels = <
       item
@@ -27,12 +28,14 @@ object FrmPrincipal: TFrmPrincipal
       item
         Width = 300
       end>
+    ExplicitTop = 422
+    ExplicitWidth = 624
   end
   object MainMenu1: TMainMenu
     Left = 432
     Top = 80
     object mnuCadastro: TMenuItem
-      Caption = 'Cadastros'
+      Caption = '&Cadastros'
       object MnuUsuarios: TMenuItem
         Caption = 'Usu'#225'rios'
         OnClick = MnuUsuariosClick
