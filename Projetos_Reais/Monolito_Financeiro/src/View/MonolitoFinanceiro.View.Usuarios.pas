@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, MonolitoFinanceiro.View.CadastroPadrao,
   Data.DB, System.ImageList, Vcl.ImgList, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.WinXPanels, MonolitoFinanceiro.Model.Usuarios, Vcl.WinXCtrls;
+  Vcl.ExtCtrls, Vcl.WinXPanels, MonolitoFinanceiro.Model.Usuarios, Vcl.WinXCtrls,
+  Vcl.Imaging.GIFImg;
 
 type
   TFrmUsuarios = class(TFrmCadastroPadrao)
@@ -18,13 +19,15 @@ type
     LblLogin: TLabel;
     LblSenha: TLabel;
     LblStatus: TLabel;
+    Image1: TImage;
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
     procedure BtnIncluirClick(Sender: TObject);
     Procedure LimparCampos;
     procedure BtnCancelarClick(Sender: TObject);
-    procedure BtnExcluirClick(Sender: TObject);                                 
+    procedure BtnExcluirClick(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -153,6 +156,20 @@ begin
 
   PnlPrincipal.ActiveCard := CardPesquisa;
   inherited;
+
+end;
+
+procedure TFrmUsuarios.Image1Click(Sender: TObject);
+begin
+  inherited;
+    with (Image1.Picture.Graphic as TGifImage) do
+  begin
+    AnimationSpeed := 100;  // percent of normal speed, range 0 through 1000
+    Animate := True;
+  end;
+  DmUsuarios.CdsUsuarios.close;
+  DmUsuarios.CdsUsuarios.CommandText := 'SELECT * FROM Usuarios';
+  DmUsuarios.Cdsusuarios.open;
 
 end;
 

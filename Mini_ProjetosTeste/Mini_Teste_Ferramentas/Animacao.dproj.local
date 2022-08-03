@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/07/02 09:59:48.000.250,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/09 13:45:18.000.278,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/02 22:54:53.533,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/02 23:32:07.487,C:\Users\Administrator\Documents\Delphi\Mini_ProjetosTeste\Mini_Teste_Ferramentas\Unit1.dfm=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/08/02 23:32:07.487,C:\Users\Administrator\Documents\Delphi\Mini_ProjetosTeste\Mini_Teste_Ferramentas\Unit1.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/02 23:32:24.470,C:\Users\Administrator\Documents\Delphi\Mini_ProjetosTeste\Mini_Teste_Ferramentas\Animacao.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
