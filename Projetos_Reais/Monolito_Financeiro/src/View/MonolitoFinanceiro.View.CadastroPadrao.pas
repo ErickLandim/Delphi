@@ -17,7 +17,7 @@ type
     PnlGrid: TPanel;
     DBGrid1: TDBGrid;
     EdtPesquisar: TEdit;
-    Pesquisar: TLabel;
+    LblPesquisar: TLabel;
     BtnPesquisar: TButton;
     ImageList1: TImageList;
     BtnFechar: TButton;

@@ -20,6 +20,8 @@ type
     LblSenha: TLabel;
     LblStatus: TLabel;
     Image1: TImage;
+    PnlEdtPesquisar: TPanel;
+    Panel1: TPanel;
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);

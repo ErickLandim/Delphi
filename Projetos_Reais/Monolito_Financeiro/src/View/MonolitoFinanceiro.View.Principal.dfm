@@ -18,9 +18,9 @@ object FrmPrincipal: TFrmPrincipal
   TextHeight = 15
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 494
+    Top = 488
     Width = 977
-    Height = 19
+    Height = 25
     Panels = <
       item
         Width = 150
@@ -28,8 +28,6 @@ object FrmPrincipal: TFrmPrincipal
       item
         Width = 300
       end>
-    ExplicitTop = 422
-    ExplicitWidth = 624
   end
   object MainMenu1: TMainMenu
     Left = 432

@@ -12,8 +12,10 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = True
   Position = poScreenCenter
   OnShow = FormShow
+  PixelsPerInch = 96
   TextHeight = 15
   object PnlPrincipal: TCardPanel
     Left = 0
@@ -21,7 +23,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
     Width = 624
     Height = 441
     Align = alClient
-    ActiveCard = CardCadastro
+    ActiveCard = CardPesquisa
     Caption = 'Card1'
     TabOrder = 0
     object CardCadastro: TCard
@@ -84,17 +86,17 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        object Pesquisar: TLabel
+        object LblPesquisar: TLabel
           Left = 16
           Top = 16
-          Width = 50
+          Width = 53
           Height = 15
-          Caption = 'Pesquisar'
+          Caption = 'Pesquisar:'
         end
         object EdtPesquisar: TEdit
           Left = 16
           Top = 37
-          Width = 121
+          Width = 173
           Height = 23
           TabOrder = 0
         end

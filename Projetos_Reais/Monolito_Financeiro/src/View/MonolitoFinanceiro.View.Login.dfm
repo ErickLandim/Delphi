@@ -12,8 +12,10 @@ object FrmLogin: TFrmLogin
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OldCreateOrder = True
   Position = poScreenCenter
   OnShow = FormShow
+  PixelsPerInch = 96
   TextHeight = 15
   object PnlLoginEsquerda: TPanel
     Left = 0
@@ -1253,7 +1255,6 @@ object FrmLogin: TFrmLogin
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitTop = 40
       object LblNomeAplicacao: TLabel
         Left = 30
         Top = 30
@@ -1270,7 +1271,6 @@ object FrmLogin: TFrmLogin
         ParentColor = False
         ParentFont = False
         WordWrap = True
-        ExplicitLeft = 45
         ExplicitWidth = 264
         ExplicitHeight = 35
       end
@@ -1284,9 +1284,6 @@ object FrmLogin: TFrmLogin
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 273
-    ExplicitWidth = 531
-    ExplicitHeight = 399
     object PnlLateradireita: TPanel
       Left = 0
       Top = 0
@@ -1303,10 +1300,6 @@ object FrmLogin: TFrmLogin
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 6
-      ExplicitTop = 100
-      ExplicitWidth = 617
-      ExplicitHeight = 382
       DesignSize = (
         535
         467)
@@ -1428,9 +1421,6 @@ object FrmLogin: TFrmLogin
             Color = clBackground
             ParentBackground = False
             TabOrder = 1
-            ExplicitLeft = 1
-            ExplicitTop = 22
-            ExplicitWidth = 457
           end
         end
       end
@@ -1438,7 +1428,7 @@ object FrmLogin: TFrmLogin
         Left = 79
         Top = 352
         Width = 362
-        Height = 39
+        Height = 49
         Cursor = crHandPoint
         Caption = 'Entrar'
         TabOrder = 1
@@ -1455,7 +1445,7 @@ object FrmLogin: TFrmLogin
           Left = 0
           Top = 0
           Width = 459
-          Height = 24
+          Height = 17
           Align = alTop
           Caption = 'SENHA DO USU'#193'RIO:'
           Font.Charset = DEFAULT_CHARSET
@@ -1464,9 +1454,7 @@ object FrmLogin: TFrmLogin
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = 1
-          ExplicitTop = 1
-          ExplicitWidth = 457
+          ExplicitWidth = 131
         end
         object EdtSenha: TEdit
           Left = 0
@@ -1486,9 +1474,6 @@ object FrmLogin: TFrmLogin
           ParentFont = False
           PasswordChar = '*'
           TabOrder = 0
-          ExplicitLeft = 1
-          ExplicitTop = 34
-          ExplicitWidth = 457
         end
         object PnlLinhaEdtSenha: TPanel
           Left = 0
@@ -1497,9 +1482,6 @@ object FrmLogin: TFrmLogin
           Height = 1
           Align = alBottom
           TabOrder = 1
-          ExplicitLeft = 1
-          ExplicitTop = 23
-          ExplicitWidth = 457
         end
       end
     end
