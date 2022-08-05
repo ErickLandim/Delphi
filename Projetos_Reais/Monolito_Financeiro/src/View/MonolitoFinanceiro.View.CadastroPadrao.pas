@@ -16,8 +16,8 @@ type
     PnlPesquisaBotoes: TPanel;
     PnlGrid: TPanel;
     DBGrid1: TDBGrid;
-    EdtPesquisar: TEdit;
-    LblPesquisar: TLabel;
+    EdtPesquisarNome: TEdit;
+    LblPesquisarNome: TLabel;
     BtnPesquisar: TButton;
     ImageList1: TImageList;
     BtnFechar: TButton;
@@ -29,6 +29,8 @@ type
     BtnCancelar: TButton;
     BtnSalvar: TButton;
     DataSource1: TDataSource;
+    LblPesquisarStatus: TLabel;
+    EdtPesquisarStatus: TEdit;
     procedure BtnIncluirClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnFecharClick(Sender: TObject);

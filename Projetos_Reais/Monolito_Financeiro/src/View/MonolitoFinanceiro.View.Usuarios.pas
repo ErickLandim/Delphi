@@ -20,8 +20,6 @@ type
     LblSenha: TLabel;
     LblStatus: TLabel;
     Image1: TImage;
-    PnlEdtPesquisar: TPanel;
-    Panel1: TPanel;
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
@@ -42,7 +40,7 @@ var
 implementation
 
 uses
-  MonolitoFinanceiro.Utilitarios;
+  MonolitoFinanceiro.Utilitarios, FireDAC.Comp.Client;
 
 {$R *.dfm}
 
@@ -93,12 +91,37 @@ begin
 end;
 
 procedure TFrmUsuarios.BtnPesquisarClick(Sender: TObject);
+Var
+  SQLPesquisa : string;
 begin
   inherited;
-  DmUsuarios.CdsUsuarios.close;
-  DmUsuarios.CdsUsuarios.CommandText := 'SELECT * FROM Usuarios';
-  DmUsuarios.Cdsusuarios.open;
 
+    SQLPesquisa := 'SELECT * FROM Usuarios';
+
+   if EdtPesquisarNome.Text + EdtPesquisarStatus.Text = '' then
+    begin
+     DmUsuarios.CdsUsuarios.close;
+     DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa;
+     DmUsuarios.Cdsusuarios.open;
+    end
+    Else if EdtPesquisarNome.Text + EdtPesquisarStatus.Text <> '' then
+      begin
+        DmUsuarios.CdsUsuarios.Close;
+        DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE nome LIKE "' + EdtPesquisarNome.Text + '%" AND status LIKE "'  +  EdtPesquisarStatus.Text + '%" ';
+        DmUsuarios.CdsUsuarios.Open;
+      end
+      Else if EdtPesquisarStatus.Text <> '' then
+        begin
+         DmUsuarios.CdsUsuarios.Close;
+         DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE status LIKE "'  +  EdtPesquisarStatus.Text + '" ';
+         DmUsuarios.CdsUsuarios.Open;
+        end
+          Else if EdtPesquisarNome.Text <> '' then
+          begin
+           DmUsuarios.CdsUsuarios.Close;
+           DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE login OR nome LIKE "'  + EdtPesquisarNome.Text + '%" ';
+           DmUsuarios.CdsUsuarios.Open;
+          end;
 end;
 
 procedure TFrmUsuarios.BtnSalvarClick(Sender: TObject);

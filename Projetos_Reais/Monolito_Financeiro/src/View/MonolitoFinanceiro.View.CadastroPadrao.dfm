@@ -86,16 +86,23 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        object LblPesquisar: TLabel
+        object LblPesquisarNome: TLabel
           Left = 16
           Top = 16
-          Width = 53
+          Width = 90
           Height = 15
-          Caption = 'Pesquisar:'
+          Caption = 'Nome/Ou Login:'
         end
-        object EdtPesquisar: TEdit
+        object LblPesquisarStatus: TLabel
+          Left = 256
+          Top = 16
+          Width = 35
+          Height = 15
+          Caption = 'Status:'
+        end
+        object EdtPesquisarNome: TEdit
           Left = 16
-          Top = 37
+          Top = 38
           Width = 173
           Height = 23
           TabOrder = 0
@@ -112,6 +119,14 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 1
+        end
+        object EdtPesquisarStatus: TEdit
+          Left = 256
+          Top = 39
+          Width = 173
+          Height = 23
+          CharCase = ecUpperCase
+          TabOrder = 2
         end
       end
       object PnlPesquisaBotoes: TPanel

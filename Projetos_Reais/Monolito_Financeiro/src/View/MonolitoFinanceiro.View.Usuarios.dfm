@@ -3,7 +3,6 @@ inherited FrmUsuarios: TFrmUsuarios
   PixelsPerInch = 96
   TextHeight = 15
   inherited PnlPrincipal: TCardPanel
-    ActiveCard = CardPesquisa
     inherited CardCadastro: TCard
       object LblNome: TLabel [0]
         Left = 24
@@ -4368,10 +4367,6 @@ inherited FrmUsuarios: TFrmUsuarios
           Stretch = True
           Transparent = True
           OnClick = Image1Click
-        end
-        inherited EdtPesquisar: TEdit
-          Width = 173
-          ExplicitWidth = 173
         end
         inherited BtnPesquisar: TButton
           Cursor = crHandPoint
