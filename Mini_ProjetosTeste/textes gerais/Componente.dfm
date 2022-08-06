@@ -2313,5 +2313,29 @@ object Form1: TForm1
       Stretch = True
       Transparent = True
     end
+    object ELSDBEdit1: TELSDBEdit
+      Left = 536
+      Top = 200
+      Width = 121
+      Height = 21
+      TabOrder = 0
+      MudarColor = clWindow
+    end
+    object ELSDBEdit2: TELSDBEdit
+      Left = 536
+      Top = 264
+      Width = 121
+      Height = 21
+      TabOrder = 1
+      MudarColor = clAqua
+    end
+    object ELSDBEdit3: TELSDBEdit
+      Left = 536
+      Top = 328
+      Width = 121
+      Height = 21
+      TabOrder = 2
+      MudarColor = clHighlight
+    end
   end
 end

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/07/25 13:40:52.000.846,=rtl.dcp</Transaction>
+    <Transaction>2022/08/05 22:38:08.000.942,=rtl.dcp</Transaction>
+    <Transaction>2022/08/05 22:38:28.493,=rtl.dcp</Transaction>
+    <Transaction>2022/08/05 22:39:12.950,C:\Users\Administrator\Documents\Delphi\ELS_ComponentesCriados\ELS.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2022/08/05 22:45:47.981,=C:\Users\Administrator\Documents\Delphi\ELS_ComponentesCriados\ELS\Source\ELSDBEdit.pas</Transaction>
+    <Transaction>2022/08/05 22:45:48.054,=vcl.dcp</Transaction>
+    <Transaction>2022/08/05 22:45:48.133,=vcldb.dcp</Transaction>
+    <Transaction>2022/08/05 22:45:48.191,=dbrtl.dcp</Transaction>
+    <Transaction>2022/08/05 22:45:48.244,=vclwinx.dcp</Transaction>
+    <Transaction>2022/08/05 22:45:48.279,=vclimg.dcp</Transaction>
+    <Transaction>2022/08/05 22:45:48.315,=bindengine.dcp</Transaction>
+  </Transactions>
+</BorlandProject>
