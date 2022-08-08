@@ -6,10 +6,13 @@ uses
   System.SysUtils, System.Classes, Vcl.Controls, Vcl.StdCtrls, Vcl.Mask,Vcl.Graphics;
 
 type
+  TTipoMascara = (tmData,tmCPF, tmCNPJ, tmCEP, tmTelefone, tmCelular);
   TELSMaskEdit = class(TMaskEdit)
   private
     FMudarColor: Tcolor;
+    FTipoMascara: TTipoMascara;
     procedure SetMudarColor(const Value: Tcolor);
+    procedure SetTipoMascara(const Value: TTipoMascara);
     { Private declarations }
   protected
     { Protected declarations }
@@ -20,6 +23,7 @@ type
     Constructor Create(Aowner : TComponent); Override;
   published
     { Published declarations }
+    property TipoMascara : TTipoMascara read FTipoMascara write SetTipoMascara;
     Property MudarColor : Tcolor read FMudarColor write SetMudarColor;
   end;
 
@@ -56,6 +60,32 @@ end;
 procedure TELSMaskEdit.SetMudarColor(const Value: Tcolor);
 begin
   FMudarColor := Value;
+end;
+
+procedure TELSMaskEdit.SetTipoMascara(const Value: TTipoMascara);
+begin
+  FTipoMascara := Value;
+
+  case Value of
+    tmData:
+        EditMask := '99/99/9999-99;0;_';
+
+    tmCPF:
+        EditMask := '999.999.999-99;0;_';
+
+    tmCNPJ:
+        EditMask := '99.999.999.9999-99;0;_';
+
+    tmCEP:
+        EditMask := '99.999-999;0;_';
+
+    tmTelefone:
+        EditMask := '(99) 9999-9999;0;_';
+
+    tmCelular:
+        EditMask := '(99) 9 9999-9999;0;_';
+
+  end;
 end;
 
 end.
