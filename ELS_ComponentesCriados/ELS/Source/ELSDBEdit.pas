@@ -37,8 +37,8 @@ end;
 
 constructor TELSDBEdit.Create(Aowner: TComponent);
 begin
-  inherited;
-  FMudarColor := ClWindow;
+  inherited Create(Aowner);
+  FMudarColor := $00D6F4FE;
 end;
 
 procedure TELSDBEdit.DoEnter;

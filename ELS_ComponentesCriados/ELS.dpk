@@ -37,6 +37,7 @@ requires
   bindengine;
 
 contains
-  ELSDBEdit in 'ELS\Source\ELSDBEdit.pas';
+  ELSDBEdit in 'ELS\Source\ELSDBEdit.pas',
+  ELSMaskEdit in 'ELS\Source\ELSMaskEdit.pas';
 
 end.
