@@ -40,7 +40,7 @@ object DmUsuarios: TDmUsuarios
       FieldName = 'Email'
       Size = 50
     end
-    object CdsUsuariosData_De_Nascimento: TStringField
+    object CdsUsuariosData_De_Nascimento: TDateField
       FieldName = 'Data_De_Nascimento'
     end
   end

@@ -1,5 +1,4 @@
 object DmUsuarios: TDmUsuarios
-  OldCreateOrder = True
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   Height = 480
@@ -35,13 +34,6 @@ object DmUsuarios: TDmUsuarios
     end
     object CdsUsuariosData_Cadastro: TDateField
       FieldName = 'Data_Cadastro'
-    end
-    object CdsUsuariosEmail: TStringField
-      FieldName = 'Email'
-      Size = 50
-    end
-    object CdsUsuariosData_De_Nascimento: TStringField
-      FieldName = 'Data_De_Nascimento'
     end
   end
   object CdpUsuarios: TDataSetProvider

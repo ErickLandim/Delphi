@@ -1,17 +1,9 @@
 inherited FrmUsuarios: TFrmUsuarios
   Caption = 'Cadastro de Usuarios'
-  ClientHeight = 444
-  ClientWidth = 661
-  ExplicitWidth = 667
-  ExplicitHeight = 473
   PixelsPerInch = 96
   TextHeight = 15
   inherited PnlPrincipal: TCardPanel
-    Width = 661
-    Height = 444
     inherited CardCadastro: TCard
-      Width = 659
-      Height = 442
       object LblNome: TLabel [0]
         Left = 24
         Top = 40
@@ -41,13 +33,7 @@ inherited FrmUsuarios: TFrmUsuarios
         Caption = 'Status'
       end
       inherited PnlCadastroBotoes: TPanel
-        Top = 371
-        Width = 659
-        inherited BtnCancelar: TButton
-          Left = 564
-        end
         inherited BtnSalvar: TButton
-          Left = 470
           OnClick = BtnSalvarClick
         end
       end
@@ -86,10 +72,7 @@ inherited FrmUsuarios: TFrmUsuarios
       end
     end
     inherited CardPesquisa: TCard
-      Width = 659
-      Height = 442
       inherited PnlPesquisa: TPanel
-        Width = 659
         object Image1: TImage [1]
           Left = 456
           Top = 5
@@ -4386,16 +4369,12 @@ inherited FrmUsuarios: TFrmUsuarios
           OnClick = Image1Click
         end
         inherited BtnPesquisar: TButton
-          Left = 565
           Cursor = crHandPoint
           OnClick = BtnPesquisarClick
         end
       end
       inherited PnlPesquisaBotoes: TPanel
-        Top = 371
-        Width = 659
         inherited BtnFechar: TButton
-          Left = 564
           Cursor = crHandPoint
         end
         inherited BtnIncluir: TButton
@@ -4413,38 +4392,24 @@ inherited FrmUsuarios: TFrmUsuarios
         end
       end
       inherited PnlGrid: TPanel
-        Width = 659
-        Height = 304
         inherited DBGrid1: TDBGrid
-          Width = 657
-          Height = 302
           DataSource = DataSource1
           Columns = <
             item
               Expanded = False
               FieldName = 'Nome'
-              Width = 137
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Login'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Status'
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Email'
-              Width = 205
-              Visible = True
-            end
-            item
-              Expanded = False
-              FieldName = 'Data_De_Nascimento'
+              Width = 64
               Visible = True
             end>
         end

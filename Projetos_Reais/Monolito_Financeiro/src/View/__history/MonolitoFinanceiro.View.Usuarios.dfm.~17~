@@ -4423,7 +4423,7 @@ inherited FrmUsuarios: TFrmUsuarios
             item
               Expanded = False
               FieldName = 'Nome'
-              Width = 137
+              Width = 111
               Visible = True
             end
             item
@@ -4439,12 +4439,13 @@ inherited FrmUsuarios: TFrmUsuarios
             item
               Expanded = False
               FieldName = 'Email'
-              Width = 205
+              Width = 166
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Data_De_Nascimento'
+              Width = 114
               Visible = True
             end>
         end

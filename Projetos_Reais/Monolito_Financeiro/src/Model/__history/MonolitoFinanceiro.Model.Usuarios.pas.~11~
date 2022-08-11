@@ -22,7 +22,7 @@ type
     CdsUsuariosStatus: TStringField;
     CdsUsuariosData_Cadastro: TDateField;
     CdsUsuariosEmail: TStringField;
-    CdsUsuariosData_De_Nascimento: TStringField;
+    CdsUsuariosData_De_Nascimento: TDateField;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
