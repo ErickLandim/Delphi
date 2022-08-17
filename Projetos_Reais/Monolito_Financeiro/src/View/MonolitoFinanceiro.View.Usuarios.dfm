@@ -1,23 +1,38 @@
 inherited FrmUsuarios: TFrmUsuarios
+  BorderStyle = bsToolWindow
   Caption = 'Cadastro de Usuarios'
-  ClientHeight = 444
-  ClientWidth = 661
-  ExplicitWidth = 667
-  ExplicitHeight = 473
+  ClientHeight = 451
+  ClientWidth = 763
+  Font.Style = [fsBold]
+  ExplicitWidth = 769
+  ExplicitHeight = 480
   PixelsPerInch = 96
   TextHeight = 15
   inherited PnlPrincipal: TCardPanel
-    Width = 661
-    Height = 444
+    Width = 763
+    Height = 451
+    ExplicitWidth = 661
+    ExplicitHeight = 444
     inherited CardCadastro: TCard
-      Width = 659
-      Height = 442
+      Width = 761
+      Height = 449
+      Color = clBtnHighlight
+      ParentBackground = False
+      ExplicitLeft = 2
+      ExplicitWidth = 761
+      ExplicitHeight = 449
       object LblNome: TLabel [0]
         Left = 24
         Top = 40
-        Width = 33
+        Width = 34
         Height = 15
         Caption = 'Nome'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
       object LblLogin: TLabel [1]
         Left = 24
@@ -25,36 +40,91 @@ inherited FrmUsuarios: TFrmUsuarios
         Width = 30
         Height = 15
         Caption = 'Login'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
       object LblSenha: TLabel [2]
         Left = 24
         Top = 98
-        Width = 32
+        Width = 34
         Height = 15
         Caption = 'Senha'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
       object LblStatus: TLabel [3]
-        Left = 22
-        Top = 152
-        Width = 32
+        Left = 23
+        Top = 133
+        Width = 35
         Height = 15
         Caption = 'Status'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblEmail: TLabel [4]
+        Left = 352
+        Top = 40
+        Width = 29
+        Height = 15
+        Caption = 'Email'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblDataDeNacimento: TLabel [5]
+        Left = 352
+        Top = 69
+        Width = 114
+        Height = 15
+        Caption = 'Data De Nascimento'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
       inherited PnlCadastroBotoes: TPanel
-        Top = 371
-        Width = 659
+        Top = 378
+        Width = 761
+        BorderStyle = bsSingle
+        Color = 14013696
+        ParentBackground = False
+        ExplicitTop = 378
+        ExplicitWidth = 761
         inherited BtnCancelar: TButton
-          Left = 564
+          Left = 662
+          Height = 65
+          ExplicitLeft = 662
+          ExplicitHeight = 65
         end
         inherited BtnSalvar: TButton
-          Left = 470
+          Left = 568
+          Height = 65
           OnClick = BtnSalvarClick
+          ExplicitLeft = 568
+          ExplicitHeight = 65
         end
       end
       object ToggleStatus: TToggleSwitch
         Left = 72
-        Top = 152
-        Width = 113
+        Top = 133
+        Width = 115
         Height = 20
         StateCaptions.CaptionOn = 'Ativo'
         StateCaptions.CaptionOff = 'Bloqueado'
@@ -84,14 +154,44 @@ inherited FrmUsuarios: TFrmUsuarios
         Cursor = crIBeam
         TabOrder = 4
       end
+      object EdtEmail: TEdit
+        Left = 387
+        Top = 37
+        Width = 174
+        Height = 23
+        Cursor = crIBeam
+        TabOrder = 5
+      end
+      object MkEdtDataDeNascimento: TMaskEdit
+        Left = 472
+        Top = 66
+        Width = 66
+        Height = 23
+        Cursor = crIBeam
+        EditMask = '!99/99/0000;1;_'
+        MaxLength = 10
+        TabOrder = 6
+        Text = '  /  /    '
+      end
     end
     inherited CardPesquisa: TCard
-      Width = 659
-      Height = 442
+      Width = 761
+      Height = 449
+      ExplicitWidth = 659
+      ExplicitHeight = 442
       inherited PnlPesquisa: TPanel
-        Width = 659
+        Width = 761
+        Color = 14013696
+        ParentBackground = False
+        ExplicitWidth = 659
+        inherited LblPesquisarNome: TLabel
+          Width = 91
+          Font.Style = [fsBold]
+          ParentFont = False
+          ExplicitWidth = 91
+        end
         object Image1: TImage [1]
-          Left = 456
+          Left = 560
           Top = 5
           Width = 49
           Height = 56
@@ -4385,18 +4485,36 @@ inherited FrmUsuarios: TFrmUsuarios
           Transparent = True
           OnClick = Image1Click
         end
+        inherited LblPesquisarEmail: TLabel
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        inherited EdtPesquisarNome: TEdit
+          Cursor = crIBeam
+        end
         inherited BtnPesquisar: TButton
-          Left = 565
+          Left = 667
           Cursor = crHandPoint
+          Font.Color = 14013696
+          ParentFont = False
           OnClick = BtnPesquisarClick
+          ExplicitLeft = 565
+        end
+        inherited EdtPesquisarEmail: TEdit
+          Cursor = crIBeam
         end
       end
       inherited PnlPesquisaBotoes: TPanel
-        Top = 371
-        Width = 659
+        Top = 378
+        Width = 761
+        Color = 14013696
+        ParentBackground = False
+        ExplicitTop = 371
+        ExplicitWidth = 659
         inherited BtnFechar: TButton
-          Left = 564
+          Left = 666
           Cursor = crHandPoint
+          ExplicitLeft = 564
         end
         inherited BtnIncluir: TButton
           Cursor = crHandPoint
@@ -4413,12 +4531,17 @@ inherited FrmUsuarios: TFrmUsuarios
         end
       end
       inherited PnlGrid: TPanel
-        Width = 659
-        Height = 304
+        Width = 761
+        Height = 311
+        ExplicitWidth = 659
+        ExplicitHeight = 304
         inherited DBGrid1: TDBGrid
-          Width = 657
-          Height = 302
+          Width = 759
+          Height = 309
+          Color = clWhite
           DataSource = DataSource1
+          FixedColor = clWhite
+          TitleFont.Style = [fsBold]
           Columns = <
             item
               Expanded = False
@@ -4434,6 +4557,7 @@ inherited FrmUsuarios: TFrmUsuarios
             item
               Expanded = False
               FieldName = 'Status'
+              Width = 64
               Visible = True
             end
             item
@@ -4445,6 +4569,7 @@ inherited FrmUsuarios: TFrmUsuarios
             item
               Expanded = False
               FieldName = 'Data_De_Nascimento'
+              Width = 122
               Visible = True
             end>
         end
@@ -4458,6 +4583,5 @@ inherited FrmUsuarios: TFrmUsuarios
   inherited DataSource1: TDataSource
     DataSet = DmUsuarios.CdsUsuarios
     Left = 537
-    Top = 284
   end
 end

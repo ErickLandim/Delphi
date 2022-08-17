@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, MonolitoFinanceiro.View.CadastroPadrao,
   Data.DB, System.ImageList, Vcl.ImgList, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
   Vcl.ExtCtrls, Vcl.WinXPanels, MonolitoFinanceiro.Model.Usuarios, Vcl.WinXCtrls,
-  Vcl.Imaging.GIFImg;
+  Vcl.Imaging.GIFImg, Vcl.Mask;
 
 type
   TFrmUsuarios = class(TFrmCadastroPadrao)
@@ -20,6 +20,10 @@ type
     LblSenha: TLabel;
     LblStatus: TLabel;
     Image1: TImage;
+    LblEmail: TLabel;
+    LblDataDeNacimento: TLabel;
+    EdtEmail: TEdit;
+    MkEdtDataDeNascimento: TMaskEdit;
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
@@ -98,22 +102,22 @@ begin
 
     SQLPesquisa := 'SELECT * FROM Usuarios';
 
-   if EdtPesquisarNome.Text + EdtPesquisarStatus.Text = '' then
+   if EdtPesquisarNome.Text + EdtPesquisarEmail.Text = '' then
     begin
      DmUsuarios.CdsUsuarios.close;
      DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa;
      DmUsuarios.Cdsusuarios.open;
     end
-    Else if EdtPesquisarNome.Text + EdtPesquisarStatus.Text <> '' then
+    Else if EdtPesquisarNome.Text + EdtPesquisarEmail.Text <> '' then
       begin
         DmUsuarios.CdsUsuarios.Close;
-        DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE nome LIKE "' + EdtPesquisarNome.Text + '%" AND status LIKE "'  +  EdtPesquisarStatus.Text + '%" ';
+        DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE nome LIKE "' + EdtPesquisarNome.Text + '%" AND Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
         DmUsuarios.CdsUsuarios.Open;
       end
-      Else if EdtPesquisarStatus.Text <> '' then
+      Else if EdtPesquisarEmail.Text <> '' then
         begin
          DmUsuarios.CdsUsuarios.Close;
-         DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE status LIKE "'  +  EdtPesquisarStatus.Text + '" ';
+         DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
          DmUsuarios.CdsUsuarios.Open;
         end
           Else if EdtPesquisarNome.Text <> '' then
@@ -147,6 +151,19 @@ begin
                     application.MessageBox('O campo Senha não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
                     Abort;
                   End;
+                           if Trim(EdtEmail.Text) = '' then
+                           Begin
+                             EdtEmail.SetFocus;
+                             Application.MessageBox('O Campo Email não pode estar vazio.', 'Atenção', Mb_Ok + MB_ICONWARNING);
+                             Abort;
+                           End;
+                                   if Trim(MKEdtDataDeNascimento.Text) = '' Then
+                                   Begin
+                                     MKEdtDataDeNascimento.SetFocus;
+                                     Application.MessageBox('O Campo Data de Nascimento não pode estar vazio.', 'Atenção', Mb_Ok + MB_ICONWARNING);
+                                     Abort;
+                                   End;
+
 
   if DmUsuarios.TemLoginCadastrado(Trim(EdtLogin.Text), DmUsuarios.CdsUsuarios.FieldByName('ID').AsString) then
   Begin
@@ -154,7 +171,7 @@ begin
     application.MessageBox(PwideChar(format('O Login já existe', [EdtLogin.text])), 'Atenção', Mb_OK + MB_ICONWARNING);
     Abort;
   End;
-                  
+
   LStatus := 'A';
 
   if ToggleStatus.State = tssoff then
@@ -170,10 +187,12 @@ begin
     DmUsuarios.CdsUsuariosData_Cadastro.AsDateTime := Now;
   end;
   
-  DmUsuarios.CdsUsuariosNome.AsString := Trim(EdtNome.Text);
-  DmUsuarios.CdsUsuariosLogin.AsString := Trim(EdtLogin.Text);
-  DmUsuarios.CdsUsuariosSenha.AsString := Trim(EdtSenha.Text);
-  DmUsuarios.CdsUsuariosStatus.AsString := LStatus;
+  DmUsuarios.CdsUsuariosNome.AsString          := Trim(EdtNome.Text);
+  DmUsuarios.CdsUsuariosLogin.AsString         := Trim(EdtLogin.Text);
+  DmUsuarios.CdsUsuariosSenha.AsString         := Trim(EdtSenha.Text);
+  DmUsuarios.CdsUsuariosStatus.AsString        := LStatus;
+  DmUsuarios.CdsUsuariosEmail.AsString         := Trim(EdtEmail.Text);
+  DmUsuarios.CdsUsuariosData_Cadastro.AsString := Trim(MKEdtDataDeNascimento.Text);
 
   DmUsuarios.CdsUsuarios.Post;
   DmUsuarios.CdsUsuarios.ApplyUpdates (0);

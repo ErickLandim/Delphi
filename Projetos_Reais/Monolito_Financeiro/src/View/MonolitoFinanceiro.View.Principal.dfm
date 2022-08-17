@@ -30,8 +30,8 @@ object FrmPrincipal: TFrmPrincipal
       end>
   end
   object MainMenu1: TMainMenu
-    Left = 432
-    Top = 80
+    Left = 408
+    Top = 192
     object mnuCadastro: TMenuItem
       Caption = '&Cadastros'
       object MnuUsuarios: TMenuItem

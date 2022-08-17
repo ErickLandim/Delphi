@@ -29,8 +29,8 @@ type
     BtnCancelar: TButton;
     BtnSalvar: TButton;
     DataSource1: TDataSource;
-    LblPesquisarStatus: TLabel;
-    EdtPesquisarStatus: TEdit;
+    LblPesquisarEmail: TLabel;
+    EdtPesquisarEmail: TEdit;
     procedure BtnIncluirClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnFecharClick(Sender: TObject);
