@@ -26,8 +26,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
     ActiveCard = CardPesquisa
     Caption = 'Card1'
     TabOrder = 0
-    ExplicitWidth = 770
-    ExplicitHeight = 453
     object CardCadastro: TCard
       Left = 1
       Top = 1
@@ -36,8 +34,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      ExplicitWidth = 768
-      ExplicitHeight = 451
       object PnlCadastroBotoes: TPanel
         Left = 0
         Top = 558
@@ -45,8 +41,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Height = 71
         Align = alBottom
         TabOrder = 0
-        ExplicitTop = 380
-        ExplicitWidth = 768
         object BtnCancelar: TButton
           Left = 1280
           Top = 1
@@ -60,7 +54,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           Images = ImageList1
           TabOrder = 0
           OnClick = BtnCancelarClick
-          ExplicitLeft = 673
         end
         object BtnSalvar: TButton
           Left = 1186
@@ -74,7 +67,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 1
-          ExplicitLeft = 579
         end
       end
     end
@@ -86,8 +78,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
       Caption = 'CardPesquisa'
       CardIndex = 1
       TabOrder = 1
-      ExplicitWidth = 768
-      ExplicitHeight = 451
       object PnlPesquisa: TPanel
         Left = 0
         Top = 0
@@ -96,6 +86,8 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitLeft = 1
+        ExplicitTop = -2
         object LblPesquisarNome: TLabel
           Left = 16
           Top = 19
@@ -110,7 +102,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ParentFont = False
         end
         object LblPesquisarEmail: TLabel
-          Left = 240
+          Left = 288
           Top = 19
           Width = 42
           Height = 20
@@ -125,7 +117,7 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         object EdtPesquisarNome: TEdit
           Left = 16
           Top = 40
-          Width = 193
+          Width = 233
           Height = 29
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -153,12 +145,11 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           Images = ImageList1
           ParentFont = False
           TabOrder = 1
-          ExplicitLeft = 1281
         end
         object EdtPesquisarEmail: TEdit
-          Left = 240
+          Left = 288
           Top = 40
-          Width = 177
+          Width = 233
           Height = 29
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -201,7 +192,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ParentFont = False
           TabOrder = 0
           OnClick = BtnFecharClick
-          ExplicitLeft = 1280
         end
         object BtnIncluir: TButton
           Left = 1
@@ -290,9 +280,6 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
         Align = alClient
         Anchors = [akLeft, akTop, akRight]
         TabOrder = 2
-        ExplicitTop = 67
-        ExplicitWidth = 768
-        ExplicitHeight = 313
         object DBGrid1: TDBGrid
           AlignWithMargins = True
           Left = 4

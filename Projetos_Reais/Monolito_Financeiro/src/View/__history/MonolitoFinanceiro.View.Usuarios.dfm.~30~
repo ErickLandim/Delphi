@@ -1,179 +1,247 @@
 inherited FrmUsuarios: TFrmUsuarios
+  Align = alClient
+  BorderStyle = bsToolWindow
   Caption = 'Cadastro de Usuarios'
-  ClientHeight = 451
-  ClientWidth = 763
-  ExplicitWidth = 769
-  ExplicitHeight = 480
+  ClientHeight = 885
+  ClientWidth = 1836
+  Font.Height = -15
+  ExplicitWidth = 1842
+  ExplicitHeight = 914
   PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 20
   inherited PnlPrincipal: TCardPanel
-    Width = 763
-    Height = 451
-    ActiveCard = CardCadastro
-    ExplicitWidth = 661
-    ExplicitHeight = 444
+    Width = 1836
+    Height = 885
+    ExplicitWidth = 1836
+    ExplicitHeight = 885
     inherited CardCadastro: TCard
-      Width = 761
-      Height = 449
+      Width = 1834
+      Height = 883
       Color = clBtnHighlight
       ParentBackground = False
-      ExplicitWidth = 659
-      ExplicitHeight = 442
-      object LblNome: TLabel [0]
-        Left = 24
-        Top = 40
-        Width = 34
-        Height = 15
-        Caption = 'Nome'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object LblLogin: TLabel [1]
-        Left = 24
-        Top = 69
-        Width = 30
-        Height = 15
-        Caption = 'Login'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object LblSenha: TLabel [2]
-        Left = 24
-        Top = 98
-        Width = 34
-        Height = 15
-        Caption = 'Senha'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object LblStatus: TLabel [3]
-        Left = 24
-        Top = 133
-        Width = 38
-        Height = 17
-        Caption = 'Status'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object LblEmail: TLabel [4]
-        Left = 352
-        Top = 40
-        Width = 29
-        Height = 15
-        Caption = 'Email'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object LblDataDeNacimento: TLabel [5]
-        Left = 352
-        Top = 69
-        Width = 114
-        Height = 15
-        Caption = 'Data De Nascimento'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
+      ExplicitWidth = 1834
+      ExplicitHeight = 883
       inherited PnlCadastroBotoes: TPanel
-        Top = 378
-        Width = 761
-        ExplicitTop = 371
-        ExplicitWidth = 659
+        Top = 794
+        Width = 1834
+        Height = 89
+        BevelOuter = bvNone
+        Color = 15790320
+        Font.Height = -15
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentFont = False
+        ExplicitTop = 794
+        ExplicitWidth = 1834
+        ExplicitHeight = 89
         inherited BtnCancelar: TButton
-          Left = 666
-          ExplicitLeft = 564
+          Left = 1722
+          Top = 0
+          Width = 112
+          Height = 89
+          ExplicitLeft = 1722
+          ExplicitTop = 0
+          ExplicitWidth = 112
+          ExplicitHeight = 89
         end
         inherited BtnSalvar: TButton
-          Left = 572
+          Left = 1610
+          Top = 0
+          Width = 112
+          Height = 89
           OnClick = BtnSalvarClick
-          ExplicitLeft = 470
+          ExplicitLeft = 1610
+          ExplicitTop = 0
+          ExplicitWidth = 112
+          ExplicitHeight = 89
         end
       end
-      object ToggleStatus: TToggleSwitch
-        Left = 72
-        Top = 133
-        Width = 113
-        Height = 20
-        StateCaptions.CaptionOn = 'Ativo'
-        StateCaptions.CaptionOff = 'Bloqueado'
+      object Pnl_AlinhamentoDasInfo: TPanel
+        Left = 0
+        Top = 0
+        Width = 1834
+        Height = 794
+        Align = alClient
+        Padding.Left = 500
+        Padding.Top = 500
         TabOrder = 1
-      end
-      object EdtNome: TEdit
-        Left = 72
-        Top = 37
-        Width = 233
-        Height = 23
-        Cursor = crIBeam
-        TabOrder = 2
-      end
-      object EdtSenha: TEdit
-        Left = 72
-        Top = 95
-        Width = 233
-        Height = 23
-        Cursor = crIBeam
-        TabOrder = 3
-      end
-      object EdtLogin: TEdit
-        Left = 72
-        Top = 66
-        Width = 233
-        Height = 23
-        Cursor = crIBeam
-        TabOrder = 4
-      end
-      object EdtEmail: TEdit
-        Left = 387
-        Top = 37
-        Width = 174
-        Height = 23
-        TabOrder = 5
-      end
-      object MkEdtDataDeNascimento: TMaskEdit
-        Left = 466
-        Top = 66
-        Width = 66
-        Height = 23
-        EditMask = '!99/99/0000;1;_'
-        MaxLength = 10
-        TabOrder = 6
-        Text = '  /  /    '
+        object LblDataDeNacimento: TLabel
+          Left = 622
+          Top = 163
+          Width = 144
+          Height = 20
+          Caption = 'Data De Nascimento'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object LblEmail: TLabel
+          Left = 622
+          Top = 97
+          Width = 38
+          Height = 20
+          Caption = 'Email'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object LblLogin: TLabel
+          Left = 233
+          Top = 163
+          Width = 39
+          Height = 20
+          Caption = 'Login'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object LblSenha: TLabel
+          Left = 233
+          Top = 230
+          Width = 42
+          Height = 20
+          Caption = 'Senha'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object LblStatus: TLabel
+          Left = 233
+          Top = 285
+          Width = 44
+          Height = 20
+          Caption = 'Status'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object LblNome: TLabel
+          Left = 233
+          Top = 97
+          Width = 43
+          Height = 20
+          Caption = 'Nome'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object EdtEmail: TEdit
+          Left = 666
+          Top = 93
+          Width = 223
+          Height = 29
+          Cursor = crIBeam
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+        end
+        object EdtLogin: TEdit
+          Left = 287
+          Top = 159
+          Width = 233
+          Height = 29
+          Cursor = crIBeam
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 1
+        end
+        object EdtSenha: TEdit
+          Left = 287
+          Top = 226
+          Width = 233
+          Height = 29
+          Cursor = crIBeam
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 2
+        end
+        object MkEdtDataDeNascimento: TMaskEdit
+          Left = 772
+          Top = 156
+          Width = 85
+          Height = 28
+          Cursor = crIBeam
+          EditMask = '!99/99/0000;1;_'
+          MaxLength = 10
+          TabOrder = 3
+          Text = '  /  /    '
+        end
+        object ToggleStatus: TToggleSwitch
+          Left = 287
+          Top = 285
+          Width = 131
+          Height = 22
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          StateCaptions.CaptionOn = 'Ativo'
+          StateCaptions.CaptionOff = 'Bloqueado'
+          TabOrder = 4
+        end
+        object EdtNome: TEdit
+          Left = 287
+          Top = 93
+          Width = 233
+          Height = 29
+          Cursor = crIBeam
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 5
+        end
       end
     end
     inherited CardPesquisa: TCard
-      Width = 761
-      Height = 449
-      ExplicitWidth = 659
-      ExplicitHeight = 442
+      Width = 1834
+      Height = 883
+      OnClick = CardPesquisaClick
+      ExplicitWidth = 1834
+      ExplicitHeight = 883
       inherited PnlPesquisa: TPanel
-        Width = 761
-        ExplicitWidth = 659
+        Width = 1834
+        Color = 15790320
+        ParentBackground = False
+        ExplicitLeft = 0
+        ExplicitWidth = 1834
         object Image1: TImage [1]
-          Left = 456
-          Top = 5
+          Left = 1616
+          Top = 13
           Width = 49
           Height = 56
           Center = True
@@ -4466,74 +4534,185 @@ inherited FrmUsuarios: TFrmUsuarios
           Transparent = True
           OnClick = Image1Click
         end
+        inherited EdtPesquisarNome: TEdit
+          Top = 45
+          Cursor = crIBeam
+          ExplicitTop = 45
+        end
         inherited BtnPesquisar: TButton
-          Left = 667
+          Left = 1722
           Cursor = crHandPoint
+          Font.Color = 14013696
           OnClick = BtnPesquisarClick
-          ExplicitLeft = 565
+          ExplicitLeft = 1722
+        end
+        inherited EdtPesquisarEmail: TEdit
+          Top = 45
+          Cursor = crIBeam
+          ExplicitTop = 45
         end
       end
       inherited PnlPesquisaBotoes: TPanel
-        Top = 378
-        Width = 761
-        ExplicitTop = 371
-        ExplicitWidth = 659
+        Top = 798
+        Width = 1834
+        BevelOuter = bvNone
+        Color = 15790320
+        Font.Style = []
+        ParentBackground = False
+        ExplicitTop = 798
+        ExplicitWidth = 1834
         inherited BtnFechar: TButton
-          Left = 666
+          Left = 1722
+          Top = 0
+          Height = 85
           Cursor = crHandPoint
-          ExplicitLeft = 564
+          Font.Style = []
+          ExplicitLeft = 1722
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnIncluir: TButton
+          Left = 0
+          Top = 0
+          Height = 85
           Cursor = crHandPoint
+          Font.Style = []
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnExcluir: TButton
+          Left = 224
+          Top = 0
+          Height = 85
           Cursor = crHandPoint
+          Font.Style = []
           OnClick = BtnExcluirClick
+          ExplicitLeft = 224
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnImprimir: TButton
+          Left = 336
+          Top = 0
+          Height = 85
           Cursor = crHandPoint
+          Font.Style = []
+          ExplicitLeft = 336
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnAlterar: TButton
+          Left = 112
+          Top = 0
+          Height = 85
           Cursor = crHandPoint
+          Font.Style = []
+          ExplicitLeft = 112
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
       end
       inherited PnlGrid: TPanel
-        Width = 761
-        Height = 311
-        ExplicitWidth = 659
-        ExplicitHeight = 304
+        Width = 1834
+        Height = 717
+        ExplicitWidth = 1834
+        ExplicitHeight = 717
         inherited DBGrid1: TDBGrid
-          Width = 759
-          Height = 309
+          Width = 1826
+          Height = 709
+          Color = clWhite
           DataSource = DataSource1
+          Font.Color = 8421440
+          Font.Height = -23
           Columns = <
             item
               Expanded = False
               FieldName = 'Nome'
-              Width = 137
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 8421440
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Title.Alignment = taCenter
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clNavy
+              Title.Font.Height = -20
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = [fsBold]
+              Width = 224
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Login'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 8421440
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Title.Alignment = taCenter
+              Title.Color = 16512
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clNavy
+              Title.Font.Height = -20
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = [fsBold]
+              Width = 275
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Status'
-              Width = 64
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 8421440
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Title.Alignment = taCenter
+              Title.Color = 4194304
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clNavy
+              Title.Font.Height = -20
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = [fsBold]
+              Width = 111
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Email'
-              Width = 205
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 8421440
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Title.Alignment = taCenter
+              Title.Color = 4194304
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clNavy
+              Title.Font.Height = -20
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = [fsBold]
+              Width = 318
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'Data_De_Nascimento'
-              Width = 64
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = 8421440
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
+              Title.Alignment = taCenter
+              Title.Color = 4194304
+              Title.Font.Charset = DEFAULT_CHARSET
+              Title.Font.Color = clNavy
+              Title.Font.Height = -20
+              Title.Font.Name = 'Segoe UI'
+              Title.Font.Style = [fsBold]
+              Width = 242
               Visible = True
             end>
         end
@@ -4541,12 +4720,12 @@ inherited FrmUsuarios: TFrmUsuarios
     end
   end
   inherited ImageList1: TImageList
-    Left = 441
-    Top = 282
+    Left = 1441
+    Top = 58
   end
   inherited DataSource1: TDataSource
     DataSet = DmUsuarios.CdsUsuarios
-    Left = 537
-    Top = 284
+    Left = 1649
+    Top = 164
   end
 end

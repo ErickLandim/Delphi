@@ -35,6 +35,7 @@ type
     procedure Image1Click(Sender: TObject);
     procedure CardPesquisaClick(Sender: TObject);
 
+
   private
     { Private declarations }
   public
@@ -59,6 +60,8 @@ begin
   EdtNome.Text := DmUsuarios.CdsUsuariosNome.AsString;
   EdtLogin.Text := DmUsuarios.CdsUsuariosLogin.AsString;
   EdtSenha.Text := DmUsuarios.CdsUsuariosSenha.AsString;
+  EdtEmail.Text := DmUsuarios.CdsUsuariosEmail.AsString;
+  MkEdtDataDeNascimento.Text := DmUsuarios.CdsUsuariosData_De_Nascimento.AsString;
 
   ToggleStatus.State := Tsson;
   if DmUsuarios.CdsUsuariosStatus.AsString = 'B' then
@@ -195,7 +198,7 @@ begin
   DmUsuarios.CdsUsuariosSenha.AsString         := Trim(EdtSenha.Text);
   DmUsuarios.CdsUsuariosStatus.AsString        := LStatus;
   DmUsuarios.CdsUsuariosEmail.AsString         := Trim(EdtEmail.Text);
-  DmUsuarios.CdsUsuariosData_Cadastro.AsString := Trim(MKEdtDataDeNascimento.Text);
+  DmUsuarios.CdsUsuariosData_De_Nascimento.AsString := Trim(MKEdtDataDeNascimento.Text);
 
   DmUsuarios.CdsUsuarios.Post;
   DmUsuarios.CdsUsuarios.ApplyUpdates (0);
@@ -243,6 +246,8 @@ begin
   end;
 
 end;
+
+
 
 
 

@@ -5,8 +5,7 @@ inherited FrmUsuarios: TFrmUsuarios
   ClientHeight = 885
   ClientWidth = 1836
   Font.Height = -15
-  WindowState = wsMaximized
-  ExplicitLeft = -741
+  ExplicitTop = -21
   ExplicitWidth = 1842
   ExplicitHeight = 914
   PixelsPerInch = 96
@@ -14,17 +13,16 @@ inherited FrmUsuarios: TFrmUsuarios
   inherited PnlPrincipal: TCardPanel
     Width = 1836
     Height = 885
-    ActiveCard = CardPesquisa
-    ExplicitWidth = 763
-    ExplicitHeight = 451
+    ActiveCard = CardCadastro
+    ExplicitWidth = 1836
+    ExplicitHeight = 885
     inherited CardCadastro: TCard
       Width = 1834
       Height = 883
       Color = clBtnHighlight
       ParentBackground = False
-      ExplicitLeft = 2
-      ExplicitWidth = 1167
-      ExplicitHeight = 479
+      ExplicitWidth = 1834
+      ExplicitHeight = 883
       inherited PnlCadastroBotoes: TPanel
         Top = 794
         Width = 1834
@@ -35,17 +33,18 @@ inherited FrmUsuarios: TFrmUsuarios
         Font.Style = [fsBold]
         ParentBackground = False
         ParentFont = False
-        ExplicitTop = 390
-        ExplicitWidth = 1167
+        ExplicitTop = 794
+        ExplicitWidth = 1834
         ExplicitHeight = 89
         inherited BtnCancelar: TButton
           Left = 1722
           Top = 0
           Width = 112
           Height = 89
-          ExplicitLeft = 1054
+          ExplicitLeft = 1722
+          ExplicitTop = 0
           ExplicitWidth = 112
-          ExplicitHeight = 87
+          ExplicitHeight = 89
         end
         inherited BtnSalvar: TButton
           Left = 1610
@@ -53,9 +52,10 @@ inherited FrmUsuarios: TFrmUsuarios
           Width = 112
           Height = 89
           OnClick = BtnSalvarClick
-          ExplicitLeft = 942
+          ExplicitLeft = 1610
+          ExplicitTop = 0
           ExplicitWidth = 112
-          ExplicitHeight = 87
+          ExplicitHeight = 89
         end
       end
       object Pnl_AlinhamentoDasInfo: TPanel
@@ -67,8 +67,6 @@ inherited FrmUsuarios: TFrmUsuarios
         Padding.Left = 500
         Padding.Top = 500
         TabOrder = 1
-        ExplicitLeft = -8
-        ExplicitTop = -16
         object LblDataDeNacimento: TLabel
           Left = 622
           Top = 163
@@ -97,7 +95,7 @@ inherited FrmUsuarios: TFrmUsuarios
         end
         object LblLogin: TLabel
           Left = 233
-          Top = 159
+          Top = 163
           Width = 39
           Height = 20
           Caption = 'Login'
@@ -137,7 +135,7 @@ inherited FrmUsuarios: TFrmUsuarios
         object LblNome: TLabel
           Left = 233
           Top = 97
-          Width = 48
+          Width = 43
           Height = 20
           Caption = 'Nome'
           Font.Charset = DEFAULT_CHARSET
@@ -150,7 +148,7 @@ inherited FrmUsuarios: TFrmUsuarios
         object EdtEmail: TEdit
           Left = 666
           Top = 93
-          Width = 199
+          Width = 223
           Height = 29
           Cursor = crIBeam
           Font.Charset = DEFAULT_CHARSET
@@ -192,10 +190,10 @@ inherited FrmUsuarios: TFrmUsuarios
         object MkEdtDataDeNascimento: TMaskEdit
           Left = 772
           Top = 156
-          Width = 85
+          Width = 93
           Height = 28
           Cursor = crIBeam
-          EditMask = '!99/99/0000;1;_'
+          EditMask = '!99/99/9999;1;_'
           MaxLength = 10
           TabOrder = 3
           Text = '  /  /    '
@@ -235,13 +233,14 @@ inherited FrmUsuarios: TFrmUsuarios
       Width = 1834
       Height = 883
       OnClick = CardPesquisaClick
-      ExplicitWidth = 761
-      ExplicitHeight = 449
+      ExplicitWidth = 1834
+      ExplicitHeight = 883
       inherited PnlPesquisa: TPanel
         Width = 1834
         Color = 15790320
         ParentBackground = False
-        ExplicitWidth = 1367
+        ExplicitLeft = 0
+        ExplicitWidth = 1834
         object Image1: TImage [1]
           Left = 1616
           Top = 13
@@ -4547,10 +4546,12 @@ inherited FrmUsuarios: TFrmUsuarios
           Cursor = crHandPoint
           Font.Color = 14013696
           OnClick = BtnPesquisarClick
-          ExplicitLeft = 1273
+          ExplicitLeft = 1722
         end
         inherited EdtPesquisarEmail: TEdit
+          Top = 45
           Cursor = crIBeam
+          ExplicitTop = 45
         end
       end
       inherited PnlPesquisaBotoes: TPanel
@@ -4560,15 +4561,17 @@ inherited FrmUsuarios: TFrmUsuarios
         Color = 15790320
         Font.Style = []
         ParentBackground = False
-        ExplicitTop = 394
-        ExplicitWidth = 1367
+        ExplicitTop = 798
+        ExplicitWidth = 1834
         inherited BtnFechar: TButton
           Left = 1722
           Top = 0
           Height = 85
           Cursor = crHandPoint
           Font.Style = []
-          ExplicitLeft = 1272
+          ExplicitLeft = 1722
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnIncluir: TButton
           Left = 0
@@ -4576,6 +4579,9 @@ inherited FrmUsuarios: TFrmUsuarios
           Height = 85
           Cursor = crHandPoint
           Font.Style = []
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnExcluir: TButton
           Left = 224
@@ -4584,6 +4590,9 @@ inherited FrmUsuarios: TFrmUsuarios
           Cursor = crHandPoint
           Font.Style = []
           OnClick = BtnExcluirClick
+          ExplicitLeft = 224
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnImprimir: TButton
           Left = 336
@@ -4591,6 +4600,9 @@ inherited FrmUsuarios: TFrmUsuarios
           Height = 85
           Cursor = crHandPoint
           Font.Style = []
+          ExplicitLeft = 336
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
         inherited BtnAlterar: TButton
           Left = 112
@@ -4598,13 +4610,16 @@ inherited FrmUsuarios: TFrmUsuarios
           Height = 85
           Cursor = crHandPoint
           Font.Style = []
+          ExplicitLeft = 112
+          ExplicitTop = 0
+          ExplicitHeight = 85
         end
       end
       inherited PnlGrid: TPanel
         Width = 1834
         Height = 717
-        ExplicitWidth = 1367
-        ExplicitHeight = 341
+        ExplicitWidth = 1834
+        ExplicitHeight = 717
         inherited DBGrid1: TDBGrid
           Width = 1826
           Height = 709

@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, MonolitoFinanceiro.View.CadastroPadrao,
   Data.DB, System.ImageList, Vcl.ImgList, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
   Vcl.ExtCtrls, Vcl.WinXPanels, MonolitoFinanceiro.Model.Usuarios, Vcl.WinXCtrls,
-  Vcl.Imaging.GIFImg;
+  Vcl.Imaging.GIFImg, Vcl.Mask;
 
 type
   TFrmUsuarios = class(TFrmCadastroPadrao)
@@ -20,8 +20,11 @@ type
     LblSenha: TLabel;
     LblStatus: TLabel;
     Image1: TImage;
-    PnlEdtPesquisar: TPanel;
-    Panel1: TPanel;
+    LblEmail: TLabel;
+    LblDataDeNacimento: TLabel;
+    EdtEmail: TEdit;
+    MkEdtDataDeNascimento: TMaskEdit;
+    Pnl_AlinhamentoDasInfo: TPanel;
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
@@ -30,6 +33,8 @@ type
     procedure BtnCancelarClick(Sender: TObject);
     procedure BtnExcluirClick(Sender: TObject);
     procedure Image1Click(Sender: TObject);
+    procedure CardPesquisaClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -42,7 +47,7 @@ var
 implementation
 
 uses
-  MonolitoFinanceiro.Utilitarios;
+  MonolitoFinanceiro.Utilitarios, FireDAC.Comp.Client;
 
 {$R *.dfm}
 
@@ -54,6 +59,8 @@ begin
   EdtNome.Text := DmUsuarios.CdsUsuariosNome.AsString;
   EdtLogin.Text := DmUsuarios.CdsUsuariosLogin.AsString;
   EdtSenha.Text := DmUsuarios.CdsUsuariosSenha.AsString;
+  EdtEmail.Text := DmUsuarios.CdsUsuariosEmail.AsString;
+  MkEdtDataDeNascimento.Text := DmUsuarios.CdsUsuariosData_De_Nascimento.AsString;
 
   ToggleStatus.State := Tsson;
   if DmUsuarios.CdsUsuariosStatus.AsString = 'B' then
@@ -93,12 +100,37 @@ begin
 end;
 
 procedure TFrmUsuarios.BtnPesquisarClick(Sender: TObject);
+Var
+  SQLPesquisa : string;
 begin
   inherited;
-  DmUsuarios.CdsUsuarios.close;
-  DmUsuarios.CdsUsuarios.CommandText := 'SELECT * FROM Usuarios';
-  DmUsuarios.Cdsusuarios.open;
 
+    SQLPesquisa := 'SELECT * FROM Usuarios';
+
+   if EdtPesquisarNome.Text + EdtPesquisarEmail.Text = '' then
+    begin
+     DmUsuarios.CdsUsuarios.close;
+     DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa;
+     DmUsuarios.Cdsusuarios.open;
+    end
+    Else if EdtPesquisarNome.Text + EdtPesquisarEmail.Text <> '' then
+      begin
+        DmUsuarios.CdsUsuarios.Close;
+        DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE nome LIKE "' + EdtPesquisarNome.Text + '%" AND Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
+        DmUsuarios.CdsUsuarios.Open;
+      end
+      Else if EdtPesquisarEmail.Text <> '' then
+        begin
+         DmUsuarios.CdsUsuarios.Close;
+         DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
+         DmUsuarios.CdsUsuarios.Open;
+        end
+          Else if EdtPesquisarNome.Text <> '' then
+          begin
+           DmUsuarios.CdsUsuarios.Close;
+           DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE login OR nome LIKE "'  + EdtPesquisarNome.Text + '%" ';
+           DmUsuarios.CdsUsuarios.Open;
+          end;
 end;
 
 procedure TFrmUsuarios.BtnSalvarClick(Sender: TObject);
@@ -124,6 +156,19 @@ begin
                     application.MessageBox('O campo Senha não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
                     Abort;
                   End;
+                           if Trim(EdtEmail.Text) = '' then
+                           Begin
+                             EdtEmail.SetFocus;
+                             Application.MessageBox('O Campo Email não pode estar vazio.', 'Atenção', Mb_Ok + MB_ICONWARNING);
+                             Abort;
+                           End;
+                                   if Trim(MKEdtDataDeNascimento.Text) = '' Then
+                                   Begin
+                                     MKEdtDataDeNascimento.SetFocus;
+                                     Application.MessageBox('O Campo Data de Nascimento não pode estar vazio.', 'Atenção', Mb_Ok + MB_ICONWARNING);
+                                     Abort;
+                                   End;
+
 
   if DmUsuarios.TemLoginCadastrado(Trim(EdtLogin.Text), DmUsuarios.CdsUsuarios.FieldByName('ID').AsString) then
   Begin
@@ -131,7 +176,7 @@ begin
     application.MessageBox(PwideChar(format('O Login já existe', [EdtLogin.text])), 'Atenção', Mb_OK + MB_ICONWARNING);
     Abort;
   End;
-                  
+
   LStatus := 'A';
 
   if ToggleStatus.State = tssoff then
@@ -147,16 +192,24 @@ begin
     DmUsuarios.CdsUsuariosData_Cadastro.AsDateTime := Now;
   end;
   
-  DmUsuarios.CdsUsuariosNome.AsString := Trim(EdtNome.Text);
-  DmUsuarios.CdsUsuariosLogin.AsString := Trim(EdtLogin.Text);
-  DmUsuarios.CdsUsuariosSenha.AsString := Trim(EdtSenha.Text);
-  DmUsuarios.CdsUsuariosStatus.AsString := LStatus;
+  DmUsuarios.CdsUsuariosNome.AsString          := Trim(EdtNome.Text);
+  DmUsuarios.CdsUsuariosLogin.AsString         := Trim(EdtLogin.Text);
+  DmUsuarios.CdsUsuariosSenha.AsString         := Trim(EdtSenha.Text);
+  DmUsuarios.CdsUsuariosStatus.AsString        := LStatus;
+  DmUsuarios.CdsUsuariosEmail.AsString         := Trim(EdtEmail.Text);
+  DmUsuarios.CdsUsuariosData_De_Nascimento.AsString := Trim(MKEdtDataDeNascimento.Text);
 
   DmUsuarios.CdsUsuarios.Post;
   DmUsuarios.CdsUsuarios.ApplyUpdates (0);
   application.MessageBox(PWideChar(Mensagem),  'Atenção', Mb_OK + MB_ICONINFORMATION);
 
   PnlPrincipal.ActiveCard := CardPesquisa;
+  inherited;
+
+end;
+
+procedure TFrmUsuarios.CardPesquisaClick(Sender: TObject);
+begin
   inherited;
 
 end;
@@ -192,5 +245,7 @@ begin
   end;
 
 end;
+
+
 
 end.
