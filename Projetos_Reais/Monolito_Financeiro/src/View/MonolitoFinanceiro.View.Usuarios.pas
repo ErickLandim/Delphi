@@ -32,6 +32,7 @@ type
     procedure BtnCancelarClick(Sender: TObject);
     procedure BtnExcluirClick(Sender: TObject);
     procedure Image1Click(Sender: TObject);
+    procedure CardPesquisaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -199,6 +200,12 @@ begin
   application.MessageBox(PWideChar(Mensagem),  'Atenção', Mb_OK + MB_ICONINFORMATION);
 
   PnlPrincipal.ActiveCard := CardPesquisa;
+  inherited;
+
+end;
+
+procedure TFrmUsuarios.CardPesquisaClick(Sender: TObject);
+begin
   inherited;
 
 end;

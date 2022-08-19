@@ -30,6 +30,7 @@ object FrmPrincipal: TFrmPrincipal
       item
         Width = 300
       end>
+    ExplicitTop = 488
   end
   object PnlMenuPrincipal: TPanel
     Left = 0
@@ -41,6 +42,8 @@ object FrmPrincipal: TFrmPrincipal
     Color = 14145495
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = -6
+    ExplicitHeight = 488
     object PnlMenuEsquerda: TPanel
       Left = 0
       Top = 0
@@ -51,6 +54,7 @@ object FrmPrincipal: TFrmPrincipal
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitHeight = 488
       object SptBtnSair: TSpeedButton
         AlignWithMargins = True
         Left = 0
@@ -541,6 +545,7 @@ object FrmPrincipal: TFrmPrincipal
         Color = clSilver
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 100
       end
       object Panel3: TPanel
         Left = 0
@@ -552,6 +557,7 @@ object FrmPrincipal: TFrmPrincipal
         Color = clSilver
         ParentBackground = False
         TabOrder = 2
+        ExplicitTop = 150
       end
       object Panel4: TPanel
         Left = 0
@@ -563,6 +569,7 @@ object FrmPrincipal: TFrmPrincipal
         Color = clSilver
         ParentBackground = False
         TabOrder = 3
+        ExplicitTop = 200
       end
     end
     object Pnl_SubMenu_Cadastro: TPanel

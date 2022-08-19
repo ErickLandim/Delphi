@@ -23,7 +23,7 @@ type
     Panel4: TPanel;
     Pnl_SubMenu_Cadastro: TPanel;
     SbtBtn_CadastroUsuarios: TSpeedButton;
-
+    procedure MnuUsuariosClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure SptBtnMenuClick(Sender: TObject);
@@ -82,14 +82,7 @@ end;
 
 procedure TFrmPrincipal.SbtBtn_CadastroUsuariosClick(Sender: TObject);
 begin
-  FrmUsuarios := TFrmUsuarios.Create(Self);
-
-  FrmUsuarios.Parent := PnlMenuPrincipal;
-  FrmUsuarios.Align := AlClient;
-  FrmUsuarios.BorderStyle := bsNone;
-
   FrmUsuarios.Show;
-
 end;
 
 procedure TFrmPrincipal.SptBtnCadastroClick(Sender: TObject);

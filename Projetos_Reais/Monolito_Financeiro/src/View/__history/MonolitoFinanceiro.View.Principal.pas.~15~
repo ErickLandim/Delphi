@@ -9,6 +9,11 @@ uses
 
 type
   TFrmPrincipal = class(TForm)
+    MainMenu1: TMainMenu;
+    mnuCadastro: TMenuItem;
+    mnuRelatorios: TMenuItem;
+    mnuAjuda: TMenuItem;
+    MnuUsuarios: TMenuItem;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
     PnlMenuPrincipal: TPanel;
@@ -21,16 +26,11 @@ type
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
-    Pnl_SubMenu_Cadastro: TPanel;
-    SbtBtn_CadastroUsuarios: TSpeedButton;
-
+    procedure MnuUsuariosClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure SptBtnMenuClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure SptBtnCadastroClick(Sender: TObject);
-    procedure Pnl_SubMenu_CadastroMouseEnter(Sender: TObject);
-    procedure SbtBtn_CadastroUsuariosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -75,26 +75,9 @@ begin
   PnlMenuEsquerda.Width := 50;
 end;
 
-procedure TFrmPrincipal.Pnl_SubMenu_CadastroMouseEnter(Sender: TObject);
+procedure TFrmPrincipal.MnuUsuariosClick(Sender: TObject);
 begin
-  Pnl_SubMenu_Cadastro.Visible := False;
-end;
-
-procedure TFrmPrincipal.SbtBtn_CadastroUsuariosClick(Sender: TObject);
-begin
-  FrmUsuarios := TFrmUsuarios.Create(Self);
-
-  FrmUsuarios.Parent := PnlMenuPrincipal;
-  FrmUsuarios.Align := AlClient;
-  FrmUsuarios.BorderStyle := bsNone;
-
-  FrmUsuarios.Show;
-
-end;
-
-procedure TFrmPrincipal.SptBtnCadastroClick(Sender: TObject);
-begin
-  Pnl_SubMenu_Cadastro.Visible := Not Pnl_SubMenu_Cadastro.Visible;
+   FrmUsuarios.show;
 end;
 
 procedure TFrmPrincipal.SptBtnMenuClick(Sender: TObject);

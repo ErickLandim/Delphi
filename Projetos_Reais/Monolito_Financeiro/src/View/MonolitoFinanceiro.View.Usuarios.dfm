@@ -176,6 +176,7 @@ inherited FrmUsuarios: TFrmUsuarios
     inherited CardPesquisa: TCard
       Width = 761
       Height = 449
+      OnClick = CardPesquisaClick
       ExplicitWidth = 761
       ExplicitHeight = 449
       inherited PnlPesquisa: TPanel
@@ -4507,6 +4508,7 @@ inherited FrmUsuarios: TFrmUsuarios
         Top = 378
         Width = 761
         ParentBackground = False
+        ExplicitLeft = 0
         ExplicitTop = 378
         ExplicitWidth = 761
         inherited BtnFechar: TButton
