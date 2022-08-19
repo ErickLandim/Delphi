@@ -25,7 +25,7 @@ object FrmLogin: TFrmLogin
     Width = 1240
     Height = 909
     Align = alClient
-    Color = 15131358
+    Color = 14145495
     Padding.Left = 500
     Padding.Top = 300
     Padding.Right = 500

@@ -41,7 +41,7 @@ object FrmPrincipal: TFrmPrincipal
     Height = 547
     Align = alClient
     BevelOuter = bvNone
-    Color = 15658734
+    Color = 14145495
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20

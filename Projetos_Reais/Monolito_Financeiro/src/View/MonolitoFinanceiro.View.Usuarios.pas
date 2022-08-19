@@ -24,6 +24,7 @@ type
     LblDataDeNacimento: TLabel;
     EdtEmail: TEdit;
     MkEdtDataDeNascimento: TMaskEdit;
+    Pnl_AlinhamentoDasInfo: TPanel;
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
@@ -33,6 +34,7 @@ type
     procedure BtnExcluirClick(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure CardPesquisaClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -241,5 +243,7 @@ begin
   end;
 
 end;
+
+
 
 end.
