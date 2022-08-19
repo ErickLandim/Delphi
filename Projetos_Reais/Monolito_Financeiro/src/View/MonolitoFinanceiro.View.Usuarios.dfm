@@ -11,14 +11,13 @@ inherited FrmUsuarios: TFrmUsuarios
   inherited PnlPrincipal: TCardPanel
     Width = 763
     Height = 451
-    ExplicitWidth = 661
-    ExplicitHeight = 444
+    ExplicitWidth = 763
+    ExplicitHeight = 451
     inherited CardCadastro: TCard
       Width = 761
       Height = 449
       Color = clBtnHighlight
       ParentBackground = False
-      ExplicitLeft = 2
       ExplicitWidth = 761
       ExplicitHeight = 449
       object LblNome: TLabel [0]
@@ -177,13 +176,12 @@ inherited FrmUsuarios: TFrmUsuarios
     inherited CardPesquisa: TCard
       Width = 761
       Height = 449
-      ExplicitWidth = 659
-      ExplicitHeight = 442
+      ExplicitWidth = 761
+      ExplicitHeight = 449
       inherited PnlPesquisa: TPanel
         Width = 761
-        Color = 14013696
         ParentBackground = False
-        ExplicitWidth = 659
+        ExplicitWidth = 761
         inherited LblPesquisarNome: TLabel
           Width = 91
           Font.Style = [fsBold]
@@ -4496,9 +4494,10 @@ inherited FrmUsuarios: TFrmUsuarios
           Left = 667
           Cursor = crHandPoint
           Font.Color = 14013696
+          Font.Style = [fsBold]
           ParentFont = False
           OnClick = BtnPesquisarClick
-          ExplicitLeft = 565
+          ExplicitLeft = 667
         end
         inherited EdtPesquisarEmail: TEdit
           Cursor = crIBeam
@@ -4507,14 +4506,13 @@ inherited FrmUsuarios: TFrmUsuarios
       inherited PnlPesquisaBotoes: TPanel
         Top = 378
         Width = 761
-        Color = 14013696
         ParentBackground = False
-        ExplicitTop = 371
-        ExplicitWidth = 659
+        ExplicitTop = 378
+        ExplicitWidth = 761
         inherited BtnFechar: TButton
           Left = 666
           Cursor = crHandPoint
-          ExplicitLeft = 564
+          ExplicitLeft = 666
         end
         inherited BtnIncluir: TButton
           Cursor = crHandPoint
@@ -4533,8 +4531,8 @@ inherited FrmUsuarios: TFrmUsuarios
       inherited PnlGrid: TPanel
         Width = 761
         Height = 311
-        ExplicitWidth = 659
-        ExplicitHeight = 304
+        ExplicitWidth = 761
+        ExplicitHeight = 311
         inherited DBGrid1: TDBGrid
           Width = 759
           Height = 309

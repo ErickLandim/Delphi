@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls, Vcl.ExtCtrls,
+  Vcl.Buttons;
 
 type
   TFrmPrincipal = class(TForm)
@@ -15,6 +16,12 @@ type
     MnuUsuarios: TMenuItem;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
+    PnlMenuPrincipal: TPanel;
+    PnlMenuEsquerda: TPanel;
+    SptBtnSair: TSpeedButton;
+    SptBtnRelatorios: TSpeedButton;
+    SptBtnCadastro: TSpeedButton;
+    SptBtnMenu: TSpeedButton;
     procedure MnuUsuariosClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
