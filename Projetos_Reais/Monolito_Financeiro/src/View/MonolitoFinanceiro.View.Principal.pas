@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ComCtrls, Vcl.ExtCtrls,
-  Vcl.Buttons;
+  Vcl.Buttons, Vcl.StdCtrls;
 
 type
   TFrmPrincipal = class(TForm)
@@ -23,6 +23,8 @@ type
     Panel4: TPanel;
     Pnl_SubMenu_Cadastro: TPanel;
     SbtBtn_CadastroUsuarios: TSpeedButton;
+    Panel5: TPanel;
+    Label1: TLabel;
 
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -31,6 +33,7 @@ type
     procedure SptBtnCadastroClick(Sender: TObject);
     procedure Pnl_SubMenu_CadastroMouseEnter(Sender: TObject);
     procedure SbtBtn_CadastroUsuariosClick(Sender: TObject);
+    procedure SptBtnSairClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -106,6 +109,11 @@ begin
 
    bExpandido := Not bExpandido;
 
+end;
+
+procedure TFrmPrincipal.SptBtnSairClick(Sender: TObject);
+begin
+    Application.Terminate;
 end;
 
 procedure TFrmPrincipal.Timer1Timer(Sender: TObject);

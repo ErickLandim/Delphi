@@ -4,8 +4,8 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'Cadastro Padr'#227'o'
-  ClientHeight = 453
-  ClientWidth = 770
+  ClientHeight = 631
+  ClientWidth = 1377
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,35 +20,35 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
   object PnlPrincipal: TCardPanel
     Left = 0
     Top = 0
-    Width = 770
-    Height = 453
+    Width = 1377
+    Height = 631
     Align = alClient
     ActiveCard = CardPesquisa
     Caption = 'Card1'
     TabOrder = 0
-    ExplicitWidth = 624
-    ExplicitHeight = 441
+    ExplicitWidth = 770
+    ExplicitHeight = 453
     object CardCadastro: TCard
       Left = 1
       Top = 1
-      Width = 768
-      Height = 451
+      Width = 1375
+      Height = 629
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      ExplicitWidth = 622
-      ExplicitHeight = 439
+      ExplicitWidth = 768
+      ExplicitHeight = 451
       object PnlCadastroBotoes: TPanel
         Left = 0
-        Top = 380
-        Width = 768
+        Top = 558
+        Width = 1375
         Height = 71
         Align = alBottom
         TabOrder = 0
-        ExplicitTop = 368
-        ExplicitWidth = 622
+        ExplicitTop = 380
+        ExplicitWidth = 768
         object BtnCancelar: TButton
-          Left = 673
+          Left = 1280
           Top = 1
           Width = 94
           Height = 69
@@ -60,10 +60,10 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           Images = ImageList1
           TabOrder = 0
           OnClick = BtnCancelarClick
-          ExplicitLeft = 527
+          ExplicitLeft = 673
         end
         object BtnSalvar: TButton
-          Left = 579
+          Left = 1186
           Top = 1
           Width = 94
           Height = 69
@@ -74,173 +74,251 @@ object FrmCadastroPadrao: TFrmCadastroPadrao
           ImageMargins.Top = 10
           Images = ImageList1
           TabOrder = 1
-          ExplicitLeft = 433
+          ExplicitLeft = 579
         end
       end
     end
     object CardPesquisa: TCard
       Left = 1
       Top = 1
-      Width = 768
-      Height = 451
+      Width = 1375
+      Height = 629
       Caption = 'CardPesquisa'
       CardIndex = 1
       TabOrder = 1
-      ExplicitWidth = 622
-      ExplicitHeight = 439
+      ExplicitWidth = 768
+      ExplicitHeight = 451
       object PnlPesquisa: TPanel
         Left = 0
         Top = 0
-        Width = 768
-        Height = 67
+        Width = 1375
+        Height = 81
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 622
         object LblPesquisarNome: TLabel
           Left = 16
-          Top = 16
-          Width = 90
-          Height = 15
+          Top = 19
+          Width = 117
+          Height = 20
           Caption = 'Nome/Ou Login:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
         object LblPesquisarEmail: TLabel
           Left = 240
-          Top = 17
-          Width = 32
-          Height = 15
+          Top = 19
+          Width = 42
+          Height = 20
           Caption = 'Email:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
         end
         object EdtPesquisarNome: TEdit
           Left = 16
-          Top = 38
-          Width = 173
-          Height = 23
+          Top = 40
+          Width = 193
+          Height = 29
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 0
         end
         object BtnPesquisar: TButton
-          Left = 674
+          Left = 1263
           Top = 0
-          Width = 94
-          Height = 67
+          Width = 112
+          Height = 81
           Align = alRight
           Caption = 'Pesquisar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
           ImageAlignment = iaTop
           ImageIndex = 6
           ImageMargins.Top = 10
           Images = ImageList1
+          ParentFont = False
           TabOrder = 1
-          ExplicitLeft = 528
+          ExplicitLeft = 1281
         end
         object EdtPesquisarEmail: TEdit
           Left = 240
-          Top = 38
+          Top = 40
           Width = 177
-          Height = 23
+          Height = 29
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           TabOrder = 2
         end
       end
       object PnlPesquisaBotoes: TPanel
         Left = 0
-        Top = 380
-        Width = 768
-        Height = 71
+        Top = 544
+        Width = 1375
+        Height = 85
         Align = alBottom
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 1
-        ExplicitTop = 373
-        ExplicitWidth = 622
         object BtnFechar: TButton
-          Left = 673
+          Left = 1262
           Top = 1
-          Width = 94
-          Height = 69
+          Width = 112
+          Height = 83
           Align = alRight
           Caption = 'Fechar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
           ImageAlignment = iaTop
           ImageIndex = 3
           ImageMargins.Top = 10
           Images = ImageList1
+          ParentFont = False
           TabOrder = 0
           OnClick = BtnFecharClick
-          ExplicitLeft = 527
+          ExplicitLeft = 1280
         end
         object BtnIncluir: TButton
           Left = 1
           Top = 1
-          Width = 94
-          Height = 69
+          Width = 112
+          Height = 83
           Align = alLeft
           Caption = 'Incluir'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
           ImageAlignment = iaTop
           ImageIndex = 5
           ImageMargins.Top = 10
           Images = ImageList1
+          ParentFont = False
           TabOrder = 1
           OnClick = BtnIncluirClick
         end
         object BtnExcluir: TButton
-          Left = 189
+          Left = 225
           Top = 1
-          Width = 94
-          Height = 69
+          Width = 112
+          Height = 83
           Align = alLeft
           Caption = 'Excluir'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
           ImageAlignment = iaTop
           ImageIndex = 2
           ImageMargins.Top = 10
           Images = ImageList1
+          ParentFont = False
           TabOrder = 2
         end
         object BtnImprimir: TButton
-          Left = 283
+          Left = 337
           Top = 1
-          Width = 94
-          Height = 69
+          Width = 112
+          Height = 83
           Align = alLeft
           Caption = 'Imprimir'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
           ImageAlignment = iaTop
           ImageIndex = 4
           ImageMargins.Top = 10
           Images = ImageList1
+          ParentFont = False
           TabOrder = 3
         end
         object BtnAlterar: TButton
-          Left = 95
+          Left = 113
           Top = 1
-          Width = 94
-          Height = 69
+          Width = 112
+          Height = 83
           Align = alLeft
           Caption = 'Alterar'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
           ImageAlignment = iaTop
           ImageIndex = 0
           ImageMargins.Top = 10
           Images = ImageList1
+          ParentFont = False
           TabOrder = 4
           OnClick = BtnAlterarClick
         end
       end
       object PnlGrid: TPanel
         Left = 0
-        Top = 67
-        Width = 768
-        Height = 313
+        Top = 81
+        Width = 1375
+        Height = 463
         Align = alClient
+        Anchors = [akLeft, akTop, akRight]
         TabOrder = 2
-        ExplicitWidth = 622
-        ExplicitHeight = 301
+        ExplicitTop = 67
+        ExplicitWidth = 768
+        ExplicitHeight = 313
         object DBGrid1: TDBGrid
-          Left = 1
-          Top = 1
-          Width = 766
-          Height = 311
+          AlignWithMargins = True
+          Left = 4
+          Top = 4
+          Width = 1367
+          Height = 455
+          Cursor = crHandPoint
           Align = alClient
+          BorderStyle = bsNone
+          Color = clInfoBk
+          FixedColor = 16744448
+          GradientEndColor = clGreen
+          GradientStartColor = clMaroon
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = -1
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          Options = [dgTitles, dgColumnResize, dgColLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgTitleClick]
+          ParentFont = False
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -12
+          TitleFont.Color = clBlack
+          TitleFont.Height = -20
           TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          TitleFont.Style = [fsBold]
         end
       end
     end

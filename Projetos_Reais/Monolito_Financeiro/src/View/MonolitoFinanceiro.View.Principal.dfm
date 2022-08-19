@@ -2,13 +2,14 @@ object FrmPrincipal: TFrmPrincipal
   Left = 735
   Top = 312
   Align = alClient
+  BorderStyle = bsNone
   Caption = 'Monolito Financeiro'
-  ClientHeight = 533
-  ClientWidth = 977
+  ClientHeight = 572
+  ClientWidth = 993
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -15
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = True
@@ -17,11 +18,11 @@ object FrmPrincipal: TFrmPrincipal
   OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 15
+  TextHeight = 20
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 508
-    Width = 977
+    Top = 547
+    Width = 993
     Height = 25
     Panels = <
       item
@@ -30,27 +31,39 @@ object FrmPrincipal: TFrmPrincipal
       item
         Width = 300
       end>
+    ExplicitTop = 508
+    ExplicitWidth = 977
   end
   object PnlMenuPrincipal: TPanel
     Left = 0
     Top = 0
-    Width = 977
-    Height = 508
+    Width = 993
+    Height = 547
     Align = alClient
     BevelOuter = bvNone
     Color = 14145495
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     ParentBackground = False
+    ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 977
+    ExplicitHeight = 508
     object PnlMenuEsquerda: TPanel
       Left = 0
-      Top = 0
+      Top = 25
       Width = 129
-      Height = 508
+      Height = 522
       Align = alLeft
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
+      ExplicitTop = 0
+      ExplicitHeight = 508
       object SptBtnSair: TSpeedButton
         AlignWithMargins = True
         Left = 0
@@ -173,6 +186,7 @@ object FrmPrincipal: TFrmPrincipal
         Margin = 10
         ParentFont = False
         Spacing = 10
+        OnClick = SptBtnSairClick
         ExplicitLeft = -16
         ExplicitTop = 150
         ExplicitWidth = 121
@@ -518,7 +532,8 @@ object FrmPrincipal: TFrmPrincipal
         ParentFont = False
         Spacing = 10
         OnClick = SptBtnMenuClick
-        ExplicitWidth = 105
+        ExplicitLeft = -3
+        ExplicitTop = 1
       end
       object Panel1: TPanel
         Left = 0
@@ -567,7 +582,7 @@ object FrmPrincipal: TFrmPrincipal
     end
     object Pnl_SubMenu_Cadastro: TPanel
       Left = 129
-      Top = 51
+      Top = 76
       Width = 152
       Height = 52
       Color = 16119285
@@ -600,8 +615,32 @@ object FrmPrincipal: TFrmPrincipal
         Spacing = 10
         OnClick = SbtBtn_CadastroUsuariosClick
         ExplicitLeft = 0
-        ExplicitTop = 56
-        ExplicitWidth = 105
+        ExplicitTop = 0
+      end
+    end
+    object Panel5: TPanel
+      Left = 0
+      Top = 0
+      Width = 993
+      Height = 25
+      Align = alTop
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 2
+      object Label1: TLabel
+        Left = 1
+        Top = 1
+        Width = 155
+        Height = 23
+        Align = alLeft
+        Caption = 'Monolito Financeiro'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        ExplicitHeight = 21
       end
     end
   end

@@ -29,6 +29,7 @@ type
     PnlLinhaEdtSenha: TPanel;
     LblTextoLoginPadrao: TLabel;
     SpeedButton1: TSpeedButton;
+    Pnl_PrincipalAtras: TPanel;
     procedure BtnEntrarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
