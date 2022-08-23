@@ -31,8 +31,6 @@ object FrmPrincipal: TFrmPrincipal
       item
         Width = 300
       end>
-    ExplicitTop = 508
-    ExplicitWidth = 977
   end
   object PnlMenuPrincipal: TPanel
     Left = 0
@@ -50,8 +48,7 @@ object FrmPrincipal: TFrmPrincipal
     ParentBackground = False
     ParentFont = False
     TabOrder = 1
-    ExplicitWidth = 977
-    ExplicitHeight = 508
+    ExplicitLeft = -8
     object PnlMenuEsquerda: TPanel
       Left = 0
       Top = 25
@@ -62,8 +59,6 @@ object FrmPrincipal: TFrmPrincipal
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 0
-      ExplicitHeight = 508
       object SptBtnSair: TSpeedButton
         AlignWithMargins = True
         Left = 0
@@ -583,18 +578,19 @@ object FrmPrincipal: TFrmPrincipal
     object Pnl_SubMenu_Cadastro: TPanel
       Left = 129
       Top = 76
-      Width = 152
+      Width = 149
       Height = 52
       Color = 16119285
       ParentBackground = False
       TabOrder = 1
       Visible = False
       OnMouseEnter = Pnl_SubMenu_CadastroMouseEnter
+      OnMouseLeave = Pnl_SubMenu_CadastroMouseLeave
       object SbtBtn_CadastroUsuarios: TSpeedButton
         AlignWithMargins = True
         Left = 1
         Top = 1
-        Width = 150
+        Width = 147
         Height = 50
         Cursor = crHandPoint
         Margins.Left = 0
@@ -616,6 +612,7 @@ object FrmPrincipal: TFrmPrincipal
         OnClick = SbtBtn_CadastroUsuariosClick
         ExplicitLeft = 0
         ExplicitTop = 0
+        ExplicitWidth = 150
       end
     end
     object Panel5: TPanel
@@ -646,7 +643,7 @@ object FrmPrincipal: TFrmPrincipal
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 784
-    Top = 296
+    Left = 672
+    Top = 384
   end
 end

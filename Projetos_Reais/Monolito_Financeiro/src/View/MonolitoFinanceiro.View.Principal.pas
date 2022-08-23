@@ -34,6 +34,7 @@ type
     procedure Pnl_SubMenu_CadastroMouseEnter(Sender: TObject);
     procedure SbtBtn_CadastroUsuariosClick(Sender: TObject);
     procedure SptBtnSairClick(Sender: TObject);
+    procedure Pnl_SubMenu_CadastroMouseLeave(Sender: TObject);
   private
     { Private declarations }
   public
@@ -83,6 +84,11 @@ begin
   Pnl_SubMenu_Cadastro.Visible := False;
 end;
 
+procedure TFrmPrincipal.Pnl_SubMenu_CadastroMouseLeave(Sender: TObject);
+begin
+  Pnl_SubMenu_Cadastro.Visible := False;
+end;
+
 procedure TFrmPrincipal.SbtBtn_CadastroUsuariosClick(Sender: TObject);
 begin
   FrmUsuarios := TFrmUsuarios.Create(Self);
@@ -93,6 +99,7 @@ begin
 
   FrmUsuarios.Show;
 
+  Pnl_SubMenu_Cadastro.Visible := False;
 end;
 
 procedure TFrmPrincipal.SptBtnCadastroClick(Sender: TObject);
@@ -108,6 +115,8 @@ begin
    PnlMenuEsquerda.Width := 130;
 
    bExpandido := Not bExpandido;
+
+   Pnl_SubMenu_Cadastro.Visible := False;
 
 end;
 
