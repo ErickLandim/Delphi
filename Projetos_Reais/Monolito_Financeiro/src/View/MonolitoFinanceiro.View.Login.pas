@@ -20,7 +20,6 @@ type
     LblSenha: TLabel;
     EdtLogin: TEdit;
     EdtSenha: TEdit;
-    BtnEntrar: TButton;
     LblLoginSemSenha: TLabel;
     LblLoginSemLogin: TLabel;
     PnlLoginInserindo: TPanel;
@@ -30,9 +29,13 @@ type
     LblTextoLoginPadrao: TLabel;
     SpeedButton1: TSpeedButton;
     Pnl_PrincipalAtras: TPanel;
+    Pnl_PrincipalCentral: TPanel;
+    PnlBtn_Entrar: TPanel;
+    SBtn_Entrar: TSpeedButton;
     procedure BtnEntrarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure SBtn_EntrarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -85,6 +88,33 @@ end;
 procedure TFrmLogin.SpeedButton1Click(Sender: TObject);
 begin
     Application.Terminate;
+end;
+
+procedure TFrmLogin.SBtn_EntrarClick(Sender: TObject);
+begin
+  if Trim(EdtLogin.Text) = '' then
+  Begin
+    EdtLogin.SetFocus;
+    Application.MessageBox('Informe seu nome de usuario', 'Atenção', Mb_Ok + Mb_ICONWARNING);
+    Abort;
+  End;
+     if Trim(EdtSenha.Text) = '' then
+     begin
+        EdtSenha.SetFocus;
+        Application.MessageBox('Informe sua senha de usuario', 'Atenção', Mb_Ok + Mb_ICONWARNING);
+        Abort;
+     end;
+       try
+         DmUsuarios.EfetuarLogin(Trim(EdtLogin.Text), Trim(EdtSenha.Text));
+         DmSistema.DataUltimoAcesso(Now);
+         DmSistema.UsuarioUltimoAcesso(DmUsuarios.GetUsuarioLogado.Login);
+         ModalResult := MrOk;
+       Except on Erro : Exception do
+        begin
+          Application.MessageBox(PWideChar(Erro.Message), 'Atenção', MB_Ok + MB_ICONWARNING);
+          EdtLogin.SetFocus;
+        end;
+       end;
 end;
 
 end.

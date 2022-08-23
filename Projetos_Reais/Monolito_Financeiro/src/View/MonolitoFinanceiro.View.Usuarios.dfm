@@ -5,7 +5,7 @@ inherited FrmUsuarios: TFrmUsuarios
   ClientHeight = 885
   ClientWidth = 1836
   Font.Height = -15
-  ExplicitTop = -21
+  ExplicitTop = -25
   ExplicitWidth = 1842
   ExplicitHeight = 914
   PixelsPerInch = 96
@@ -13,7 +13,6 @@ inherited FrmUsuarios: TFrmUsuarios
   inherited PnlPrincipal: TCardPanel
     Width = 1836
     Height = 885
-    ActiveCard = CardCadastro
     ExplicitWidth = 1836
     ExplicitHeight = 885
     inherited CardCadastro: TCard
@@ -26,36 +25,34 @@ inherited FrmUsuarios: TFrmUsuarios
       inherited PnlCadastroBotoes: TPanel
         Top = 794
         Width = 1834
-        Height = 89
         BevelOuter = bvNone
         Color = 15790320
         Font.Height = -15
         Font.Style = [fsBold]
         ParentBackground = False
         ParentFont = False
-        ExplicitTop = 794
+        ExplicitTop = 800
         ExplicitWidth = 1834
-        ExplicitHeight = 89
-        inherited BtnCancelar: TButton
+        inherited PnlBtn_Cancelar: TPanel
           Left = 1722
           Top = 0
-          Width = 112
           Height = 89
-          ExplicitLeft = 1722
-          ExplicitTop = 0
-          ExplicitWidth = 112
-          ExplicitHeight = 89
+          inherited SBtn_Cancelar: TSpeedButton
+            Height = 87
+            Font.Height = -15
+            Font.Style = [fsBold]
+          end
         end
-        inherited BtnSalvar: TButton
+        inherited PnlBtn_Salvar: TPanel
           Left = 1610
           Top = 0
-          Width = 112
           Height = 89
-          OnClick = BtnSalvarClick
-          ExplicitLeft = 1610
-          ExplicitTop = 0
-          ExplicitWidth = 112
-          ExplicitHeight = 89
+          inherited SBtn_Salvar: TSpeedButton
+            Height = 87
+            Font.Height = -15
+            Font.Style = [fsBold]
+            OnClick = SBtn_SalvarClick
+          end
         end
       end
       object Pnl_AlinhamentoDasInfo: TPanel
@@ -239,11 +236,10 @@ inherited FrmUsuarios: TFrmUsuarios
         Width = 1834
         Color = 15790320
         ParentBackground = False
-        ExplicitLeft = 0
         ExplicitWidth = 1834
         object Image1: TImage [1]
-          Left = 1616
-          Top = 13
+          Left = 1480
+          Top = 19
           Width = 49
           Height = 56
           Center = True
@@ -4541,17 +4537,20 @@ inherited FrmUsuarios: TFrmUsuarios
           Cursor = crIBeam
           ExplicitTop = 45
         end
-        inherited BtnPesquisar: TButton
-          Left = 1722
-          Cursor = crHandPoint
-          Font.Color = 14013696
-          OnClick = BtnPesquisarClick
-          ExplicitLeft = 1722
-        end
         inherited EdtPesquisarEmail: TEdit
           Top = 45
           Cursor = crIBeam
           ExplicitTop = 45
+        end
+        inherited PnlBtn_Pesquisar: TPanel
+          Left = 1722
+          ExplicitLeft = 1610
+          inherited SBtn_Pesquisar: TSpeedButton
+            Font.Height = -15
+            OnClick = SBtn_PesquisarClick
+            ExplicitLeft = -1
+            ExplicitTop = 1
+          end
         end
       end
       inherited PnlPesquisaBotoes: TPanel
@@ -4559,60 +4558,62 @@ inherited FrmUsuarios: TFrmUsuarios
         Width = 1834
         BevelOuter = bvNone
         Color = 15790320
+        Font.Height = -15
         Font.Style = []
         ParentBackground = False
         ExplicitTop = 798
         ExplicitWidth = 1834
-        inherited BtnFechar: TButton
-          Left = 1722
-          Top = 0
-          Height = 85
-          Cursor = crHandPoint
-          Font.Style = []
-          ExplicitLeft = 1722
-          ExplicitTop = 0
-          ExplicitHeight = 85
-        end
-        inherited BtnIncluir: TButton
-          Left = 0
-          Top = 0
-          Height = 85
-          Cursor = crHandPoint
-          Font.Style = []
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitHeight = 85
-        end
-        inherited BtnExcluir: TButton
+        inherited PnlBtn_imprimir: TPanel
           Left = 224
           Top = 0
           Height = 85
-          Cursor = crHandPoint
-          Font.Style = []
-          OnClick = BtnExcluirClick
-          ExplicitLeft = 224
+          ExplicitLeft = 448
           ExplicitTop = 0
           ExplicitHeight = 85
+          inherited SBtn_Imprimir: TSpeedButton
+            Height = 83
+          end
         end
-        inherited BtnImprimir: TButton
+        inherited PnlBtn_Excluir: TPanel
           Left = 336
           Top = 0
           Height = 85
-          Cursor = crHandPoint
-          Font.Style = []
-          ExplicitLeft = 336
-          ExplicitTop = 0
-          ExplicitHeight = 85
+          inherited SBtn_Excluir: TSpeedButton
+            Height = 83
+            OnClick = SBtn_ExcluirClick
+            ExplicitLeft = 6
+            ExplicitTop = 2
+            ExplicitHeight = 83
+          end
         end
-        inherited BtnAlterar: TButton
+        inherited PnlBtn_Alterar: TPanel
           Left = 112
           Top = 0
           Height = 85
-          Cursor = crHandPoint
-          Font.Style = []
-          ExplicitLeft = 112
+          inherited SBtn_Alterar: TSpeedButton
+            Height = 83
+            OnClick = SBtn_AlterarClick
+          end
+        end
+        inherited PnlBtn_Incluir: TPanel
+          Left = 0
+          Top = 0
+          Height = 85
+          inherited SBtn_Incluir: TSpeedButton
+            Height = 83
+            OnClick = SBtn_IncluirClick
+          end
+        end
+        inherited PnlBtn_Fechar: TPanel
+          Left = 1722
+          Top = 0
+          Height = 85
+          ExplicitLeft = 1610
           ExplicitTop = 0
           ExplicitHeight = 85
+          inherited SBtn_Fechar: TSpeedButton
+            Height = 83
+          end
         end
       end
       inherited PnlGrid: TPanel
@@ -4722,8 +4723,8 @@ inherited FrmUsuarios: TFrmUsuarios
     end
   end
   inherited ImageList1: TImageList
-    Left = 1441
-    Top = 58
+    Left = 1545
+    Top = 250
   end
   inherited DataSource1: TDataSource
     DataSet = DmUsuarios.CdsUsuarios

@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, MonolitoFinanceiro.View.CadastroPadrao,
   Data.DB, System.ImageList, Vcl.ImgList, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls,
   Vcl.ExtCtrls, Vcl.WinXPanels, MonolitoFinanceiro.Model.Usuarios, Vcl.WinXCtrls,
-  Vcl.Imaging.GIFImg, Vcl.Mask;
+  Vcl.Imaging.GIFImg, Vcl.Mask, Vcl.Buttons;
 
 type
   TFrmUsuarios = class(TFrmCadastroPadrao)
@@ -34,6 +34,12 @@ type
     procedure BtnExcluirClick(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure CardPesquisaClick(Sender: TObject);
+    procedure SBtn_AlterarClick(Sender: TObject);
+    procedure SBtn_IncluirClick(Sender: TObject);
+    procedure SBtn_ExcluirClick(Sender: TObject);
+    procedure SBtn_FecharClick(Sender: TObject);
+    procedure SBtn_PesquisarClick(Sender: TObject);
+    procedure SBtn_SalvarClick(Sender: TObject);
 
 
   private
@@ -77,7 +83,7 @@ end;
 procedure TFrmUsuarios.BtnExcluirClick(Sender: TObject);
 begin
   inherited;
-  
+
   if Application.MessageBox('Deseja mesmo excluir o registro?', 'Pergunta', MB_YESNO + MB_ICONQUESTION) <> mrYes then
   Exit;
 
@@ -85,12 +91,12 @@ begin
     DmUsuarios.CdsUsuarios.Delete;
     DmUsuarios.CdsUsuarios.ApplyUpdates(0);
     Application.MessageBox('Registro Excluido com sucesso!', 'Atenção', MB_OK + MB_ICONINFORMATION)
-  
+
   Except on E : Exception do
-  Application.MessageBox(PWideChar(E.Message), 'Erro ao excluir!', MB_OK + MB_ICONERROR); 
+  Application.MessageBox(PWideChar(E.Message), 'Erro ao excluir!', MB_OK + MB_ICONERROR);
 
   End;
-  
+
 end;
 
 procedure TFrmUsuarios.BtnIncluirClick(Sender: TObject);
@@ -248,7 +254,189 @@ begin
 end;
 
 
+procedure TFrmUsuarios.SBtn_AlterarClick(Sender: TObject);
+begin
+ inherited;
+  DmUsuarios.CdsUsuarios.Edit;
+
+  EdtNome.Text := DmUsuarios.CdsUsuariosNome.AsString;
+  EdtLogin.Text := DmUsuarios.CdsUsuariosLogin.AsString;
+  EdtSenha.Text := DmUsuarios.CdsUsuariosSenha.AsString;
+  EdtEmail.Text := DmUsuarios.CdsUsuariosEmail.AsString;
+  MkEdtDataDeNascimento.Text := DmUsuarios.CdsUsuariosData_De_Nascimento.AsString;
+
+  ToggleStatus.State := Tsson;
+  if DmUsuarios.CdsUsuariosStatus.AsString = 'B' then
+    ToggleStatus.State := tssOff;
+end;
+
+procedure TFrmUsuarios.SBtn_ExcluirClick(Sender: TObject);
+begin
+    inherited;
+
+  if Application.MessageBox('Deseja mesmo excluir o registro?', 'Pergunta', MB_YESNO + MB_ICONQUESTION) <> mrYes then
+  Exit;
+
+  Try
+    DmUsuarios.CdsUsuarios.Delete;
+    DmUsuarios.CdsUsuarios.ApplyUpdates(0);
+    Application.MessageBox('Registro Excluido com sucesso!', 'Atenção', MB_OK + MB_ICONINFORMATION)
+
+  Except on E : Exception do
+  Application.MessageBox(PWideChar(E.Message), 'Erro ao excluir!', MB_OK + MB_ICONERROR);
+
+  End;
+
+end;
+
+procedure TFrmUsuarios.SBtn_FecharClick(Sender: TObject);
+Var
+  SQLPesquisa : string;
+begin
+  inherited;
+
+    SQLPesquisa := 'SELECT * FROM Usuarios';
+
+   if EdtPesquisarNome.Text + EdtPesquisarEmail.Text = '' then
+    begin
+     DmUsuarios.CdsUsuarios.close;
+     DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa;
+     DmUsuarios.Cdsusuarios.open;
+    end
+    Else if EdtPesquisarNome.Text + EdtPesquisarEmail.Text <> '' then
+      begin
+        DmUsuarios.CdsUsuarios.Close;
+        DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE nome LIKE "' + EdtPesquisarNome.Text + '%" AND Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
+        DmUsuarios.CdsUsuarios.Open;
+      end
+      Else if EdtPesquisarEmail.Text <> '' then
+        begin
+         DmUsuarios.CdsUsuarios.Close;
+         DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
+         DmUsuarios.CdsUsuarios.Open;
+        end
+          Else if EdtPesquisarNome.Text <> '' then
+          begin
+           DmUsuarios.CdsUsuarios.Close;
+           DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE login OR nome LIKE "'  + EdtPesquisarNome.Text + '%" ';
+           DmUsuarios.CdsUsuarios.Open;
+          end;
+end;
+
+procedure TFrmUsuarios.SBtn_IncluirClick(Sender: TObject);
+begin
+  inherited;
+  LimparCampos;
+  DmUsuarios.CdsUsuarios.Insert;
+end;
+
+procedure TFrmUsuarios.SBtn_PesquisarClick(Sender: TObject);
+Var
+  SQLPesquisa : string;
+begin
+  inherited;
+
+    SQLPesquisa := 'SELECT * FROM Usuarios';
+
+   if EdtPesquisarNome.Text + EdtPesquisarEmail.Text = '' then
+    begin
+     DmUsuarios.CdsUsuarios.close;
+     DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa;
+     DmUsuarios.Cdsusuarios.open;
+    end
+    Else if EdtPesquisarNome.Text + EdtPesquisarEmail.Text <> '' then
+      begin
+        DmUsuarios.CdsUsuarios.Close;
+        DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE nome LIKE "' + EdtPesquisarNome.Text + '%" AND Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
+        DmUsuarios.CdsUsuarios.Open;
+      end
+      Else if EdtPesquisarEmail.Text <> '' then
+        begin
+         DmUsuarios.CdsUsuarios.Close;
+         DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE Email LIKE "'  +  EdtPesquisarEmail.Text + '%" ';
+         DmUsuarios.CdsUsuarios.Open;
+        end
+          Else if EdtPesquisarNome.Text <> '' then
+          begin
+           DmUsuarios.CdsUsuarios.Close;
+           DmUsuarios.CdsUsuarios.CommandText := SQLPesquisa + ' WHERE login OR nome LIKE "'  + EdtPesquisarNome.Text + '%" ';
+           DmUsuarios.CdsUsuarios.Open;
+          end;
+end;
+
+procedure TFrmUsuarios.SBtn_SalvarClick(Sender: TObject);
+Var
+  LStatus : String;
+  Mensagem : String;
+begin
+  if Trim(EdtNome.Text) = '' then
+  Begin
+    EdtNome.SetFocus;
+    application.MessageBox('O campo nome não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
+    Abort;
+  End;
+          if Trim(EdtLogin.Text) = '' then
+          Begin
+            EdtLogin.SetFocus;
+            application.MessageBox('O campo Login não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
+            Abort;
+          End;
+                  if Trim(EdtSenha.Text) = '' then
+                  Begin
+                    EdtSenha.SetFocus;
+                    application.MessageBox('O campo Senha não pode estar vazio.', 'Atenção', Mb_OK + MB_ICONWARNING);
+                    Abort;
+                  End;
+                           if Trim(EdtEmail.Text) = '' then
+                           Begin
+                             EdtEmail.SetFocus;
+                             Application.MessageBox('O Campo Email não pode estar vazio.', 'Atenção', Mb_Ok + MB_ICONWARNING);
+                             Abort;
+                           End;
+                                   if Trim(MKEdtDataDeNascimento.Text) = '' Then
+                                   Begin
+                                     MKEdtDataDeNascimento.SetFocus;
+                                     Application.MessageBox('O Campo Data de Nascimento não pode estar vazio.', 'Atenção', Mb_Ok + MB_ICONWARNING);
+                                     Abort;
+                                   End;
 
 
+  if DmUsuarios.TemLoginCadastrado(Trim(EdtLogin.Text), DmUsuarios.CdsUsuarios.FieldByName('ID').AsString) then
+  Begin
+    EdtLogin.SetFocus;
+    application.MessageBox(PwideChar(format('O Login já existe', [EdtLogin.text])), 'Atenção', Mb_OK + MB_ICONWARNING);
+    Abort;
+  End;
+
+  LStatus := 'A';
+
+  if ToggleStatus.State = tssoff then
+  LStatus := 'B';
+
+  Mensagem := 'Registro alterado com sucesso';
+
+  if DmUsuarios.CdsUsuarios.State in [dsInsert] then
+  Begin
+    Mensagem := 'Registro Incluido com sucesso';
+
+    DmUsuarios.CdsUsuariosId.AsString := TUtilitario.GetID;
+    DmUsuarios.CdsUsuariosData_Cadastro.AsDateTime := Now;
+  end;
+
+  DmUsuarios.CdsUsuariosNome.AsString          := Trim(EdtNome.Text);
+  DmUsuarios.CdsUsuariosLogin.AsString         := Trim(EdtLogin.Text);
+  DmUsuarios.CdsUsuariosSenha.AsString         := Trim(EdtSenha.Text);
+  DmUsuarios.CdsUsuariosStatus.AsString        := LStatus;
+  DmUsuarios.CdsUsuariosEmail.AsString         := Trim(EdtEmail.Text);
+  DmUsuarios.CdsUsuariosData_De_Nascimento.AsString := Trim(MKEdtDataDeNascimento.Text);
+
+  DmUsuarios.CdsUsuarios.Post;
+  DmUsuarios.CdsUsuarios.ApplyUpdates (0);
+  application.MessageBox(PWideChar(Mensagem),  'Atenção', Mb_OK + MB_ICONINFORMATION);
+
+  PnlPrincipal.ActiveCard := CardPesquisa;
+  inherited;
+
+end;
 
 end.
