@@ -1,0 +1,16 @@
+program ListaTarefas;
+
+uses
+  Vcl.Forms,
+  ListaTarefas.View.Main in '..\src\View\ListaTarefas.View.Main.pas' {Frm_Principal},
+  ListaTarefas.Model.Usuarios in '..\src\model\ListaTarefas.Model.Usuarios.pas',
+  ListaTarefas.Model.Tarefas in '..\src\model\ListaTarefas.Model.Tarefas.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrm_Principal, Frm_Principal);
+  Application.Run;
+end.

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/07/02 09:59:48.000.250,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/07/09 13:45:18.000.278,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/05 23:06:01.000.843,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/09 16:54:39.000.649,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 11:12:27.000.964,=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 11:13:11.000.803,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\ListaTa.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/11/07 11:13:31.000.440,C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\ListaTarefas.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\ListaTa.dproj</Transaction>
+    <Transaction>2022/11/07 11:18:09.000.733,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.Main.pas=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 11:18:09.000.733,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.Main.dfm=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/11/07 11:18:28.000.329,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\ListaTarefas.dproj=C:\Users\Administrator\Documents\Embarcadero\Studio\Projects\ListaTarefas.dproj</Transaction>
+    <Transaction>2022/11/07 11:19:48.000.179,=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 11:39:35.000.598,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\model\ListaTarefas.Model.Usuarios.pas=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 11:39:42.000.916,=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 11:44:30.000.010,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\model\ListaTarefas.Model.Tarefas.pas=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 12:22:30.000.882,=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 12:26:08.000.756,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.dfm=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.Cadastro.dfm</Transaction>
+    <Transaction>2022/11/07 12:26:08.000.756,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.Cadastro.pas</Transaction>
+    <Transaction>2022/11/07 12:42:13.471,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.CadastroUsuario.pas=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.Cadastro.pas</Transaction>
+    <Transaction>2022/11/07 12:42:13.471,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.CadastroUsuario.dfm=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.Cadastro.dfm</Transaction>
+    <Transaction>2022/11/07 12:44:52.542,=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas</Transaction>
+    <Transaction>2022/11/07 12:48:47.094,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.CadastroTarefas.dfm=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.dfm</Transaction>
+    <Transaction>2022/11/07 12:48:47.094,C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\src\View\ListaTarefas.View.CadastroTarefas.pas=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\ListaDeTarefas\Bin\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
