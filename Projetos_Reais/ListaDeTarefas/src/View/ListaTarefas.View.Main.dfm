@@ -4,7 +4,7 @@ object Frm_Principal: TFrm_Principal
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Lista de tarefas'
   ClientHeight = 372
-  ClientWidth = 389
+  ClientWidth = 407
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,12 +12,14 @@ object Frm_Principal: TFrm_Principal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Pnl_Principal: TPanel
     Left = 0
     Top = 0
-    Width = 389
+    Width = 407
     Height = 372
     Align = alClient
     BevelOuter = bvNone
@@ -28,10 +30,11 @@ object Frm_Principal: TFrm_Principal
     Padding.Bottom = 3
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 389
     object Pnl_TopoTitulo: TPanel
       Left = 3
       Top = 3
-      Width = 383
+      Width = 401
       Height = 49
       Align = alTop
       BevelOuter = bvNone
@@ -48,11 +51,12 @@ object Frm_Principal: TFrm_Principal
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 383
     end
     object Pnl_BaixoBandeja: TPanel
       Left = 3
       Top = 328
-      Width = 383
+      Width = 401
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
@@ -69,6 +73,7 @@ object Frm_Principal: TFrm_Principal
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 383
       object PnlBtnNovoCadastrar: TPanel
         Left = 3
         Top = 3
@@ -98,6 +103,7 @@ object Frm_Principal: TFrm_Principal
           Font.Name = 'Sitka Text'
           Font.Style = [fsBold]
           ParentFont = False
+          OnClick = SBtn_CadastrarClick
           ExplicitLeft = -3
           ExplicitTop = 3
           ExplicitWidth = 68
@@ -118,7 +124,6 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 73
         object SBtn_Editar: TSpeedButton
           Left = 1
           Top = 1
@@ -140,7 +145,7 @@ object Frm_Principal: TFrm_Principal
         end
       end
       object PnlBtnCancelar: TPanel
-        Left = 312
+        Left = 330
         Top = 3
         Width = 68
         Height = 35
@@ -148,6 +153,7 @@ object Frm_Principal: TFrm_Principal
         Color = 16514043
         ParentBackground = False
         TabOrder = 2
+        ExplicitLeft = 312
         object SBtn_Cancelar: TSpeedButton
           Left = 1
           Top = 1
@@ -169,7 +175,7 @@ object Frm_Principal: TFrm_Principal
     object Pnl_Pesquisa: TPanel
       Left = 3
       Top = 52
-      Width = 383
+      Width = 401
       Height = 33
       Align = alTop
       BevelOuter = bvNone
@@ -180,6 +186,7 @@ object Frm_Principal: TFrm_Principal
       Padding.Bottom = 2
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 383
       object Edt_Pesquisa: TEdit
         Left = 2
         Top = 2
@@ -198,7 +205,7 @@ object Frm_Principal: TFrm_Principal
         ExplicitHeight = 27
       end
       object PnlBtnPesquisar: TPanel
-        Left = 296
+        Left = 314
         Top = 2
         Width = 85
         Height = 29
@@ -212,6 +219,7 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
+        ExplicitLeft = 296
         object SBtn_Pesquisar: TSpeedButton
           Left = 1
           Top = 1
@@ -236,19 +244,33 @@ object Frm_Principal: TFrm_Principal
     object Pnl_CentralLista: TPanel
       Left = 3
       Top = 85
-      Width = 383
+      Width = 401
       Height = 243
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 3
-      object ListBox1: TListBox
+      ExplicitWidth = 383
+      object ListView1: TListView
         Left = 0
         Top = 0
-        Width = 383
+        Width = 401
         Height = 243
         Align = alClient
-        ItemHeight = 13
+        Columns = <
+          item
+            Caption = 'ID'
+          end
+          item
+            Caption = 'Titulo'
+            Width = 250
+          end
+          item
+            Caption = 'Data/Hora'
+            Width = 150
+          end>
         TabOrder = 0
+        ViewStyle = vsReport
+        ExplicitWidth = 383
       end
     end
   end

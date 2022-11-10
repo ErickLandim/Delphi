@@ -1,10 +1,10 @@
-object Frm_Login: TFrm_Login
-  Left = 0
-  Top = 0
+object FrmLogin: TFrmLogin
+  Left = 686
+  Top = 231
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'LOGIN'
   ClientHeight = 372
-  ClientWidth = 389
+  ClientWidth = 407
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,12 +12,13 @@ object Frm_Login: TFrm_Login
   Font.Name = 'Sitka Text'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 16
   object PnlCentral: TPanel
     Left = 0
     Top = 0
-    Width = 389
+    Width = 407
     Height = 372
     Align = alClient
     BevelOuter = bvNone
@@ -28,10 +29,11 @@ object Frm_Login: TFrm_Login
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 389
     object PnlTitulo: TPanel
       Left = 5
       Top = 5
-      Width = 379
+      Width = 397
       Height = 73
       Align = alTop
       BevelOuter = bvNone
@@ -45,12 +47,12 @@ object Frm_Login: TFrm_Login
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitTop = -1
+      ExplicitWidth = 379
     end
     object PnlOrgEdits: TPanel
       Left = 5
       Top = 78
-      Width = 379
+      Width = 397
       Height = 289
       Align = alClient
       BevelOuter = bvNone
@@ -60,11 +62,11 @@ object Frm_Login: TFrm_Login
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 83
+      ExplicitWidth = 379
       object PnlSenha: TPanel
         Left = 5
         Top = 73
-        Width = 369
+        Width = 387
         Height = 72
         Align = alTop
         BevelOuter = bvNone
@@ -73,14 +75,14 @@ object Frm_Login: TFrm_Login
         Padding.Right = 5
         Padding.Bottom = 5
         TabOrder = 0
-        ExplicitTop = 57
+        ExplicitWidth = 369
         object LblSenha: TLabel
           Left = 5
           Top = 15
-          Width = 359
+          Width = 377
           Height = 21
           Align = alTop
-          Caption = 'SENHA DO USU'#193'RIO:'
+          Caption = 'SENHA:'
           Color = 16776176
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clAppWorkSpace
@@ -89,12 +91,12 @@ object Frm_Login: TFrm_Login
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
-          ExplicitWidth = 158
+          ExplicitWidth = 59
         end
         object Edt_Senha: TEdit
           Left = 5
           Top = 42
-          Width = 359
+          Width = 377
           Height = 24
           Align = alBottom
           BevelInner = bvNone
@@ -109,27 +111,25 @@ object Frm_Login: TFrm_Login
           ParentFont = False
           PasswordChar = '*'
           TabOrder = 0
-          Text = 'EDIT1'
+          ExplicitWidth = 359
         end
         object PnlLinhaSenha: TPanel
           Left = 5
           Top = 66
-          Width = 359
+          Width = 377
           Height = 1
           Align = alBottom
           Caption = 'PnlLinhaSenha'
           Color = clGrayText
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 0
-          ExplicitTop = 64
-          ExplicitWidth = 369
+          ExplicitWidth = 359
         end
       end
       object PnlLoginNome: TPanel
         Left = 5
         Top = 0
-        Width = 369
+        Width = 387
         Height = 73
         Align = alTop
         BevelOuter = bvNone
@@ -144,13 +144,14 @@ object Frm_Login: TFrm_Login
         Padding.Bottom = 5
         ParentFont = False
         TabOrder = 1
-        object LblNome: TLabel
+        ExplicitWidth = 369
+        object LblEmail: TLabel
           Left = 5
           Top = 15
-          Width = 359
+          Width = 377
           Height = 21
           Align = alTop
-          Caption = 'NOME DE USU'#193'RIO:'
+          Caption = 'E-MAIL DE USU'#193'RIO:'
           Color = 16776176
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clAppWorkSpace
@@ -159,18 +160,17 @@ object Frm_Login: TFrm_Login
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
-          ExplicitWidth = 151
+          ExplicitWidth = 159
         end
-        object Edt_Nome: TEdit
+        object Edt_Email: TEdit
           Left = 5
           Top = 38
-          Width = 359
+          Width = 377
           Height = 29
           Align = alBottom
           BevelInner = bvNone
           BevelOuter = bvNone
           BorderStyle = bsNone
-          CharCase = ecUpperCase
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 5263440
           Font.Height = -16
@@ -178,29 +178,25 @@ object Frm_Login: TFrm_Login
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitLeft = 0
-          ExplicitTop = 27
-          ExplicitWidth = 369
+          ExplicitWidth = 359
         end
-        object PnlLinhaNome: TPanel
+        object PnlLinhaEmail: TPanel
           Left = 5
           Top = 67
-          Width = 359
+          Width = 377
           Height = 1
           Align = alBottom
           Caption = 'Panel2'
           Color = clGrayText
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 0
-          ExplicitTop = 56
-          ExplicitWidth = 369
+          ExplicitWidth = 359
         end
       end
       object PnlBandejaBotoes: TPanel
         Left = 5
         Top = 232
-        Width = 369
+        Width = 387
         Height = 52
         Align = alBottom
         BevelOuter = bvNone
@@ -211,8 +207,7 @@ object Frm_Login: TFrm_Login
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        ExplicitLeft = 10
-        ExplicitTop = 248
+        ExplicitWidth = 369
         object PnlBtnEntrar: TPanel
           Left = 0
           Top = 0
@@ -222,9 +217,6 @@ object Frm_Login: TFrm_Login
           Color = 16514043
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 1
-          ExplicitTop = 1
-          ExplicitHeight = 50
           object SBtn_Entrar: TSpeedButton
             Left = 1
             Top = 1
@@ -239,12 +231,12 @@ object Frm_Login: TFrm_Login
             Font.Name = 'Sitka Text'
             Font.Style = [fsBold]
             ParentFont = False
-            ExplicitWidth = 64
-            ExplicitHeight = 39
+            OnClick = SBtn_EntrarClick
+            ExplicitLeft = 0
           end
         end
         object PnlCadastrar: TPanel
-          Left = 281
+          Left = 299
           Top = 0
           Width = 88
           Height = 52
@@ -252,9 +244,7 @@ object Frm_Login: TFrm_Login
           Color = 16514043
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 280
-          ExplicitTop = 1
-          ExplicitHeight = 50
+          ExplicitLeft = 281
           object SBtn_CadastrarUsuario: TSpeedButton
             Left = 1
             Top = 1
@@ -269,6 +259,7 @@ object Frm_Login: TFrm_Login
             Font.Name = 'Sitka Text'
             Font.Style = [fsBold]
             ParentFont = False
+            OnClick = SBtn_CadastrarUsuarioClick
             ExplicitLeft = 0
             ExplicitWidth = 65
             ExplicitHeight = 40

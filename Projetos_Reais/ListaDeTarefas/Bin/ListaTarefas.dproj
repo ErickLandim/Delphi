@@ -105,15 +105,15 @@
         <DCCReference Include="..\src\model\ListaTarefas.Model.Usuarios.pas"/>
         <DCCReference Include="..\src\model\ListaTarefas.Model.Tarefas.pas"/>
         <DCCReference Include="..\src\View\ListaTarefas.View.CadastroUsuario.pas">
-            <Form>Frm_CadastroUsuario</Form>
+            <Form>FrmCadastroUsuario</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\src\View\ListaTarefas.View.CadastroTarefas.pas">
-            <Form>Frm_CadastroTarefas</Form>
+            <Form>FrmCadastroTarefas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\src\View\ListaTarefas.View.Login.pas">
-            <Form>Frm_Login</Form>
+            <Form>FrmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

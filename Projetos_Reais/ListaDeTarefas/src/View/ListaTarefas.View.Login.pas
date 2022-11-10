@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
 
 type
-  TFrm_Login = class(TForm)
+  TFrmLogin = class(TForm)
     PnlCentral: TPanel;
     PnlTitulo: TPanel;
     PnlOrgEdits: TPanel;
@@ -16,14 +16,17 @@ type
     LblSenha: TLabel;
     PnlLinhaSenha: TPanel;
     PnlLoginNome: TPanel;
-    LblNome: TLabel;
-    Edt_Nome: TEdit;
-    PnlLinhaNome: TPanel;
+    LblEmail: TLabel;
+    Edt_Email: TEdit;
+    PnlLinhaEmail: TPanel;
     PnlBandejaBotoes: TPanel;
     SBtn_Entrar: TSpeedButton;
     PnlBtnEntrar: TPanel;
     PnlCadastrar: TPanel;
     SBtn_CadastrarUsuario: TSpeedButton;
+    procedure SBtn_CadastrarUsuarioClick(Sender: TObject);
+    procedure SBtn_EntrarClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -31,10 +34,36 @@ type
   end;
 
 var
-  Frm_Login: TFrm_Login;
+  FrmLogin: TFrmLogin;
 
 implementation
 
+uses
+  ListaTarefas.View.CadastroUsuario;
+
 {$R *.dfm}
+
+
+procedure TFrmLogin.SBtn_CadastrarUsuarioClick(Sender: TObject);
+var
+  lCadastroUsuario : TFrmCadastroUsuario;
+begin
+  lCadastroUsuario := TFrmCadastroUsuario.Create(nil);
+    try
+      lCadastroUsuario.ShowModal;
+      if lCadastroUsuario.ModalResult = mrok then
+      begin
+        Edt_Email.Text := lCadastroUsuario.FUsuario.Email;
+        Edt_Senha.Text := lCadastroUsuario.FUsuario.Senha;
+      end;
+    finally
+      FreeAndNil(lCadastroUsuario);
+    end;
+end;
+
+procedure TFrmLogin.SBtn_EntrarClick(Sender: TObject);
+begin
+  Close;
+end;
 
 end.
