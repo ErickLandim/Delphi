@@ -19,10 +19,9 @@ type
     SBtn_Cadastrar: TSpeedButton;
     SBtn_Editar: TSpeedButton;
     SBtn_Cancelar: TSpeedButton;
-    PnlBtnNovoCadastrar: TPanel;
-    PnlBtnEditar: TPanel;
-    PnlBtnCancelar: TPanel;
-    PnlBtnPesquisar: TPanel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
 
   private
     { Private declarations }

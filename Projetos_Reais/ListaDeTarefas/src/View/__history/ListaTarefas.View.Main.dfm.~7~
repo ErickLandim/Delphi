@@ -69,10 +69,11 @@ object Frm_Principal: TFrm_Principal
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
-      object PnlBtnNovoCadastrar: TPanel
+      ExplicitTop = 334
+      object Panel1: TPanel
         Left = 3
         Top = 3
-        Width = 68
+        Width = 70
         Height = 35
         Align = alLeft
         Color = 16514043
@@ -87,46 +88,38 @@ object Frm_Principal: TFrm_Principal
         object SBtn_Cadastrar: TSpeedButton
           Left = 1
           Top = 1
-          Width = 66
+          Width = 62
           Height = 33
-          Align = alClient
+          Align = alLeft
           Caption = 'Novo'
-          Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 5263440
           Font.Height = -13
           Font.Name = 'Sitka Text'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = -3
-          ExplicitTop = 3
-          ExplicitWidth = 68
+          ExplicitLeft = 2
+          ExplicitTop = 6
+          ExplicitHeight = 38
         end
       end
-      object PnlBtnEditar: TPanel
-        Left = 71
+      object Panel2: TPanel
+        Left = 73
         Top = 3
-        Width = 68
+        Width = 77
         Height = 35
         Align = alLeft
         Color = 16514043
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = 5263440
-        Font.Height = -11
-        Font.Name = 'Sitka Text'
-        Font.Style = [fsBold]
         ParentBackground = False
-        ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 73
+        ExplicitLeft = 84
         object SBtn_Editar: TSpeedButton
           Left = 1
           Top = 1
-          Width = 66
+          Width = 63
           Height = 33
-          Align = alClient
+          Align = alLeft
           Caption = 'Editar'
-          Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 5263440
           Font.Height = -13
@@ -135,11 +128,10 @@ object Frm_Principal: TFrm_Principal
           ParentFont = False
           ExplicitLeft = 65
           ExplicitTop = 6
-          ExplicitWidth = 63
           ExplicitHeight = 35
         end
       end
-      object PnlBtnCancelar: TPanel
+      object Panel3: TPanel
         Left = 312
         Top = 3
         Width = 68
@@ -149,11 +141,11 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         TabOrder = 2
         object SBtn_Cancelar: TSpeedButton
-          Left = 1
+          Left = 4
           Top = 1
-          Width = 66
+          Width = 63
           Height = 33
-          Align = alClient
+          Align = alRight
           Caption = 'Cancelar'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
@@ -162,7 +154,6 @@ object Frm_Principal: TFrm_Principal
           Font.Name = 'Sitka Text'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitTop = 3
         end
       end
     end
@@ -180,6 +171,22 @@ object Frm_Principal: TFrm_Principal
       Padding.Bottom = 2
       ParentBackground = False
       TabOrder = 2
+      object SBtn_Pesquisar: TSpeedButton
+        Left = 288
+        Top = 2
+        Width = 93
+        Height = 29
+        Align = alRight
+        Caption = 'Pesquisar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Sitka Text'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 287
+        ExplicitTop = -2
+      end
       object Edt_Pesquisa: TEdit
         Left = 2
         Top = 2
@@ -196,41 +203,6 @@ object Frm_Principal: TFrm_Principal
         TabOrder = 0
         Text = 'Pesquisa'
         ExplicitHeight = 27
-      end
-      object PnlBtnPesquisar: TPanel
-        Left = 296
-        Top = 2
-        Width = 85
-        Height = 29
-        Align = alRight
-        Color = 16514043
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentBackground = False
-        ParentFont = False
-        TabOrder = 1
-        object SBtn_Pesquisar: TSpeedButton
-          Left = 1
-          Top = 1
-          Width = 83
-          Height = 27
-          Align = alClient
-          Caption = 'Pesquisar'
-          Flat = True
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = 5263440
-          Font.Height = -13
-          Font.Name = 'Sitka Text'
-          Font.Style = [fsBold]
-          ParentFont = False
-          ExplicitLeft = 287
-          ExplicitTop = -2
-          ExplicitWidth = 93
-          ExplicitHeight = 29
-        end
       end
     end
     object Pnl_CentralLista: TPanel
