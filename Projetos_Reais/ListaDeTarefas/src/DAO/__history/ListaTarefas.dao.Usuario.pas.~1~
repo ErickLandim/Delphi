@@ -1,0 +1,57 @@
+unit ListaTarefas.dao.Usuario;
+
+interface
+
+uses
+  ListaTarefas.Model.Usuarios, ListaTarefas.Model.Conexao;
+
+Type
+  TDAOUsuario = Class
+  private
+    FConn: TDMConexao;
+  public
+    Constructor Create;
+    Destructor Destroy; Override;
+    procedure Inserir(Value: TUsuario);
+    procedure Apagar(Value: TUsuario);
+    Function Alterar(Value: TUsuario): TUsuario;
+    Function LoginUsuario(aEmail, aSenha: String): TUsuario;
+
+  End;
+
+implementation
+
+{ TDAOUsuario }
+
+function TDAOUsuario.Alterar(Value: TUsuario): TUsuario;
+begin
+
+end;
+
+procedure TDAOUsuario.Apagar(Value: TUsuario);
+begin
+
+end;
+
+constructor TDAOUsuario.Create;
+begin
+  FConn:= TDMConexao.Create(nil);
+end;
+
+destructor TDAOUsuario.Destroy;
+begin
+   FConn.Free;
+  inherited;
+end;
+
+procedure TDAOUsuario.Inserir(Value: TUsuario);
+begin
+
+end;
+
+function TDAOUsuario.LoginUsuario(aEmail, aSenha: String): TUsuario;
+begin
+
+end;
+
+end.

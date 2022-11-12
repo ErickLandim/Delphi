@@ -29,7 +29,6 @@ object FrmLogin: TFrmLogin
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 389
     object PnlTitulo: TPanel
       Left = 5
       Top = 5
@@ -47,7 +46,6 @@ object FrmLogin: TFrmLogin
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 379
     end
     object PnlOrgEdits: TPanel
       Left = 5
@@ -62,7 +60,6 @@ object FrmLogin: TFrmLogin
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 379
       object PnlSenha: TPanel
         Left = 5
         Top = 73
@@ -75,7 +72,6 @@ object FrmLogin: TFrmLogin
         Padding.Right = 5
         Padding.Bottom = 5
         TabOrder = 0
-        ExplicitWidth = 369
         object LblSenha: TLabel
           Left = 5
           Top = 15
@@ -111,7 +107,6 @@ object FrmLogin: TFrmLogin
           ParentFont = False
           PasswordChar = '*'
           TabOrder = 0
-          ExplicitWidth = 359
         end
         object PnlLinhaSenha: TPanel
           Left = 5
@@ -123,7 +118,6 @@ object FrmLogin: TFrmLogin
           Color = clGrayText
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 359
         end
       end
       object PnlLoginNome: TPanel
@@ -144,7 +138,6 @@ object FrmLogin: TFrmLogin
         Padding.Bottom = 5
         ParentFont = False
         TabOrder = 1
-        ExplicitWidth = 369
         object LblEmail: TLabel
           Left = 5
           Top = 15
@@ -178,7 +171,6 @@ object FrmLogin: TFrmLogin
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitWidth = 359
         end
         object PnlLinhaEmail: TPanel
           Left = 5
@@ -190,7 +182,6 @@ object FrmLogin: TFrmLogin
           Color = clGrayText
           ParentBackground = False
           TabOrder = 1
-          ExplicitWidth = 359
         end
       end
       object PnlBandejaBotoes: TPanel
@@ -207,7 +198,6 @@ object FrmLogin: TFrmLogin
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        ExplicitWidth = 369
         object PnlBtnEntrar: TPanel
           Left = 0
           Top = 0
@@ -244,7 +234,6 @@ object FrmLogin: TFrmLogin
           Color = 16514043
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 281
           object SBtn_CadastrarUsuario: TSpeedButton
             Left = 1
             Top = 1

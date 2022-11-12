@@ -8,6 +8,7 @@ object DMConexao: TDMConexao
       
         'Database=C:\Users\Administrator\Documents\Delphi\Projetos_Reais\' +
         'ListaDeTarefas\bd\ListaTarefasdb.db'
+      'LockingMode=Normal'
       'DriverID=SQLite')
     LoginPrompt = False
     Left = 72

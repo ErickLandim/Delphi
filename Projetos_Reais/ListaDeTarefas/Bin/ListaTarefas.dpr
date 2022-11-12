@@ -8,7 +8,8 @@ uses
   ListaTarefas.View.CadastroUsuario in '..\src\View\ListaTarefas.View.CadastroUsuario.pas' {FrmCadastroUsuario},
   ListaTarefas.View.CadastroTarefas in '..\src\View\ListaTarefas.View.CadastroTarefas.pas' {FrmCadastroTarefas},
   ListaTarefas.View.Login in '..\src\View\ListaTarefas.View.Login.pas' {FrmLogin},
-  ListaTarefas.Model.Conexao in '..\src\model\Conexao\ListaTarefas.Model.Conexao.pas' {DMConexao: TDataModule};
+  ListaTarefas.Model.Conexao in '..\src\model\Conexao\ListaTarefas.Model.Conexao.pas' {DMConexao: TDataModule},
+  ListaTarefas.dao.Usuario in '..\src\DAO\ListaTarefas.dao.Usuario.pas';
 
 {$R *.res}
 
@@ -17,9 +18,5 @@ begin
   Application.MainFormOnTaskbar := True;
   ReportMemoryLeaksOnShutdown := True;
   Application.CreateForm(TFrm_Principal, Frm_Principal);
-  Application.CreateForm(TFrmCadastroUsuario, FrmCadastroUsuario);
-  Application.CreateForm(TFrmCadastroTarefas, FrmCadastroTarefas);
-  Application.CreateForm(TFrmLogin, FrmLogin);
-  Application.CreateForm(TDMConexao, DMConexao);
   Application.Run;
 end.

@@ -31,7 +31,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
     Padding.Bottom = 3
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 389
     object Pnl_BandejaDown: TPanel
       Left = 10
       Top = 320
@@ -44,7 +43,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
       Padding.Right = 3
       Padding.Bottom = 3
       TabOrder = 0
-      ExplicitWidth = 369
       object PnlSalvar: TPanel
         Left = 3
         Top = 3
@@ -90,7 +88,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitWidth = 369
       object LblNome: TLabel
         Left = 0
         Top = 0
@@ -120,7 +117,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 369
       end
       object PnlLinhaNome: TPanel
         Left = 0
@@ -131,7 +127,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
         Color = clBackground
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 369
       end
     end
     object PnlSenha: TPanel
@@ -143,7 +138,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
       BevelOuter = bvNone
       Padding.Top = 10
       TabOrder = 2
-      ExplicitWidth = 369
       object LblSenha: TLabel
         Left = 0
         Top = 10
@@ -174,7 +168,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 369
       end
       object PnlLinhaSenha: TPanel
         Left = 0
@@ -185,7 +178,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
         Color = clBackground
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 369
       end
     end
     object PnlEmail: TPanel
@@ -197,7 +189,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
       BevelOuter = bvNone
       Padding.Top = 10
       TabOrder = 3
-      ExplicitWidth = 369
       object LblEmail: TLabel
         Left = 0
         Top = 10
@@ -228,7 +219,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 369
       end
       object PnlLinhaEmail: TPanel
         Left = 0
@@ -239,7 +229,6 @@ object FrmCadastroUsuario: TFrmCadastroUsuario
         Color = clBackground
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 369
       end
     end
   end

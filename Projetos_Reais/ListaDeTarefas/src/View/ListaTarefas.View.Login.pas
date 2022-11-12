@@ -51,11 +51,11 @@ begin
   lCadastroUsuario := TFrmCadastroUsuario.Create(nil);
     try
       lCadastroUsuario.ShowModal;
-      if lCadastroUsuario.ModalResult = mrok then
-      begin
-        Edt_Email.Text := lCadastroUsuario.FUsuario.Email;
-        Edt_Senha.Text := lCadastroUsuario.FUsuario.Senha;
-      end;
+      //if lCadastroUsuario.ModalResult = mrok then
+      //begin
+      //  Edt_Email.Text := lCadastroUsuario.FUsuario.Email;
+      //  Edt_Senha.Text := lCadastroUsuario.FUsuario.Senha;
+      //end;
     finally
       FreeAndNil(lCadastroUsuario);
     end;

@@ -30,7 +30,6 @@ object Frm_Principal: TFrm_Principal
     Padding.Bottom = 3
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 389
     object Pnl_TopoTitulo: TPanel
       Left = 3
       Top = 3
@@ -51,7 +50,6 @@ object Frm_Principal: TFrm_Principal
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 383
     end
     object Pnl_BaixoBandeja: TPanel
       Left = 3
@@ -73,7 +71,6 @@ object Frm_Principal: TFrm_Principal
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 383
       object PnlBtnNovoCadastrar: TPanel
         Left = 3
         Top = 3
@@ -153,7 +150,6 @@ object Frm_Principal: TFrm_Principal
         Color = 16514043
         ParentBackground = False
         TabOrder = 2
-        ExplicitLeft = 312
         object SBtn_Cancelar: TSpeedButton
           Left = 1
           Top = 1
@@ -186,7 +182,6 @@ object Frm_Principal: TFrm_Principal
       Padding.Bottom = 2
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 383
       object Edt_Pesquisa: TEdit
         Left = 2
         Top = 2
@@ -219,7 +214,6 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 296
         object SBtn_Pesquisar: TSpeedButton
           Left = 1
           Top = 1
@@ -249,7 +243,6 @@ object Frm_Principal: TFrm_Principal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 3
-      ExplicitWidth = 383
       object ListView1: TListView
         Left = 0
         Top = 0
@@ -270,7 +263,6 @@ object Frm_Principal: TFrm_Principal
           end>
         TabOrder = 0
         ViewStyle = vsReport
-        ExplicitWidth = 383
       end
     end
   end
