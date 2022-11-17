@@ -7,7 +7,7 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Buttons, Vcl.StdCtrls,
   Vcl.ComCtrls, System.Generics.Collections, ListaTarefas.Model.Tarefas,
-  ListaTarefas.dao.Usuario, ListaTarefas.Model.Usuarios;
+  ListaTarefas.dao.Usuario, ListaTarefas.Model.Usuarios, ListaTarefas.dao.Tarefas;
 
 type
   TFrm_Principal = class(TForm)
@@ -28,10 +28,14 @@ type
     ListView1: TListView;
     procedure FormCreate(Sender: TObject);
     procedure SBtn_CadastrarClick(Sender: TObject);
+    procedure SBtn_EditarClick(Sender: TObject);
+    procedure SBtn_CancelarClick(Sender: TObject);
 
   private
     FDAOusuario: TDAOUsuario;
     FUsuario: TUsuario;
+    FDAOTarefas: TTarefasDAO;
+    FTarefa:  TTarefas;
     function ValidaUsuario(aEmail, aSenha: String): Boolean;
     Procedure PreencheListView(aTarefas: TObjectList<TTarefas>);
 
@@ -57,11 +61,22 @@ begin
   lLogin := TFrmLogin.Create(nil);
   Try
     lLogin.ShowModal;
+    //if not (lLogin.modalresult = mrok) then
+    //begin
+    //  application.Terminate;
+    //  Exit;
+    //end;
+
     if Not ValidaUsuario(lLogin.Edt_Email.Text, lLogin.Edt_Senha.Text) then
     Begin
       Showmessage('Usuário ou Senha incorretos');
       Application.Terminate;
+      Exit;
     End;
+
+    FDAOTarefas := TTarefasDAO.Create;
+    if not FUsuario.id.ToString.IsEmpty then
+      PreencheListView(FDAOTarefas.ListarTarefas(FUsuario.Id));
 
   Finally
     lLogin.Free;
@@ -81,8 +96,7 @@ begin
     lItem := ListView1.Items.add;
     lItem.Caption := lTarefas.Codigo.ToString;
     lItem.SubItems.add(lTarefas.Titulo);
-    lItem.SubItems.add(FormatDateTime('dd/mm/yyyy hh:mm',
-      lTarefas.DataCriacao));
+    lItem.SubItems.add(FormatDateTime('dd/mm/yyyy hh:mm',lTarefas.DataCriacao));
     lItem.Data := lTarefas;
   end;
 end;
@@ -90,18 +104,35 @@ end;
 procedure TFrm_Principal.SBtn_CadastrarClick(Sender: TObject);
 var
   lCadastroTarefas: TFrmCadastroTarefas;
-  lTarefas: TObjectList<TTarefas>;
 begin
-  lTarefas := TObjectList<TTarefas>.Create;
-  lCadastroTarefas := TFrmCadastroTarefas.Create(Self, lTarefas);
-
+  lCadastroTarefas := TFrmCadastroTarefas.Create(Self, FUsuario, FDAOTarefas);
   try
     lCadastroTarefas.ShowModal;
-    PreencheListView(lTarefas);
+    PreencheListView(FDAOTarefas.ListarTarefas(FUsuario.Id));
   finally
     FreeAndNil(lCadastroTarefas);
-    lTarefas.Free;
   end;
+end;
+
+procedure TFrm_Principal.SBtn_CancelarClick(Sender: TObject);
+begin
+ Application.Terminate;
+end;
+
+procedure TFrm_Principal.SBtn_EditarClick(Sender: TObject);
+var
+  lCadastroTarefa : TFrmCadastroTarefas;
+  lTarefa : TTarefas;
+begin
+  lTarefa := FDAOTarefas.BuscarTarefas(ListView1.ItemFocused.Caption.ToInteger);
+ try
+ lCadastroTarefa := TFrmCadastroTarefas.Create(self, FUsuario, FDAOTarefas, lTarefa);
+ lCadastroTarefa.ShowModal;
+ PreencheListView(FDAOTarefas.ListarTarefas(FUsuario.Id));
+ finally
+  lCadastroTarefa.Free;
+  lTarefa.Free;
+ end;
 end;
 
 function TFrm_Principal.ValidaUsuario(aEmail, aSenha: String): Boolean;
@@ -110,7 +141,9 @@ begin
   try
     FUsuario := FDAOusuario.LoginUsuario(aEmail, aSenha);
     if not Assigned(FUsuario) then
-      Result := False;
+    begin
+     Result := False;
+    end;
 
     Result := not FUsuario.Id.ToString.IsEmpty;
   finally

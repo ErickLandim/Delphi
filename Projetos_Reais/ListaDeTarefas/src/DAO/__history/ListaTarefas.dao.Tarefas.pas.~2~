@@ -1,0 +1,102 @@
+unit ListaTarefas.dao.Tarefas;
+
+interface
+
+uses
+  ListaTarefas.Model.Conexao, System.Generics.Collections,
+  ListaTarefas.Model.Tarefas,
+  Vcl.Dialogs, System.SysUtils;
+
+type
+  TTarefasDAO = Class
+  private
+    FConexao: TDMConexao;
+  public
+    Constructor Create;
+    Destructor destroy; Override;
+    procedure Inserir(aTarefas: TTarefas);
+    procedure Apagar(aId: integer);
+    function Alterar(aTarefas: TTarefas): TTarefas;
+    function ListarTarefas(aUsuario: integer): TObjectList<TTarefas>;
+    function BuscarTarefas(aId: integer): TTarefas;
+  End;
+
+implementation
+
+{ TTarefasDAO }
+
+function TTarefasDAO.Alterar(aTarefas: TTarefas): TTarefas;
+begin
+  FConexao.StartTransaction;
+  try
+    FConexao.SQL('UPDATE Tarefas SET titulo =:titulo, descricao = :descricao, WHERE id = :id');
+    FConexao.Params('titulo', aTarefas.Titulo);
+    FConexao.Params('descricao', aTarefas.Descricao);
+    FConexao.Params('id', aTarefas.Codigo);
+    FConexao.ExecSQL;
+    FConexao.Commit;
+
+    Showmessage('Tarefa alterada com sucesso!');
+  except
+    FConexao.Rollback;
+    raise Exception.Create('Erro ao tentar alterar a tarefa!');
+  end;
+end;
+
+procedure TTarefasDAO.Apagar(aId: integer);
+begin
+  FConexao.StartTransaction;
+  try
+    FConexao.SQL('DELETE FROM Tarefas WHERE id=:id;');
+    FConexao.Params('id', aId);
+    FConexao.ExecSQL;
+    FConexao.Commit;
+
+    Showmessage('Tarefa apagada com sucesso!');
+
+  Except
+    FConexao.Rollback;
+    raise Exception.Create('Erro ao apagar Tarefa!');
+  end;
+end;
+
+function TTarefasDAO.BuscarTarefas(aId: integer): TTarefas;
+begin
+
+end;
+
+constructor TTarefasDAO.Create;
+begin
+  FConexao := TDMConexao.Create(nil);
+end;
+
+destructor TTarefasDAO.destroy;
+begin
+  FConexao.DisposeOF;
+  inherited;
+end;
+
+procedure TTarefasDAO.Inserir(aTarefas: TTarefas);
+begin
+  FConexao.StartTransaction;
+  Try
+    FConexao.SQL
+      ('INSERT INTO Tarefas(idusuario,titulo,descricao,datacriacao)VALUES(:idusuario,:titulo,:descricao);');
+    FConexao.Params('idusuario', aTarefas.IdUsuario);
+    FConexao.Params('titulo', aTarefas.Titulo);
+    FConexao.Params('descricao', aTarefas.Descricao);
+    FConexao.ExecSQL;
+    FConexao.Commit;
+    Showmessage('Tarefa cadastrada com sucesso!');
+  Except
+    FConexao.Rollback;
+    raise Exception.Create('Erro ao incluir tarefa');
+  End;
+end;
+
+function TTarefasDAO.ListarTarefas(aUsuario: integer): TObjectList<TTarefas>;
+begin
+
+end;
+
+end.

@@ -135,6 +135,7 @@ object Frm_Principal: TFrm_Principal
           Font.Name = 'Sitka Text'
           Font.Style = [fsBold]
           ParentFont = False
+          OnClick = SBtn_EditarClick
           ExplicitLeft = 65
           ExplicitTop = 6
           ExplicitWidth = 63
@@ -156,7 +157,7 @@ object Frm_Principal: TFrm_Principal
           Width = 66
           Height = 33
           Align = alClient
-          Caption = 'Cancelar'
+          Caption = 'Sair'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 5263440
@@ -164,6 +165,7 @@ object Frm_Principal: TFrm_Principal
           Font.Name = 'Sitka Text'
           Font.Style = [fsBold]
           ParentFont = False
+          OnClick = SBtn_CancelarClick
           ExplicitTop = 3
         end
       end
@@ -261,6 +263,7 @@ object Frm_Principal: TFrm_Principal
             Caption = 'Data/Hora'
             Width = 150
           end>
+        RowSelect = True
         TabOrder = 0
         ViewStyle = vsReport
       end

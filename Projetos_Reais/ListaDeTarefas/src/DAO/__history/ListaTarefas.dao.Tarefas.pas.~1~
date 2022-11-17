@@ -1,0 +1,31 @@
+unit ListaTarefas.dao.Tarefas;
+
+interface
+
+uses
+  ListaTarefas.Model.Conexao;
+  type
+    TTarefasDAO = Class
+      private
+        FConexao : TDMConexao;
+      public
+        Constructor Create;
+        Destructor destroy; Override;
+    End;
+
+implementation
+
+{ TTarefasDAO }
+
+constructor TTarefasDAO.Create;
+begin
+  FConexao := TDMConexao.Create(nil);
+end;
+
+destructor TTarefasDAO.destroy;
+begin
+  FConexao.DisposeOF;
+  inherited;
+end;
+
+end.

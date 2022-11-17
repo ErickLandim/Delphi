@@ -27,7 +27,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
     Padding.Right = 10
     Padding.Bottom = 5
     TabOrder = 0
-    ExplicitWidth = 389
     object Pnl_BandejaDown: TPanel
       Left = 10
       Top = 321
@@ -40,9 +39,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
       Padding.Right = 3
       Padding.Bottom = 3
       TabOrder = 0
-      ExplicitLeft = 3
-      ExplicitTop = 323
-      ExplicitWidth = 383
       object PnlBtnSalvar: TPanel
         Left = 3
         Top = 3
@@ -52,7 +48,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
         Color = 16514043
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 43
         object SBtn_Salvar: TSpeedButton
           Left = 1
           Top = 1
@@ -68,8 +63,8 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
           Font.Style = [fsBold]
           ParentFont = False
           OnClick = SBtn_SalvarClick
-          ExplicitWidth = 80
-          ExplicitHeight = 41
+          ExplicitLeft = 0
+          ExplicitTop = 0
         end
       end
       object PnlBtnCancelar: TPanel
@@ -81,8 +76,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
         Color = 16514043
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 310
-        ExplicitHeight = 43
         object SBtn_Cancelar: TSpeedButton
           Left = 1
           Top = 1
@@ -119,9 +112,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
       Padding.Bottom = 3
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 3
-      ExplicitTop = 3
-      ExplicitWidth = 383
       object LblTitulo: TLabel
         Left = 3
         Top = 3
@@ -151,8 +141,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 4
-        ExplicitTop = 25
       end
       object Panel1: TPanel
         Left = 3
@@ -164,8 +152,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
         Color = clBlack
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 2
-        ExplicitWidth = 377
       end
     end
     object Pnl_Descricao: TPanel
@@ -186,10 +172,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
       Padding.Bottom = 3
       ParentFont = False
       TabOrder = 2
-      ExplicitLeft = 3
-      ExplicitTop = 49
-      ExplicitWidth = 383
-      ExplicitHeight = 271
       object LblDescricao: TLabel
         Left = 3
         Top = 3
@@ -218,9 +200,6 @@ object FrmCadastroTarefas: TFrmCadastroTarefas
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitTop = 22
-        ExplicitWidth = 377
-        ExplicitHeight = 246
       end
     end
   end

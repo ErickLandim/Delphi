@@ -9,7 +9,8 @@ uses
   ListaTarefas.View.CadastroTarefas in '..\src\View\ListaTarefas.View.CadastroTarefas.pas' {FrmCadastroTarefas},
   ListaTarefas.View.Login in '..\src\View\ListaTarefas.View.Login.pas' {FrmLogin},
   ListaTarefas.Model.Conexao in '..\src\model\Conexao\ListaTarefas.Model.Conexao.pas' {DMConexao: TDataModule},
-  ListaTarefas.dao.Usuario in '..\src\DAO\ListaTarefas.dao.Usuario.pas';
+  ListaTarefas.dao.Usuario in '..\src\DAO\ListaTarefas.dao.Usuario.pas',
+  ListaTarefas.dao.Tarefas in '..\src\DAO\ListaTarefas.dao.Tarefas.pas';
 
 {$R *.res}
 

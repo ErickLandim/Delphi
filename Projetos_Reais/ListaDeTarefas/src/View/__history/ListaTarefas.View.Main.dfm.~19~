@@ -1,0 +1,271 @@
+object Frm_Principal: TFrm_Principal
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Lista de tarefas'
+  ClientHeight = 372
+  ClientWidth = 407
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Pnl_Principal: TPanel
+    Left = 0
+    Top = 0
+    Width = 407
+    Height = 372
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    Padding.Left = 3
+    Padding.Top = 3
+    Padding.Right = 3
+    Padding.Bottom = 3
+    ParentBackground = False
+    TabOrder = 0
+    object Pnl_TopoTitulo: TPanel
+      Left = 3
+      Top = 3
+      Width = 401
+      Height = 49
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Lista de tarefas'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 5263440
+      Font.Height = -20
+      Font.Name = 'Segoe Print'
+      Font.Style = [fsBold]
+      Padding.Left = 3
+      Padding.Right = 3
+      Padding.Bottom = 3
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Pnl_BaixoBandeja: TPanel
+      Left = 3
+      Top = 328
+      Width = 401
+      Height = 41
+      Align = alBottom
+      BevelOuter = bvNone
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Text'
+      Font.Style = [fsBold]
+      Padding.Left = 3
+      Padding.Top = 3
+      Padding.Right = 3
+      Padding.Bottom = 3
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 1
+      object PnlBtnNovoCadastrar: TPanel
+        Left = 3
+        Top = 3
+        Width = 68
+        Height = 35
+        Align = alLeft
+        Color = 16514043
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Sitka Text'
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 0
+        object SBtn_Cadastrar: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 66
+          Height = 33
+          Align = alClient
+          Caption = 'Novo'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5263440
+          Font.Height = -13
+          Font.Name = 'Sitka Text'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = SBtn_CadastrarClick
+          ExplicitLeft = -3
+          ExplicitTop = 3
+          ExplicitWidth = 68
+        end
+      end
+      object PnlBtnEditar: TPanel
+        Left = 71
+        Top = 3
+        Width = 68
+        Height = 35
+        Align = alLeft
+        Color = 16514043
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 5263440
+        Font.Height = -11
+        Font.Name = 'Sitka Text'
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 1
+        object SBtn_Editar: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 66
+          Height = 33
+          Align = alClient
+          Caption = 'Editar'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5263440
+          Font.Height = -13
+          Font.Name = 'Sitka Text'
+          Font.Style = [fsBold]
+          ParentFont = False
+          OnClick = SBtn_EditarClick
+          ExplicitLeft = 65
+          ExplicitTop = 6
+          ExplicitWidth = 63
+          ExplicitHeight = 35
+        end
+      end
+      object PnlBtnCancelar: TPanel
+        Left = 330
+        Top = 3
+        Width = 68
+        Height = 35
+        Align = alRight
+        Color = 16514043
+        ParentBackground = False
+        TabOrder = 2
+        object SBtn_Cancelar: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 66
+          Height = 33
+          Align = alClient
+          Caption = 'Cancelar'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5263440
+          Font.Height = -13
+          Font.Name = 'Sitka Text'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ExplicitTop = 3
+        end
+      end
+    end
+    object Pnl_Pesquisa: TPanel
+      Left = 3
+      Top = 52
+      Width = 401
+      Height = 33
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clWhite
+      Padding.Left = 2
+      Padding.Top = 2
+      Padding.Right = 2
+      Padding.Bottom = 2
+      ParentBackground = False
+      TabOrder = 2
+      object Edt_Pesquisa: TEdit
+        Left = 2
+        Top = 2
+        Width = 207
+        Height = 29
+        Align = alLeft
+        BevelInner = bvLowered
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Sitka Text'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        Text = 'Pesquisa'
+        ExplicitHeight = 27
+      end
+      object PnlBtnPesquisar: TPanel
+        Left = 314
+        Top = 2
+        Width = 85
+        Height = 29
+        Align = alRight
+        Color = 16514043
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 1
+        object SBtn_Pesquisar: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 83
+          Height = 27
+          Align = alClient
+          Caption = 'Pesquisar'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5263440
+          Font.Height = -13
+          Font.Name = 'Sitka Text'
+          Font.Style = [fsBold]
+          ParentFont = False
+          ExplicitLeft = 287
+          ExplicitTop = -2
+          ExplicitWidth = 93
+          ExplicitHeight = 29
+        end
+      end
+    end
+    object Pnl_CentralLista: TPanel
+      Left = 3
+      Top = 85
+      Width = 401
+      Height = 243
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 3
+      object ListView1: TListView
+        Left = 0
+        Top = 0
+        Width = 401
+        Height = 243
+        Align = alClient
+        Columns = <
+          item
+            Caption = 'ID'
+          end
+          item
+            Caption = 'Titulo'
+            Width = 250
+          end
+          item
+            Caption = 'Data/Hora'
+            Width = 150
+          end>
+        RowSelect = True
+        TabOrder = 0
+        ViewStyle = vsReport
+      end
+    end
+  end
+end

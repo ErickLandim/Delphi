@@ -3,8 +3,11 @@ unit ListaTarefas.View.CadastroTarefas;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, System.Generics.Collections, ListaTarefas.Model.Tarefas;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  System.Generics.Collections, ListaTarefas.Model.Tarefas,
+  ListaTarefas.dao.Tarefas, ListaTarefas.Model.Usuarios;
 
 type
   TFrmCadastroTarefas = class(TForm)
@@ -21,13 +24,19 @@ type
     LblDescricao: TLabel;
     LblTitulo: TLabel;
     Panel1: TPanel;
-    procedure SBtn_SalvarClick(Sender: TObject);
     procedure SBtn_CancelarClick(Sender: TObject);
+    procedure SBtn_SalvarClick(Sender: TObject);
   private
     { Private declarations }
+    FDAO: TTarefasDAO;
+    FUsuario: TUsuario;
+    FTarefa: TTarefas;
+
+    procedure EmEdicao(aTarefas: TTarefas);
+    procedure Nova;
+    Procedure Edicao;
   public
-    FTarefas: TObjectList<TTarefas>;
-    Constructor Create(AOwner: TComponent; aTarefas: TObjectList<TTarefas>);
+    Constructor Create(AOwner: TComponent; aUsuario: TUsuario; aDAO: TTarefasDAO; aTarefas: TTarefas = NIL);
   end;
 
 var
@@ -36,13 +45,58 @@ var
 implementation
 
 {$R *.dfm}
-
 { TFrmCadastroTarefas }
 
-constructor TFrmCadastroTarefas.Create(AOwner: TComponent; aTarefas: TObjectList<TTarefas>);
+Constructor TFrmCadastroTarefas.Create(AOwner: TComponent; aUsuario: TUsuario; aDAO: TTarefasDAO; aTarefas: TTarefas = NIL);
 begin
   Inherited Create(AOwner);
-  FTarefas := aTarefas;
+  EmEdicao(aTarefas);
+  FUsuario := aUsuario;
+  FDAO := aDAO;
+end;
+
+procedure TFrmCadastroTarefas.Edicao;
+begin
+  try
+    FTarefa.Titulo := Edt_Titulo.Text;
+    FTarefa.Descricao := Mm_Descricao.Text;
+    FDAO.Alterar(FTarefa);
+  finally
+    Edt_Titulo.clear;
+    Mm_Descricao.clear;
+  end;
+
+end;
+
+procedure TFrmCadastroTarefas.EmEdicao(aTarefas: TTarefas);
+begin
+  if not assigned(aTarefas) then
+    Exit;
+
+  FTarefa := aTarefas;
+  Edt_Titulo.Text := FTarefa.Titulo;
+  Mm_Descricao.Lines.Add(FTarefa.Descricao);
+
+end;
+
+procedure TFrmCadastroTarefas.Nova;
+var
+  FTarefa: TTarefas;
+begin
+  if not assigned(FTarefa) then
+    FTarefa := TTarefas.Create;
+  try
+    FTarefa.IdUsuario := FUsuario.Id;
+    FTarefa.Titulo := Edt_Titulo.Text;
+    FTarefa.Descricao := Mm_Descricao.Text;
+    //Mm_Descricao.Lines.Add(FTarefa.Descricao);
+    FDAO.Inserir(FTarefa);
+  finally
+    FTarefa.DisposeOF;
+    Edt_Titulo.clear;
+    Mm_Descricao.clear;
+  end;
+
 end;
 
 procedure TFrmCadastroTarefas.SBtn_CancelarClick(Sender: TObject);
@@ -51,18 +105,11 @@ begin
 end;
 
 procedure TFrmCadastroTarefas.SBtn_SalvarClick(Sender: TObject);
-var
-  lTarefas : TTarefas;
 begin
-  lTarefas := TTarefas.Create;
-  lTarefas.Codigo := FTarefas.Count+1;
-  lTarefas.IdUsuario := 1;
-  lTarefas.Titulo := Edt_Titulo.Text;
-  lTarefas.Descricao := Mm_Descricao.Text;
-  lTarefas.DataCriacao := Now;
-  FTarefas.Add(lTarefas);
-  Edt_Titulo.clear;
-  Mm_Descricao.Clear;
+  if not Assigned(FTarefa) then
+    Nova
+  else
+    Edicao;
 end;
 
 end.

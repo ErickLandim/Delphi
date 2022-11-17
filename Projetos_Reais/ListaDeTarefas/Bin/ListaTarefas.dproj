@@ -124,6 +124,7 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="..\src\DAO\ListaTarefas.dao.Usuario.pas"/>
+        <DCCReference Include="..\src\DAO\ListaTarefas.dao.Tarefas.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
