@@ -198,7 +198,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        Text = 'Pesquisa'
         ExplicitHeight = 27
       end
       object PnlBtnPesquisar: TPanel

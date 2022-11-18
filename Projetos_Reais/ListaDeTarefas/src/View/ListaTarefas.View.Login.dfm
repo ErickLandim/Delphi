@@ -54,6 +54,7 @@ object FrmLogin: TFrmLogin
       Height = 289
       Align = alClient
       BevelOuter = bvNone
+      Caption = '123'
       Color = clBtnHighlight
       Padding.Left = 5
       Padding.Right = 5
@@ -107,6 +108,7 @@ object FrmLogin: TFrmLogin
           ParentFont = False
           PasswordChar = '*'
           TabOrder = 0
+          Text = '123'
         end
         object PnlLinhaSenha: TPanel
           Left = 5
@@ -171,6 +173,7 @@ object FrmLogin: TFrmLogin
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
+          Text = 'ericklandimaop@gmail.com'
         end
         object PnlLinhaEmail: TPanel
           Left = 5
